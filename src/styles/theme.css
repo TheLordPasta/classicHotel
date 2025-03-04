@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+:root {
+  /* Font */
+  --faculty-glyphic: "Faculty Glyphic", serif;
+
+  /* Main Theme Colors */
+  --primary-color: rgb(39, 0, 21); /* Deep Burgundy */
+  --accent-color: rgb(196, 164, 132); /* Elegant Gold */
+  --background-color: rgb(245, 245, 245); /* Soft White */
+  --dark-background: rgb(20, 10, 15); /* Luxury Black/Purple */
+  --text-color: rgb(255, 255, 255); /* White */
+  --secondary-text-color: rgb(170, 140, 120); /* Muted Gold */
+
+  /* Buttons & UI */
+  --button-color: rgb(79, 19, 53); /* Lighter Burgundy */
+  --button-hover-color: rgb(110, 25, 70); /* Brighter Burgundy */
+  --border-color: rgb(120, 90, 70); /* Soft Brown */
+}
+
+/* Apply the font to the entire website */
+body {
+  font-family: var(--faculty-glyphic), serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

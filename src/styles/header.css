@@ -3,6 +3,7 @@
   display: flex; /* Changed from list-item to flex for proper layout */
   background-color: var(--primary-color); /* Deep Burgundy */
   padding: 10px 20px;
+  z-index: 1;
 }
 
 .dropdown {

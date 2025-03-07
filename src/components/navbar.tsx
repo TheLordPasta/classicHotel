@@ -1,13 +1,14 @@
 import React from "react";
 import "../styles/theme.css";
 import "../styles/navbar.css";
+import Logo from "../resources/ClassicHotelLogo.png";
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="nav-logo-container">
         <div className="navbar-logo">
-          <img src="/path/to/logo.png" alt="Hotel Logo" />
+          <img src={Logo} alt="Hotel Logo" />
         </div>
       </div>
 

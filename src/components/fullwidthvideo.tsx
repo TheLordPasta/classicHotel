@@ -17,7 +17,7 @@ const FullWidthVideo: React.FC = () => {
         position: "relative",
         top: 0,
         left: 0,
-        zIndex: 0, // Sends it to the background
+        zIndex: 0,
       }}
     >
       <source src={VideoSrc} type="video/mp4" />

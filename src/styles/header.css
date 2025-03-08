@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   width: 150px; /* Increased width for better layout */
-  z-index: 1000; /* Ensures dropdown is on top of other elements */
+  z-index: 2001; /* Ensures dropdown is on top of other elements */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease; /* Fade effect */

@@ -10,7 +10,7 @@ body {
   display: block;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 1;
 }
 .nav-logo-container {
   background-color: var(--primary-color);

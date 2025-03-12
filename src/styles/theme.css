@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   /* Font */
-  --faculty-glyphic: "Faculty Glyphic", serif;
+  --raleway: "Raleway", serif;
 
   /* Main Theme Colors */
   --primary-color: #270015; /* Deep Burgundy */
@@ -9,22 +9,31 @@
   --background-color: #f5f5f5; /* Soft White */
   --dark-background: #140a0f; /* Luxury Black/Purple */
   --text-color: rgb(255, 255, 255); /* White */
-  --secondary-text-color: rgb(170, 140, 120); /* Muted Gold */
+  --secondary-text-color: rgba(170, 140, 120); /* Muted Gold */
+  --highlight-color: #7a3e2f;
 
   /* Buttons & UI */
-  --button-color: rgb(79, 19, 53); /* Lighter Burgundy */
-  --button-hover-color: rgb(110, 25, 70); /* Brighter Burgundy */
-  --border-color: rgb(120, 90, 70); /* Soft Brown */
+  --button-color: #c4a484; /* Lighter Burgundy */
+  --button-hover-color: rgb(230, 191, 139); /* Soft Brown */
 }
 
 /* Apply the font to the entire website */
 body {
-  font-family: var(--faculty-glyphic), serif;
+  font-family: var(--raleway), serif;
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 h1 {
+  font-family: var(--raleway), serif;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 50px;
+}
+p,
+button {
+  font-family: var(--raleway), serif;
+  font-weight: normal;
+}
+select {
+  all: unset;
 }

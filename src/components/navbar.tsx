@@ -19,7 +19,7 @@ const Navbar = () => {
         <button className="navbar-btn">Button3</button>
         <button className="navbar-btn">My Bookings</button>
         <button className="navbar-btn">Log In</button>
-        <button className="navbar-btn">Sign In</button>
+        <button className="navbar-btn">Sign Up</button>
         <button className="navbar-btn book-now">Book Now</button>
       </div>
     </div>

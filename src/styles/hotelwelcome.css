@@ -1,6 +1,6 @@
 .welcome-section {
   text-align: center;
-  background-color: var(--background-color);
+  background-color: var(--hotel-background);
   color: var(--text-color);
   padding: 40px 20px;
 }

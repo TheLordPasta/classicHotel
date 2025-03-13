@@ -8,12 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div
-      style={{
-        backgroundColor: "#f5f5f5",
-        paddingBottom: "5000px",
-      }}
-    >
+    <div>
       <Header />
       <Navbar />
       <FullWidthVideo />

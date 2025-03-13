@@ -1,7 +1,7 @@
 /* Styling for the card container */
 .card-container {
-  background-color: var(--dark-background);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
   border-radius: 0px;
   overflow: hidden;
   width: 100%;
@@ -74,19 +74,20 @@
 /* Styling for the currency selector */
 .currency-selector {
   font-family: var(--raleway);
-  background-color: var(--dark-background);
+  background-color: var(--primary-color);
   color: var(--button-color);
-  font-weight: 100;
+  font-weight: 400;
   border: none;
 }
 .currency-selector-container {
   font-family: var(--raleway);
-  background-color: var(--dark-background);
+  background-color: var(--primary-color);
   color: var(--button-color);
   font-weight: 100;
   border: none;
   padding: 3px;
   border-bottom: 1px solid var(--secondary-text-color);
+  cursor: pointer;
 }
 
 .currency-selector label {
@@ -102,6 +103,7 @@
   outline: none; /* Remove focus outline */
   appearance: none; /* Hide default dropdown arrow */
   text-align: center; /* Center text */
+  cursor: pointer;
 }
 
 /* Styling for the buttons */

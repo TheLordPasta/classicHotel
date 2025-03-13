@@ -6,7 +6,7 @@
   /* Main Theme Colors */
   --primary-color: #270015; /* Deep Burgundy */
   --accent-color: #c4a484; /* Elegant Gold */
-  --background-color: #f5f5f5; /* Soft White */
+  --hotel-background: #f1e7ea;
   --dark-background: #140a0f; /* Luxury Black/Purple */
   --text-color: rgb(255, 255, 255); /* White */
   --secondary-text-color: rgba(170, 140, 120); /* Muted Gold */
@@ -21,13 +21,18 @@
 body {
   font-family: var(--raleway), serif;
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--hotel-background);
   color: var(--text-color);
 }
 h1 {
   font-family: var(--raleway), serif;
   font-weight: 100;
   font-size: 50px;
+}
+h2 {
+  font-family: var(--raleway), serif;
+  font-weight: 100;
+  font-size: 30px;
 }
 p,
 button {

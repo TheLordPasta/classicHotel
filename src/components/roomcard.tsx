@@ -42,7 +42,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
     <div className="card-container">
       <img src={imageUrl} alt={title} className="card-image" />
       <div className="card-text">
-        <h1 className="title">{title}</h1>
+        <h2 className="title">{title}</h2>
         <div className="title-spacer">____________</div>
         <p className="description">{description}</p>
         <div className="price-container">

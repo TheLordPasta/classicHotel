@@ -1,0 +1,9 @@
+.room-gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(
+    3,
+    minmax(250px, 440px)
+  ); /* ✅ Responsive grid */
+  background-color: var(--hotel-background);
+}

@@ -16,7 +16,6 @@ const RoomCard: React.FC<RoomCardProps> = ({
   description,
 }) => {
   const [currency, setCurrency] = useState("USD");
-  const [exchangeRate, setExchangeRate] = useState(1);
   const [price, setPrice] = useState(basePrice);
 
   useEffect(() => {

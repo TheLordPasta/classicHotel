@@ -26,7 +26,6 @@ const RoomCard: React.FC<RoomCardProps> = ({
         );
         if (response.data.rates[currency]) {
           const rate = response.data.rates[currency];
-          setExchangeRate(rate);
           setPrice(basePrice * rate);
         }
       } catch (error) {

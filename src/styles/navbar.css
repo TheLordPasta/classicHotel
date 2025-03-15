@@ -20,7 +20,6 @@
 .navbar-logo {
   display: flex;
   justify-content: center; /* Center the logo */
-  flex-grow: 1; /* Take up available space */
   height: auto;
 }
 
@@ -105,8 +104,9 @@
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
     opacity: 0.95;
     margin-top: 20px;
+    position: static;
   }
   .navbar-logo img {
-    max-width: 500px;
+    max-width: 350px;
   }
 }

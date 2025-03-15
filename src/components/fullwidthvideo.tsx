@@ -1,25 +1,11 @@
 import React from "react";
 import VideoSrc from "../resources/TelAvivSkyline.mp4";
+import "../styles/fullwidthvideo.css";
 console.log("Video Source:", VideoSrc);
 
 const FullWidthVideo: React.FC = () => {
   return (
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      style={{
-        width: "100%",
-        height: "30%",
-        marginTop: "-400px",
-        objectFit: "cover",
-        position: "relative",
-        top: 0,
-        left: 0,
-        zIndex: 0,
-      }}
-    >
+    <video className="video-container" autoPlay loop muted playsInline>
       <source src={VideoSrc} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

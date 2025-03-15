@@ -1,11 +1,15 @@
-.navbar-container {
+.navbar-wrapper {
   position: sticky;
   top: 0;
+  z-index: 1000; /* Ensure it's above other elements */
+  width: 100%;
+}
+
+.navbar-container {
   color: var(--text-color);
   display: block;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
 }
 .nav-logo-container {
   background-color: var(--primary-color);
@@ -17,6 +21,7 @@
   display: flex;
   justify-content: center; /* Center the logo */
   flex-grow: 1; /* Take up available space */
+  height: auto;
 }
 
 .navbar-logo img {
@@ -53,4 +58,55 @@
 .navbar-btn.book-now:hover {
   background-color: rgb(230, 191, 139);
   border-color: rgb(230, 191, 139); /* Border matches the hover color */
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+  }
+  .hamburger-menu {
+    cursor: pointer;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .close-menu {
+    cursor: pointer;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .navbar-buttons {
+    flex-direction: column;
+    position: fixed;
+    width: 200px; /* Full height */
+    background-color: var(--primary-color);
+    opacity: 0.95;
+    transform: translateX(-100%); /* Start off-screen */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex; /* Ensure it's always visible for animation */
+    gap: 15px;
+    z-index: 1000;
+  }
+  .navbar-buttons.open {
+    transform: translateX(0);
+  }
+  .nav-logo-container {
+    size: auto;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    margin-top: 20px;
+  }
+  .navbar-logo img {
+    max-width: 500px;
+  }
 }

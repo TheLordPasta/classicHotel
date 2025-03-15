@@ -4,6 +4,16 @@
   grid-template-columns: repeat(
     3,
     minmax(250px, 440px)
-  ); /* ✅ Responsive grid */
+  ); /* ✅ Default: 3 per row */
   background-color: var(--hotel-background);
+  gap: 20px; /* Adds spacing between cards */
+}
+
+@media (max-width: 768px) {
+  .room-gallery {
+    grid-template-columns: repeat(
+      1,
+      minmax(250px, 440px)
+    ); /* ✅ Mobile: 1 per row */
+  }
 }

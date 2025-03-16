@@ -9,6 +9,11 @@
   margin: 20px auto;
   transition: transform 0.3s ease;
 }
+@media (max-width: 768px) {
+  .card-container {
+    width: 80%;
+  }
+}
 
 .card-container:hover {
   transform: translateY(-5px);

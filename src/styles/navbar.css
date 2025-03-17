@@ -1,5 +1,5 @@
 .navbar-wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000; /* Ensure it's above other elements */
   width: 100%;
@@ -7,8 +7,9 @@
 
 .navbar-container {
   background-color: transparent;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   transition: background-color 0.3s ease-in-out;
@@ -37,7 +38,6 @@
 
 .navbar-buttons {
   display: flex; /* Ensure the buttons are in a row */
-  position: fixed;
   justify-content: center;
   gap: 1px; /* Space between buttons */
 }
@@ -96,6 +96,14 @@
     cursor: pointer;
     margin-left: 2%;
     margin-top: 2%;
+  }
+  .navbar-container {
+    position: fixed; /* Fixed to viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
   }
   .navbar-buttons {
     flex-direction: column;

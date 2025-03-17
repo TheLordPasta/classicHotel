@@ -37,6 +37,7 @@
 
 .navbar-buttons {
   display: flex; /* Ensure the buttons are in a row */
+  position: fixed;
   justify-content: center;
   gap: 1px; /* Space between buttons */
 }

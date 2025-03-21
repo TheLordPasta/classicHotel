@@ -39,13 +39,15 @@
 .navbar-buttons {
   display: flex; /* Ensure the buttons are in a row */
   justify-content: center;
-  gap: 1px; /* Space between buttons */
+  backdrop-filter: blur(3px); /* Blurs the background behind */
+  -webkit-backdrop-filter: blur(3px); /* For Safari support */
 }
 
 .navbar-btn {
   background-color: transparent; /* Remove default background */
   color: var(--text-color);
   border: 2px solid transparent; /* No border until hover */
+
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 0px; /* Sharp edges */

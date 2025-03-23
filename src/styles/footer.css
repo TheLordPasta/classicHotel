@@ -1,0 +1,89 @@
+.footer-container {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 40px 20px;
+  font-family: var(--raleway);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+.hotel-name {
+  margin-left: 20%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 20%;
+  padding: 10px;
+  margin-right: 20%;
+  text-align: left;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+.footer-section p + p {
+  margin-top: 0px; /* Add a little space between consecutive <p> tags */
+}
+.hotel-name {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.contact-info {
+  font-size: 0.9rem;
+}
+
+.social-icons span {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: var(--secondary-text-color);
+  height: 200px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid var(--secondary-text-color);
+  opacity: 0.8;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.social-icons span {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Space between icons */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for movement */
+  cursor: pointer;
+}
+.social-icons span:hover {
+  transform: translateY(-5px); /* Move icon up on hover */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-divider {
+    height: 1px;
+    background-color: var(--secondary-text-color);
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,8 +1,7 @@
 import Navbar from "./components/navbar";
-import RoomGallery from "./components/room-gallery";
 import Header from "./components/header";
-import FullWidthVideo from "./components/fullwidthvideo";
-import HotelWelcome from "./components/hotelwelcome";
+import Home from "./pages/home";
+import Footer from "./components/footer";
 import "./styles/theme.css";
 import "./App.css";
 
@@ -11,11 +10,9 @@ function App() {
     <div>
       <Header />
       <Navbar />
-      <FullWidthVideo />
-      <HotelWelcome />
-      <RoomGallery />
-      <p>terms and conditions</p>
-      <p>footer</p>
+      {/*from here we need router*/}
+      <Home />
+      <Footer />
     </div>
   );
 }

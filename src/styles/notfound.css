@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+  display: inline block;
+  padding: 100px;
+  margin: 15%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 0px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.container:hover {
+  transform: translateY(-5px);
+}
+.link-text {
+  font-size: 24px;
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  color: var(--accent-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px; /* Adjust the position of the underline */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--accent-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link-text:hover {
+  color: var(--button-hover-color); /* Change text color on hover */
+}
+
+.link-text:hover::after {
+  width: 100%; /* Expand the underline */
+  left: 0;
+}

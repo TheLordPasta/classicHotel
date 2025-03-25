@@ -1,0 +1,15 @@
+.text-container-roomspage {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.text-container-roomspage h1 {
+  font-size: 80px;
+}
+.text-container-roomspage p {
+  font-size: 30px;
+}

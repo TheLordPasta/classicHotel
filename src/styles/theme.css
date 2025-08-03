@@ -12,21 +12,21 @@
   --highlight-color: #d1e7fe; /* Light Blue Accent (PANTONE 2717 C) */
 
   /* Buttons & UI */
-  --button-color: #f58266; /* Accent Orange-Pink */
-  --button-hover-color: #e3b09e; /* Light Coral Hover */
+  --button-color: #e3b09e; /* Accent Orange-Pink */
+  --button-hover-color: #f58266; /* Light Coral Hover */
 }
 
 /* Apply the font to the entire website */
 body {
   font-family: var(--polin), serif;
   margin: 0;
-  background-color: var(--hotel-background);
+  background-color: var(--highlight-color);
   color: var(--text-color);
 }
 h1 {
   font-family: var(--polin), serif;
   font-weight: 200;
-  font-size: 50px;
+  font-size: 60px;
   color: var(--text-color);
 }
 h2 {
@@ -38,7 +38,8 @@ p,
 button,
 a {
   font-family: var(--polin), serif;
-  font-weight: normal;
+  font-weight: 200;
+  font-size: 22px;
 }
 select {
   all: unset;

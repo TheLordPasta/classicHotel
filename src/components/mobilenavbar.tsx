@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 import "../styles/theme.css";
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 const MobileNavbar = () => {
   const navigate = useNavigate();
   const [opened, setOpened] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const Hamburger = (
     <FontAwesomeIcon
@@ -28,6 +29,14 @@ const MobileNavbar = () => {
       onClick={() => setOpened(!opened)}
     />
   );
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="navbar-container">

@@ -31,14 +31,27 @@ const DesktopNavbar = () => {
 
       {/* Navbar Buttons */}
       <div className="navbar-buttons">
-        <button className="navbar-btn" onClick={() => navigate("/rooms")}>
+        <button
+          className={`navbar-btn ${scrolled ? "scrolled" : ""}`}
+          onClick={() => navigate("/rooms")}
+        >
           Rooms
         </button>
-        <button className="navbar-btn">Button2</button>
-        <button className="navbar-btn">Button3</button>
-        <button className="navbar-btn">My Bookings</button>
-        <button className="navbar-btn">Log In</button>
-        <button className="navbar-btn">Sign Up</button>
+        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
+          Button2
+        </button>
+        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
+          Button3
+        </button>
+        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
+          My Bookings
+        </button>
+        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
+          Log In
+        </button>
+        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
+          Sign Up
+        </button>
         <button className="navbar-btn book-now">Book Now</button>
       </div>
     </div>

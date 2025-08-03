@@ -3,9 +3,9 @@
   justify-content: center;
   grid-template-columns: repeat(
     3,
-    minmax(250px, 440px)
+    minmax(250px, 500px)
   ); /* ✅ Default: 3 per row */
-  background-color: var(--hotel-background);
+  background-color: var(--highlight-color);
   gap: 20px; /* Adds spacing between cards */
 }
 

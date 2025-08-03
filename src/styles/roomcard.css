@@ -4,9 +4,8 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
   border-radius: 0px;
   overflow: hidden;
-  width: 100%;
   max-width: 400px;
-  margin: 20px auto;
+  margin: 50px auto;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
 }
@@ -30,7 +29,7 @@
 
 /* Styling for the text section of the card */
 .card-text {
-  padding: 15px;
+  padding: 25px;
   color: var(--text-color);
   font-family: --;
 }
@@ -115,15 +114,19 @@
 /* Styling for the buttons */
 .book-now-button,
 .see-more-button {
-  margin: 5px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 10px;
   text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .book-now-button {
-  background-color: var(--accent-color);
+  background-color: var(--button-color);
   color: var(--text-color);
   border: none;
 }
@@ -139,8 +142,8 @@
 }
 
 .see-more-button:hover {
-  background-color: rgb(230, 191, 139);
-  border-color: rgb(230, 191, 139);
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
 }
 
 .buttons-container {

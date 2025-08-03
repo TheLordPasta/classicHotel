@@ -43,7 +43,7 @@
 }
 
 .navbar-btn {
-  background-color: transparent; /* Remove default background */
+  background-color: rgba(0, 0, 0, 0.5); /* Remove default background */
   color: var(--text-color);
   border: 2px solid transparent; /* No border until hover */
   padding: 10px 20px;
@@ -55,23 +55,25 @@
   font-weight: 300;
   font-size: x-large;
 }
-
+.navbar-btn.scrolled {
+  background-color: rgba(0, 0, 0, 0);
+}
 .navbar-btn:hover {
-  background-color: var(--accent-color); /* Hover effect */
-  border-color: var(--accent-color); /* Add border on hover */
+  background-color: var(--button-hover-color); /* Hover effect */
+  border-color: var(--button-hover-color); /* Add border on hover */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Special Styling for the 'Book Now' Button */
 .navbar-btn.book-now {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color); /* Keep border color consistent */
+  background-color: var(--button-color);
+  border-color: var(--button-color); /* Keep border color consistent */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-btn.book-now:hover {
-  background-color: rgb(230, 191, 139);
-  border-color: rgb(230, 191, 139); /* Border matches the hover color */
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color); /* Border matches the hover color */
 }
 
 .mobile-navbar {

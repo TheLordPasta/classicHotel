@@ -24,7 +24,6 @@ function App() {
         <Route path="/rooms" element={<Rooms />} />
         <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
       </Routes>
-
       <Footer />
     </Router>
   );

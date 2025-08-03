@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore frontend build
+/build
+
+# Ignore node_modules in both frontend and backend
+node_modules/

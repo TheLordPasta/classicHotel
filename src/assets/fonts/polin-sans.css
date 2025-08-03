@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Polin Sans";
+  src: url("./polin-sans/polin-black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin Sans";
+  src: url("./polin-sans/polin-blackitalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Polin Sans";
+  src: url("./polin-sans/polin-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin Sans";
+  src: url("./polin-sans/polin-bolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Polin Sans";
+  src: url("./polin-sans/polin-extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin Sans";
+  src: url("./polin-sans/polin-extralightitalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}

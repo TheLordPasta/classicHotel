@@ -7,7 +7,8 @@
   width: 100%;
   max-width: 400px;
   margin: 20px auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
 }
 @media (max-width: 768px) {
   .card-container {
@@ -115,6 +116,7 @@
 .book-now-button,
 .see-more-button {
   margin: 5px;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;

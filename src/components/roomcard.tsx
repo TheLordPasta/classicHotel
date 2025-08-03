@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/roomcard.css";
+import { useNavigate } from "react-router-dom";
 
 interface RoomCardProps {
   title: string;
   imageUrl: string;
   basePrice: number; // Base price in default currency (USD)
   description: string;
+  seeMoreRoute: string;
 }
 
 const RoomCard: React.FC<RoomCardProps> = ({
@@ -14,7 +16,9 @@ const RoomCard: React.FC<RoomCardProps> = ({
   imageUrl,
   basePrice,
   description,
+  seeMoreRoute,
 }) => {
+  const navigate = useNavigate();
   const [currency, setCurrency] = useState("USD");
   const [price, setPrice] = useState(basePrice);
 
@@ -63,7 +67,12 @@ const RoomCard: React.FC<RoomCardProps> = ({
       </div>
       <div className="buttons-container">
         <button className="book-now-button">Book Now</button>
-        <button className="see-more-button">See More</button>
+        <button
+          className="see-more-button"
+          onClick={() => navigate(seeMoreRoute)}
+        >
+          See More
+        </button>
       </div>
     </div>
   );

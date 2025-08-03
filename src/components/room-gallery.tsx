@@ -1,58 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RoomCard from "./roomcard";
-import ImageExample from "../resources/images/cabin.jpg";
 import "../styles/roomgallery.css";
 
-const rooms = [
-  {
-    title: "Luxury Suite",
-    imageUrl: ImageExample,
-    basePrice: 1494,
-    description: "A luxury suite with ocean views.",
-    key: 1,
-  },
-  {
-    title: "Deluxe Room",
-    imageUrl: ImageExample,
-    basePrice: 1200,
-    description: "A cozy deluxe room with modern amenities.",
-    key: 2,
-  },
-  {
-    title: "Executive Room",
-    imageUrl: ImageExample,
-    basePrice: 1350,
-    description: "Spacious room with premium services.",
-    key: 3,
-  },
-  {
-    title: "Presidential Suite",
-    imageUrl: ImageExample,
-    basePrice: 2000,
-    description: "Experience the highest level of comfort.",
-    key: 4,
-  },
-  {
-    title: "Family Room",
-    imageUrl: ImageExample,
-    basePrice: 1100,
-    description: "Perfect for a family stay.",
-    key: 5,
-  },
-  {
-    title: "Budget Room",
-    imageUrl: ImageExample,
-    basePrice: 800,
-    description: "Affordable and comfortable.",
-    key: 6,
-  },
-];
+interface Room {
+  _id: string;
+  title: string;
+  imageUrl: string;
+  basePrice: number;
+  description: string;
+  seeMoreRoute: string;
+}
 
-const RoomGallery = () => {
+const RoomGallery: React.FC = () => {
+  const [rooms, setRooms] = useState<Room[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const apiUrl = "http://localhost:5000";
+        const response = await fetch(`${apiUrl}/api/rooms`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch rooms: ${response.status}`);
+        }
+        const data = await response.json();
+        setRooms(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRooms();
+  }, []);
+
+  if (loading) return <p>Loading rooms...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   return (
     <div className="room-gallery">
-      {rooms.map(({ key, ...room }) => (
-        <RoomCard key={key} {...room} />
+      {rooms.map((room) => (
+        <RoomCard key={room._id} {...room} />
       ))}
     </div>
   );

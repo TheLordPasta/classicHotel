@@ -1,13 +1,25 @@
 .welcome-section {
   text-align: center;
-  background-color: var(--hotel-background);
-  color: var(--text-color);
-  padding: 40px 20px;
+  background-color: var(--primary-color);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 0px;
+  width: 100%;
+  max-width: 1260px;
+  margin: 20px auto;
+  transition: transform 0.2s ease-in-out;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .welcome-section {
+    width: 80%;
+  }
+}
+.welcome-section:hover {
+  transform: translateY(-5px);
 }
 
 .welcome-title {
   text-transform: uppercase;
-  color: var(--secondary-text-color);
   margin-bottom: 15px;
 }
 
@@ -15,6 +27,11 @@
   max-width: 600px;
   margin: 0 auto 15px;
   color: var(--secondary-text-color);
+}
+.tailored-word {
+  max-width: 600px;
+  margin: 0 auto 15px;
+  color: var(--text-color);
 }
 
 .welcome-highlight {
@@ -34,6 +51,7 @@
   font-size: 1rem;
   transition: background-color 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
 }
 
 .welcome-button:hover {

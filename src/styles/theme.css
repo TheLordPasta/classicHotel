@@ -1,43 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   /* Font */
-  --raleway: "Raleway", serif;
+  --polin: "Polin Sans", serif;
 
-  /* Main Theme Colors */
-  --primary-color: #270015; /* Deep Burgundy */
-  --accent-color: #c4a484; /* Elegant Gold */
-  --hotel-background: #f1e7ea;
-  --dark-background: #140a0f; /* Luxury Black/Purple */
-  --text-color: rgb(255, 255, 255); /* White */
-  --secondary-text-color: rgba(170, 140, 120); /* Muted Gold */
-  --highlight-color: #7a3e2f;
+  /* Tailor Hotel Color Palette */
+  --primary-color: #245445; /* Deep Green (PANTONE 567 C) */
+  --accent-color: #f58266; /* Warm Accent (PANTONE 486 C) */
+  --hotel-background: #f5d6ab; /* Soft Tan (PANTONE 7507 C) */
+  --dark-background: #000000; /* Black (PANTONE Black C) */
+  --text-color: #ffffff; /* White (PANTONE White) */
+  --secondary-text-color: #e3b09e; /* Soft Coral (PANTONE 693 C) */
+  --highlight-color: #d1e7fe; /* Light Blue Accent (PANTONE 2717 C) */
 
   /* Buttons & UI */
-  --button-color: #c4a484; /* Lighter Burgundy */
-  --button-hover-color: rgb(230, 191, 139); /* Soft Brown */
+  --button-color: #f58266; /* Accent Orange-Pink */
+  --button-hover-color: #e3b09e; /* Light Coral Hover */
 }
 
 /* Apply the font to the entire website */
 body {
-  font-family: var(--raleway), serif;
+  font-family: var(--polin), serif;
   margin: 0;
   background-color: var(--hotel-background);
   color: var(--text-color);
 }
 h1 {
-  font-family: var(--raleway), serif;
+  font-family: var(--polin), serif;
   font-weight: 200;
   font-size: 50px;
+  color: var(--text-color);
 }
 h2 {
-  font-family: var(--raleway), serif;
+  font-family: var(--polin), serif;
   font-weight: 100;
   font-size: 30px;
 }
 p,
 button,
 a {
-  font-family: var(--raleway), serif;
+  font-family: var(--polin), serif;
   font-weight: normal;
 }
 select {

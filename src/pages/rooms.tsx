@@ -11,7 +11,7 @@ function Rooms() {
       <div className="text-container-roomspage">
         <h1>Rooms</h1>
         <p>
-          Nahalat Benjamin is a charming neighborhood in the heart of Tel Aviv,
+          Nah'alat Benjamin is a charming neighborhood in the heart of Tel Aviv,
           known for its vibrant atmosphere and historical significance. Located
           just a short walk from the famous Carmel Market, it features
           picturesque streets lined with Bauhaus-style buildings and lively

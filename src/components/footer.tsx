@@ -31,19 +31,19 @@ export default function Footer() {
         <div className="footer-divider" />
 
         <div className="footer-section middle">
-          <a href="#">Attractions</a>
-          <a href="#">Media</a>
-          <a href="#">Sitemap</a>
-          <a href="#">Terms and Conditions</a>
+          <a href="/attractions">Attractions</a>
+          <a href="/Media">Media</a>
+          <a href="/Sitemap">Sitemap</a>
+          <a href="/Terms&Conditions">Terms and Conditions</a>
         </div>
 
         <div className="footer-divider" />
 
         <div className="footer-section right">
           <p>📶 Free WiFi at the hotel</p>
-          <a href="#">Accessibility</a>
-          <a href="#">My Reservations</a>
-          <a href="#">Privacy Policy</a>
+          <a href="/Accessibility">Accessibility</a>
+          <a href="/My-Reservations">My Reservations</a>
+          <a href="/Privacy-Policy">Privacy Policy</a>
         </div>
       </div>
 

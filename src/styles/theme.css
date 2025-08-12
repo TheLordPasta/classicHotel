@@ -16,7 +16,6 @@
   --button-hover-color: #f58266; /* Light Coral Hover */
 }
 
-/* Apply the font to the entire website */
 body {
   font-family: var(--polin), serif;
   margin: 0;
@@ -26,21 +25,39 @@ body {
 h1 {
   font-family: var(--polin), serif;
   font-weight: 200;
-  font-size: 60px;
   color: var(--text-color);
 }
 h2 {
   font-family: var(--polin), serif;
   font-weight: 100;
-  font-size: 30px;
 }
 p,
 button,
 a {
   font-family: var(--polin), serif;
   font-weight: 200;
-  font-size: 22px;
 }
 select {
   all: unset;
+}
+/*test*/
+html {
+  font-size: var(--base-font-size, 22px);
+}
+h1 {
+  font-size: 2.73rem; /* 60px */
+}
+h2 {
+  font-size: 1.36rem; /* 30px */
+}
+h3 {
+  font-size: 1.18rem; /* ~26px */
+}
+p,
+button,
+a {
+  font-size: 1rem; /* 22px */
+}
+small {
+  font-size: 0.82rem; /* ~18px */
 }

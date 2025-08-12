@@ -59,7 +59,7 @@
 .price-label {
   margin-right: 5px;
   color: var(--text-color);
-  font-family: var(--raleway);
+  font-family: var(--polin);
   font-weight: normal;
 }
 
@@ -67,27 +67,27 @@
   margin-right: 2px;
   font-weight: normal;
   color: var(--secondary-text-color);
-  font-family: var(--raleway);
+  font-family: var(--polin);
 }
 
 .price-value {
   font-weight: 100;
-  font-family: var(--raleway);
+  font-family: var(--polin);
   margin-left: 5px;
 }
 
 /* Styling for the currency selector */
 .currency-selector {
-  font-family: var(--raleway);
+  font-family: var(--polin);
   background-color: var(--primary-color);
-  color: var(--button-color);
+  color: var(--secondary-text-color);
   font-weight: 400;
   border: none;
 }
 .currency-selector-container {
-  font-family: var(--raleway);
+  font-family: var(--polin);
   background-color: var(--primary-color);
-  color: var(--button-color);
+  color: var(--secondary-text-color);
   font-weight: 100;
   border: none;
   padding: 3px;
@@ -103,8 +103,8 @@
 
 .currency-selector select {
   padding: 5px;
-  font-family: var(--raleway);
-  color: var(--text-color);
+  font-family: var(--polin);
+  color: var(--secondary-text-color);
   outline: none; /* Remove focus outline */
   appearance: none; /* Hide default dropdown arrow */
   text-align: center; /* Center text */

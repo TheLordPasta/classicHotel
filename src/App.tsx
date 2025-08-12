@@ -12,19 +12,23 @@ import NotFound from "./pages/notfound";
 import Rooms from "./pages/rooms";
 import "./styles/theme.css";
 import "./App.css";
+import AccessibilityWidget from "./components/accessibilitywidget";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Navigate to="/homePage" replace />} />
-        <Route path="/homePage" element={<Home />} />
-        <Route path="/rooms" element={<Rooms />} />
-        <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
-      </Routes>
-      <Footer />
+      <div id="app-root">
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Navigate to="/homePage" replace />} />
+          <Route path="/homePage" element={<Home />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
+        </Routes>
+        <Footer />
+      </div>
+      <AccessibilityWidget />
     </Router>
   );
 }

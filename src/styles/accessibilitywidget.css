@@ -1,0 +1,151 @@
+.accessibility-toggle {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+  border-width: 2px;
+  border-color: transparent;
+  padding: 0px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.1s ease-in-out;
+}
+.accessibility-toggle.open {
+  border-color: black;
+}
+
+.accessibility-drawer {
+  text-align: start;
+  position: fixed;
+  top: 30%;
+  right: -350px;
+  width: 150px;
+  height: auto;
+  background-color: white;
+  color: black;
+  padding: 12px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  margin-bottom: 50%;
+}
+
+.accessibility-drawer.open {
+  right: 0;
+}
+
+.accessibility-drawer h2 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.accessibility-drawer ul {
+  list-style: none;
+  padding: 0;
+}
+.accessibility-drawer li {
+  margin-top: 5px;
+}
+
+.accessibility-drawer button {
+  text-align: start;
+  width: 100%;
+  padding: 5px;
+  font-size: 0.6rem;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.459);
+  border-width: 1px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+.accessibility-drawer button:hover {
+  background-color: var(--secondary-text-color);
+  border-color: transparent;
+}
+
+.accessibility-drawer button.reset {
+  background-color: var(--secondary-text-color);
+  color: white;
+  border-color: transparent;
+}
+.accessibility-drawer button.reset:hover {
+  background-color: var(--accent-color);
+}
+
+.accessibility-drawer button.isActive {
+  font-weight: 900;
+}
+/*modes*/
+body {
+  font-size: var(--base-font-size, 22px);
+}
+
+.grayscale-mode #app-root {
+  filter: grayscale(100%);
+}
+
+.high-contrast-mode {
+  --primary-color: #000000; /* black containers */
+  --accent-color: #d6452e; /* Bold coral-red accent */
+  --hotel-background: #000000; /* Black background */
+  --dark-background: #000000; /* Black elements */
+  --text-color: #ffffff; /* White text */
+  --secondary-text-color: #ffd6cc; /* Light peach for subtext */
+  --highlight-color: #00aaff; /* Bright blue highlight */
+
+  /* Buttons & UI */
+  --button-color: #d6452e; /* Bold coral button */
+  --button-hover-color: #ff6f4f; /* Vivid hover effect */
+}
+
+.negative-contrast-mode {
+  --primary-color: #1e2f29; /* Deep muted green-black */
+  --accent-color: #f8a88d; /* Warm coral pops against dark */
+  --hotel-background: #0f1a17; /* Rich dark teal background */
+  --dark-background: #000000; /* True black */
+  --text-color: #ffffff; /* Crisp white text */
+  --secondary-text-color: #f2c4b4; /* Soft coral for subtext */
+  --highlight-color: #a0c4ff; /* Muted blue highlight */
+
+  /* Buttons & UI */
+  --button-color: #f8a88d; /* Coral button */
+  --button-hover-color: #f2c4b4; /* Light coral hover */
+}
+
+.light-bg-mode {
+  /* Tailor Hotel Light Palette */
+  --primary-color: #7aa892; /* Softer Deep Green */
+  --accent-color: #f8a88d; /* Light Warm Accent */
+  --hotel-background: #fbe4c7; /* Pale Tan */
+  --dark-background: #333333; /* Soft Black */
+  --text-color: #000000; /* Deep Charcoal */
+  --secondary-text-color: #a24120;
+  --highlight-color: #eaf3ff; /* Pale Blue Accent */
+
+  /* Buttons & UI */
+  --button-color: #f2c4b4; /* Light Accent Coral */
+  --button-hover-color: #f8a88d; /* Light Coral Hover */
+}
+
+.underline-links-mode a {
+  text-decoration: underline !important;
+}
+
+.readable-font-mode {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Ensure child elements inherit the readable font */
+.readable-font-mode h1,
+.readable-font-mode h2,
+.readable-font-mode h3,
+.readable-font-mode p,
+.readable-font-mode button,
+.readable-font-mode a,
+.readable-font-mode small {
+  font-family: inherit !important;
+}

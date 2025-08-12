@@ -40,7 +40,7 @@ a {
 select {
   all: unset;
 }
-/*test*/
+/*adjustable font*/
 html {
   font-size: var(--base-font-size, 22px);
 }

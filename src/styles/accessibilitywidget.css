@@ -106,7 +106,8 @@ body {
   em,
   a,
   div,
-  footer {
+  footer,
+  section {
     filter: grayscale(100%);
   }
   /* Mid-gray tone */

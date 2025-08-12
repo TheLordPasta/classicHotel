@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/footer.css";
-import { faWhatsapp, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
     <footer className="footer-container">
@@ -15,13 +15,13 @@ export default function Footer() {
             <p>Follow Us</p>
             <span className="social-icon">
               <FontAwesomeIcon
-                icon={faWhatsapp}
-                color="#25d366"
+                icon={faInstagram}
+                color="#d325caff"
               ></FontAwesomeIcon>
             </span>
             <span className="social-icon">
               <FontAwesomeIcon
-                icon={faFacebook}
+                icon={faLinkedin}
                 color="#1877F2"
               ></FontAwesomeIcon>
             </span>
@@ -34,14 +34,14 @@ export default function Footer() {
           <a href="/attractions">Attractions</a>
           <a href="/Media">Media</a>
           <a href="/Sitemap">Sitemap</a>
-          <a href="/Terms&Conditions">Terms and Conditions</a>
+          <a href="/terms&conditions">Terms and Conditions</a>
         </div>
 
         <div className="footer-divider" />
 
         <div className="footer-section right">
           <p>📶 Free WiFi at the hotel</p>
-          <a href="/Accessibility">Accessibility</a>
+          <a href="/accessibility">Accessibility</a>
           <a href="/My-Reservations">My Reservations</a>
           <a href="/Privacy-Policy">Privacy Policy</a>
         </div>

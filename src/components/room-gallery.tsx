@@ -19,7 +19,7 @@ const RoomGallery: React.FC = () => {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const development: boolean = false;
+        const development: boolean = true;
         const apiUrl = development
           ? "http://localhost:5000"
           : "https://classichotel.onrender.com"; // <-- fixed the missing quote

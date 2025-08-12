@@ -27,8 +27,9 @@ function App() {
           <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
         </Routes>
         <Footer />
+
+        <AccessibilityWidget />
       </div>
-      <AccessibilityWidget />
     </Router>
   );
 }

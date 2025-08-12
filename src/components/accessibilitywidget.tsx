@@ -25,71 +25,13 @@ const AccessibilityWidget: React.FC = () => {
 
   const toggleClass = (key: keyof typeof settings, className: string) => {
     const newValue = !settings[key];
-
-    // Exclusivity logic
-    if (key === "highContrast" && newValue) {
-      document.body.classList.remove(
-        "negative-contrast-mode",
-        "light-bg-mode",
-        "grayscale-mode"
-      );
-      setSettings((prev) => ({
-        ...prev,
-        negativeContrast: false,
-        lightBackground: false,
-        grayscale: false,
-      }));
-    }
-
-    if (key === "negativeContrast" && newValue) {
-      document.body.classList.remove(
-        "high-contrast-mode",
-        "light-bg-mode",
-        "grayscale-mode"
-      );
-      setSettings((prev) => ({
-        ...prev,
-        highContrast: false,
-        lightBackground: false,
-        grayscale: false,
-      }));
-    }
-
-    if (key === "lightBackground" && newValue) {
-      document.body.classList.remove(
-        "high-contrast-mode",
-        "negative-contrast-mode",
-        "grayscale-mode"
-      );
-      setSettings((prev) => ({
-        ...prev,
-        highContrast: false,
-        negativeContrast: false,
-        grayscale: false,
-      }));
-    }
-
-    if (key === "grayscale" && newValue) {
-      document.body.classList.remove(
-        "high-contrast-mode",
-        "negative-contrast-mode",
-        "light-bg-mode"
-      );
-      setSettings((prev) => ({
-        ...prev,
-        highContrast: false,
-        negativeContrast: false,
-        lightBackground: false,
-      }));
-    }
-
     document.body.classList.toggle(className, newValue);
     setSettings((prev) => ({ ...prev, [key]: newValue }));
   };
 
   const resetAll = () => {
     document.documentElement.style.setProperty("--base-font-size", "22px");
-    document.body.className = "";
+    document.body.className = ""; // Remove all classes
     setSettings({
       fontScale: 1,
       grayscale: false,
@@ -128,16 +70,12 @@ const AccessibilityWidget: React.FC = () => {
             </button>
           </li>
           <li>
-            <button
-              className={settings.grayscale ? "isActive" : ""}
-              onClick={() => toggleClass("grayscale", "grayscale-mode")}
-            >
+            <button onClick={() => toggleClass("grayscale", "grayscale-mode")}>
               Grayscale
             </button>
           </li>
           <li>
             <button
-              className={settings.highContrast ? "isActive" : ""}
               onClick={() => toggleClass("highContrast", "high-contrast-mode")}
             >
               High Contrast
@@ -145,7 +83,6 @@ const AccessibilityWidget: React.FC = () => {
           </li>
           <li>
             <button
-              className={settings.negativeContrast ? "isActive" : ""}
               onClick={() =>
                 toggleClass("negativeContrast", "negative-contrast-mode")
               }
@@ -155,7 +92,6 @@ const AccessibilityWidget: React.FC = () => {
           </li>
           <li>
             <button
-              className={settings.lightBackground ? "isActive" : ""}
               onClick={() => toggleClass("lightBackground", "light-bg-mode")}
             >
               Light Background
@@ -163,7 +99,6 @@ const AccessibilityWidget: React.FC = () => {
           </li>
           <li>
             <button
-              className={settings.underlineLinks ? "isActive" : ""}
               onClick={() =>
                 toggleClass("underlineLinks", "underline-links-mode")
               }
@@ -173,7 +108,6 @@ const AccessibilityWidget: React.FC = () => {
           </li>
           <li>
             <button
-              className={settings.readableFont ? "isActive" : ""}
               onClick={() => toggleClass("readableFont", "readable-font-mode")}
             >
               Readable Font

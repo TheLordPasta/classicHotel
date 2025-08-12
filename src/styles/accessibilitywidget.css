@@ -3,14 +3,16 @@
   bottom: 10px;
   left: 10px;
   z-index: 1000;
-  border-width: 2px;
   border-color: transparent;
+  background-color: transparent;
   padding: 0px;
-  border-radius: 8px;
   cursor: pointer;
   font-size: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: border-color 0.1s ease-in-out;
+  list-style: none;
+  text-decoration-thickness: 2px;
+  background-color: blanchedalmond;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 .accessibility-toggle.open {
   border-color: black;
@@ -85,7 +87,32 @@ body {
 }
 
 .grayscale-mode #app-root {
-  filter: grayscale(100%);
+  video,
+  img,
+  picture,
+  canvas,
+  svg,
+  iframe,
+  object,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  strong,
+  em,
+  a,
+  div,
+  footer {
+    filter: grayscale(100%);
+  }
+  /* Mid-gray tone */
+}
+.grayscale-mode {
+  --highlight-color: #c7c7c7;
 }
 
 .high-contrast-mode {

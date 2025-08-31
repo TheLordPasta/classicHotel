@@ -19,11 +19,11 @@ const RoomGallery: React.FC = () => {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const development: boolean = true;
-        const apiUrl = development
+        const apiUrl = window.location.hostname.includes("localhost")
           ? "http://localhost:5000"
-          : "https://classichotel.onrender.com"; // <-- fixed the missing quote
+          : "https://classichotel.onrender.com";
         const response = await fetch(`${apiUrl}/api/rooms`);
+        console.log("Fetching from:", `${apiUrl}/api/rooms`);
         if (!response.ok) {
           throw new Error(`Failed to fetch rooms: ${response.status}`);
         }

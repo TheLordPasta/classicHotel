@@ -13,8 +13,11 @@ import Rooms from "./pages/rooms";
 import "./styles/theme.css";
 import "./App.css";
 import AccessibilityWidget from "./components/accessibilitywidget";
-import TermsAndConditions from "./components/terms-and-conditions";
-import Accessibility from "./components/accessibility";
+import TermsAndConditions from "./pages/terms-and-conditions";
+import Accessibility from "./pages/accessibility";
+import CookieDrawer from "./components/CookieDrawer";
+import PrivacyPolicy from "./pages/privacy-policy";
+import MaintenancePage from "./pages/maintenance";
 
 function App() {
   return (
@@ -23,15 +26,18 @@ function App() {
         <Header />
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/homePage" replace />} />
+          <Route path="/" element={<Navigate to="/maintenance" replace />} />
           <Route path="/homePage" element={<Home />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
           <Route path="/accessibility" element={<Accessibility />} />
           <Route path="/terms&conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/maintenance" element={<MaintenancePage />} />
         </Routes>
         <Footer />
         <AccessibilityWidget />
+        <CookieDrawer />
       </div>
     </Router>
   );

@@ -10,7 +10,7 @@ export const loadTrackingScripts = async () => {
   }
 
   try {
-    await fetch("/track", {
+    await fetch("https://classichotel.onrender.com/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

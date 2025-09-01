@@ -12,7 +12,13 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://thetailortlv.com", // ✅ Allow your frontend domain
+    methods: ["POST", "GET"], // ✅ Allow necessary HTTP methods
+    credentials: true, // Optional: if you're using cookies or auth headers
+  })
+);
 
 // Connect to MongoDB
 mongoose

@@ -1,29 +1,47 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/CookieDrawer.css";
 import { loadTrackingScripts } from "../utils/loadTrackingScripts.js";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 const COOKIE_CONSENT_KEY = "cookieConsentStatus";
-const ENABLE_COOKIE_PERSISTENCE = true; // ← flip to false in dev
-localStorage.removeItem("cookieConsentStatus"); //for text
+const ENABLE_COOKIE_PERSISTENCE = true;
 
-const GA_ID = "G-XXXXXXXXXX"; // ← Replace with your real GA4 ID
-const PIXEL_ID = "123456789012345"; // ← Replace with your Meta Pixel ID
+const GA_ID = process.env.REACT_APP_GA_ID;
+const PIXEL_ID = process.env.REACT_APP_PIXEL_ID;
 
 const CookieDrawer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
+  const location = useLocation();
+
+  // Track route changes only if consent is accepted
 
   useEffect(() => {
-    if (ENABLE_COOKIE_PERSISTENCE) {
-      const storedValue = localStorage.getItem(COOKIE_CONSENT_KEY);
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (consent === "true" && window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname,
+      });
+    }
+  }, [location]);
 
-      if (storedValue !== null) {
-        setIsDismissed(true);
-        if (storedValue === "true") {
-          loadTrackingScripts(); // Load trackers if accepted
-        }
-        return;
+  // Initial load: check consent and show drawer if needed
+  useEffect(() => {
+    const storedValue = localStorage.getItem(COOKIE_CONSENT_KEY);
+
+    if (storedValue !== null) {
+      setIsDismissed(true);
+      if (storedValue === "true") {
+        loadTrackingScripts({ gaId: GA_ID, pixelId: PIXEL_ID });
       }
+      return;
     }
 
     const timer = setTimeout(() => {
@@ -46,6 +64,15 @@ const CookieDrawer: React.FC = () => {
     }
     setIsDismissed(true);
     loadTrackingScripts({ gaId: GA_ID, pixelId: PIXEL_ID });
+
+    // Send initial pageview manually
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname,
+      });
+    }
   };
 
   if (isDismissed) return null;

@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import Room from "./models/room.js";
 import cors from "cors";
 import path from "path";
+import axios from "axios";
 
 dotenv.config();
 const app = express();
@@ -37,9 +38,33 @@ app.get("/api/rooms", async (req, res) => {
   }
 });
 
+// 🔐 Secure Tracking Proxy Route
+app.post("/track", async (req, res) => {
+  const { client_id, events, token } = req.body;
+
+  // Optional token validation
+  if (token !== process.env.TRACKING_TOKEN) {
+    return res.status(403).json({ error: "Invalid token" });
+  }
+
+  try {
+    const response = await axios.post(
+      `https://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}`,
+      {
+        client_id,
+        events,
+      }
+    );
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("Tracking error:", error.response?.data || error.message);
+    res.status(500).json({ error: "Tracking failed" });
+  }
+});
+
 // Catch-all route to serve index.html for React Router
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "public_html", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // Start Server

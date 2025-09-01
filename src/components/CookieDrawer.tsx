@@ -3,16 +3,8 @@ import { useLocation } from "react-router-dom";
 import "../styles/CookieDrawer.css";
 import { loadTrackingScripts } from "../utils/loadTrackingScripts.js";
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
 const COOKIE_CONSENT_KEY = "cookieConsentStatus";
 const ENABLE_COOKIE_PERSISTENCE = true;
-
-const GA_ID = process.env.REACT_APP_GA_ID;
-const PIXEL_ID = process.env.REACT_APP_PIXEL_ID;
 
 const CookieDrawer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,15 +12,10 @@ const CookieDrawer: React.FC = () => {
   const location = useLocation();
 
   // Track route changes only if consent is accepted
-
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (consent === "true" && window.gtag) {
-      window.gtag("event", "page_view", {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: location.pathname,
-      });
+    if (consent === "true") {
+      loadTrackingScripts(); // Sends page_view to /track
     }
   }, [location]);
 
@@ -39,7 +26,7 @@ const CookieDrawer: React.FC = () => {
     if (storedValue !== null) {
       setIsDismissed(true);
       if (storedValue === "true") {
-        loadTrackingScripts({ gaId: GA_ID, pixelId: PIXEL_ID });
+        loadTrackingScripts(); // Sends initial page_view to /track
       }
       return;
     }
@@ -63,16 +50,7 @@ const CookieDrawer: React.FC = () => {
       localStorage.setItem(COOKIE_CONSENT_KEY, "true");
     }
     setIsDismissed(true);
-    loadTrackingScripts({ gaId: GA_ID, pixelId: PIXEL_ID });
-
-    // Send initial pageview manually
-    if (window.gtag) {
-      window.gtag("event", "page_view", {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: location.pathname,
-      });
-    }
+    loadTrackingScripts(); // Sends initial page_view to /track
   };
 
   if (isDismissed) return null;

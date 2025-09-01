@@ -37,9 +37,9 @@ app.get("/api/rooms", async (req, res) => {
   }
 });
 
-// Catch-all route to serve React app
+// Catch-all route to serve index.html for React Router
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "public_html", "index.html"));
 });
 
 // Start Server

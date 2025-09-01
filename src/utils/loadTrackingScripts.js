@@ -1,54 +1,62 @@
-export const loadTrackingScripts = async () => {
+export const loadTrackingScripts = (options = {}) => {
+  const { gaId = "G-Y6VTFMY2QP", pixelId = "123456789012345" } = options;
+
   if (typeof window === "undefined") return;
   if (window.__trackingLoaded) return;
   window.__trackingLoaded = true;
 
-  const clientId = getGAClientId();
-  if (!clientId) {
-    console.warn("❌ No GA client ID found");
-    return;
+  // ---- Google Analytics 4 ----
+  const loadGA = () => {
+    const gaScript = document.createElement("script");
+    gaScript.id = "ga4-lib";
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
+      gaId
+    )}`;
+    gaScript.onload = () => {
+      console.log("✅ GA script loaded:", gaId);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", gaId, { anonymize_ip: true });
+      console.log("✅ GA tracking initialized");
+    };
+    document.head.appendChild(gaScript);
+  };
+
+  if (!document.getElementById("ga4-lib")) {
+    loadGA();
   }
 
-  try {
-    await fetch("https://classichotel.onrender.com/track", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        client_id: clientId,
-        events: [
-          {
-            name: "page_view",
-            params: {
-              page_title: document.title,
-              page_location: window.location.href,
-              page_path: window.location.pathname,
-            },
-          },
-          {
-            name: "meta_page_view",
-            params: {
-              pixel_id: process.env.REACT_APP_PIXEL_ID,
-              page_path: window.location.pathname,
-            },
-          },
-        ],
-        token: process.env.REACT_APP_TRACKING_SECRET, // Must match TRACKING_TOKEN in .env
-      }),
-    });
-    console.log("✅ Page view tracked via proxy (GA + Meta)");
-  } catch (err) {
-    console.error("❌ Tracking failed:", err);
+  // ---- Meta Pixel ----
+  const loadPixel = () => {
+    if (window.fbq) return;
+    (function (f, b, e, v, n, t, s) {
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = true;
+      t.src = "https://connect.facebook.net/en_US/fbevents.js";
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(window, document, "script");
+
+    window.fbq("init", pixelId);
+    window.fbq("track", "PageView");
+    console.log("✅ Meta Pixel initialized:", pixelId);
+  };
+
+  if (pixelId && pixelId !== "YOUR_PIXEL_ID") {
+    loadPixel();
   }
-};
-
-// Helper to extract GA client ID from cookie
-const getGAClientId = () => {
-  const cookie = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("_ga="));
-  if (!cookie) return null;
-
-  const value = cookie.split("=")[1];
-  const parts = value.split(".");
-  return parts.length >= 4 ? `${parts[2]}.${parts[3]}` : null;
 };

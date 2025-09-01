@@ -1,5 +1,5 @@
 export const loadTrackingScripts = (options = {}) => {
-  const { gaId = "G-Y6VTFMY2QP", pixelId = "123456789012345" } = options;
+  const { gaId = "G-5QKPWH74B2", pixelId = "123456789012345" } = options;
 
   if (typeof window === "undefined") return;
   if (window.__trackingLoaded) return;

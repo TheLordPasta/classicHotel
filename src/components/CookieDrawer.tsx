@@ -3,6 +3,12 @@ import { useLocation } from "react-router-dom";
 import "../styles/CookieDrawer.css";
 import { loadTrackingScripts } from "../utils/loadTrackingScripts.js";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 const COOKIE_CONSENT_KEY = "cookieConsentStatus";
 const ENABLE_COOKIE_PERSISTENCE = true;
 
@@ -14,8 +20,12 @@ const CookieDrawer: React.FC = () => {
   // Track route changes only if consent is accepted
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (consent === "true") {
-      loadTrackingScripts(); // Sends page_view to /track
+    if (consent === "true" && window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname,
+      });
     }
   }, [location]);
 
@@ -26,7 +36,7 @@ const CookieDrawer: React.FC = () => {
     if (storedValue !== null) {
       setIsDismissed(true);
       if (storedValue === "true") {
-        loadTrackingScripts(); // Sends initial page_view to /track
+        loadTrackingScripts(); // Loads GA + Pixel scripts
       }
       return;
     }
@@ -50,7 +60,16 @@ const CookieDrawer: React.FC = () => {
       localStorage.setItem(COOKIE_CONSENT_KEY, "true");
     }
     setIsDismissed(true);
-    loadTrackingScripts(); // Sends initial page_view to /track
+    loadTrackingScripts(); // Loads GA + Pixel scripts
+
+    // Send initial pageview manually
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname,
+      });
+    }
   };
 
   if (isDismissed) return null;

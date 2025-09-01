@@ -32,7 +32,7 @@ export const loadTrackingScripts = async () => {
             },
           },
         ],
-        token: "your_custom_token", // Must match TRACKING_TOKEN in .env
+        token: process.env.REACT_APP_TRACKING_SECRET, // Must match TRACKING_TOKEN in .env
       }),
     });
     console.log("✅ Page view tracked via proxy (GA + Meta)");

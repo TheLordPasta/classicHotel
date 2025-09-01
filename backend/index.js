@@ -25,7 +25,6 @@ mongoose
 
 // Serve static files from React build
 const __dirname = path.resolve(); // Needed for ES modules
-app.use(express.static(path.join(__dirname, "client", "build")));
 
 // API Routes
 app.get("/api/rooms", async (req, res) => {
@@ -60,11 +59,6 @@ app.post("/track", async (req, res) => {
     console.error("Tracking error:", error.response?.data || error.message);
     res.status(500).json({ error: "Tracking failed" });
   }
-});
-
-// Catch-all route to serve index.html for React Router
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // Start Server

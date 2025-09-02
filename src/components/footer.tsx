@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/footer.css";
-import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faInstagram,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
     <footer className="footer-container">
-      <h1 className="hotel-name">Your Hotel Name</h1>
+      <h1 className="hotel-name">The Tailor Hotel</h1>
       <div className="footer-content">
         <div className="footer-section left">
           <p>Contact Us</p>
@@ -23,6 +27,12 @@ export default function Footer() {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 color="#1877F2"
+              ></FontAwesomeIcon>
+            </span>
+            <span className="social-icon">
+              <FontAwesomeIcon
+                icon={faFacebook}
+                color="#2f25f1ff"
               ></FontAwesomeIcon>
             </span>
           </div>
@@ -49,7 +59,6 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>🔒 Secured Website</p>
-        <p>-sponser company- | -sponser slogen-</p>
       </div>
     </footer>
   );

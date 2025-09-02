@@ -76,6 +76,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .footer-container {
+    width: 768px;
+  }
   .footer-content {
     flex-direction: column;
   }

@@ -47,11 +47,10 @@ const MobileNavbar = () => {
         <button className="navbar-btn" onClick={() => navigate("/rooms")}>
           Rooms
         </button>
-        <button className="navbar-btn">Button2</button>
-        <button className="navbar-btn">Button3</button>
-        <button className="navbar-btn">My Bookings</button>
-        <button className="navbar-btn">Log In</button>
-        <button className="navbar-btn">Sign Up</button>
+
+        <button className="navbar-btn">About</button>
+        <button className="navbar-btn">Attractions</button>
+        <button className="navbar-btn">Contact Us</button>
         <button className="navbar-btn book-now">Book Now</button>
       </div>
     </div>

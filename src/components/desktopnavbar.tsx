@@ -38,19 +38,13 @@ const DesktopNavbar = () => {
           Rooms
         </button>
         <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          Button2
+          About
         </button>
         <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          Button3
+          Attractions
         </button>
         <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          My Bookings
-        </button>
-        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          Log In
-        </button>
-        <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          Sign Up
+          Contact Us
         </button>
         <button className="navbar-btn book-now">Book Now</button>
       </div>

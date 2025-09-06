@@ -13,26 +13,32 @@ export default function Footer() {
         <div className="footer-section left">
           <p>Contact Us</p>
           <p className="contact-info">📞 +123-456-7890</p>
+          <p>
+            ✉️&nbsp;
+            <a className="contact-info" href="mailto:hello@tailorhotel.com">
+              hello@thetailortlv.com
+            </a>{" "}
+          </p>
 
-          <p className="contact-info">✉️ info@yourhotel.com</p>
           <div className="social-icons">
             <p>Follow Us</p>
             <span className="social-icon">
               <FontAwesomeIcon
                 icon={faInstagram}
-                color="#d325caff"
+                color="#C13584"
+                href=""
               ></FontAwesomeIcon>
             </span>
             <span className="social-icon">
               <FontAwesomeIcon
                 icon={faLinkedin}
-                color="#1877F2"
+                color="#0077B5"
               ></FontAwesomeIcon>
             </span>
             <span className="social-icon">
               <FontAwesomeIcon
                 icon={faFacebook}
-                color="#2f25f1ff"
+                color="#1877F2"
               ></FontAwesomeIcon>
             </span>
           </div>

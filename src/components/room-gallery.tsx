@@ -23,7 +23,6 @@ const RoomGallery: React.FC = () => {
           ? "http://localhost:5000"
           : "https://classichotel.onrender.com";
         const response = await fetch(`${apiUrl}/api/rooms`);
-        console.log("Fetching from:", `${apiUrl}/api/rooms`);
         if (!response.ok) {
           throw new Error(`Failed to fetch rooms: ${response.status}`);
         }

@@ -1,31 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/CookieDrawer.css";
-import { loadTrackingScripts } from "../utils/loadTrackingScripts.js";
-
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
+import {
+  loadTrackingScripts,
+  sendPageView,
+} from "../utils/loadTrackingScripts";
 
 const COOKIE_CONSENT_KEY = "cookieConsentStatus";
 const ENABLE_COOKIE_PERSISTENCE = true;
 
-const CookieDrawer: React.FC = () => {
+const CookieDrawer = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const location = useLocation();
+  const firstRender = useRef(true);
 
-  // Track route changes only if consent is accepted
+  // Track route changes only if consent is accepted, skip first render
   useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (consent === "true" && window.gtag) {
-      window.gtag("event", "page_view", {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: location.pathname,
-      });
+    if (consent === "true") {
+      sendPageView(location.pathname);
     }
   }, [location]);
 
@@ -36,7 +34,7 @@ const CookieDrawer: React.FC = () => {
     if (storedValue !== null) {
       setIsDismissed(true);
       if (storedValue === "true") {
-        loadTrackingScripts(); // Loads GA + Pixel scripts
+        loadTrackingScripts();
       }
       return;
     }
@@ -60,16 +58,7 @@ const CookieDrawer: React.FC = () => {
       localStorage.setItem(COOKIE_CONSENT_KEY, "true");
     }
     setIsDismissed(true);
-    loadTrackingScripts(); // Loads GA + Pixel scripts
-
-    // Send initial pageview manually
-    if (window.gtag) {
-      window.gtag("event", "page_view", {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: location.pathname,
-      });
-    }
+    loadTrackingScripts();
   };
 
   if (isDismissed) return null;

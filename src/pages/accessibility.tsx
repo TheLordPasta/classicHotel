@@ -21,7 +21,7 @@ const accessibilitySections = [
       <p>
         Our website is designed to meet WCAG 2.1 AA standards. If you encounter
         any accessibility issues, please contact us at{" "}
-        <a href="mailto:access@tailorhotel.com">access@tailorhotel.com</a>.
+        <a href="mailto:hello@tailorhotel.com">hello@tailorhotel.com</a>.
       </p>
     ),
   },

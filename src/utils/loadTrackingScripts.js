@@ -22,6 +22,7 @@ export const loadTrackingScripts = (options = {}) => {
       window.gtag("js", new Date());
       window.gtag("config", gaId, { anonymize_ip: true });
       console.log("✅ GA tracking initialized");
+      sendPageView(); // first pageview
     };
     document.head.appendChild(gaScript);
   };
@@ -58,5 +59,16 @@ export const loadTrackingScripts = (options = {}) => {
 
   if (pixelId && pixelId !== "YOUR_PIXEL_ID") {
     loadPixel();
+  }
+};
+
+export const sendPageView = (path) => {
+  if (window.gtag) {
+    window.gtag("event", "page_view", {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: path || window.location.pathname,
+    });
+    console.log("📄 Page view sent:", path || window.location.pathname);
   }
 };

@@ -1,10 +1,15 @@
 .welcome-section {
   text-align: center;
   background-color: var(--primary-color);
+  /*background-image: url("../resources/images/cabin.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;  for texture*/
+
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
   border-radius: 0px;
-  width: 100%;
-  max-width: 1380px;
+  width: 90%;
+  max-width: 1800px;
   margin: 40px auto;
   transition: transform 0.2s ease-in-out;
   padding: 30px;

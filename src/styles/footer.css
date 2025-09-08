@@ -5,6 +5,15 @@
   font-family: var(--raleway);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
 }
+.footer-container[dir="rtl"] {
+  text-align: right;
+}
+
+.footer-container[dir="rtl"] .hotel-name {
+  margin-right: 20%;
+  margin-left: 0;
+}
+
 .hotel-name {
   margin-left: 20%;
 }
@@ -79,6 +88,25 @@ a:hover {
   .footer-container {
     width: 100%; /* Fit the screen width */
     max-width: 100vw; /* Never exceed viewport width */
+  }
+  .footer-container[dir="rtl"] {
+    text-align: right;
+  }
+
+  .footer-container[dir="rtl"] .hotel-name {
+    margin-right: 20%;
+    margin-left: 0;
+  }
+
+  .footer-container[dir="rtl"] .footer-content {
+    margin-right: 5%;
+    flex-direction: column-reverse;
+    text-align: right;
+  }
+  .footer-container[dir="rtl"] .footer-bottom {
+    margin-right: 5%;
+    flex-direction: column-reverse;
+    text-align: right;
   }
 
   .footer-content {

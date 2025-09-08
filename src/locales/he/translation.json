@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "roomsButton": "חדרים",
+    "aboutButton": "אודות",
+    "attractionsButton": "אטרקציות",
+    "contactUsButton": "צרו קשר",
+    "bookNowButton": "הזמינו עכשיו"
+  },
+  "hotelWelcome": {
+    "welcomeTitle": "דה טיילור  מלון בוטיק בלב תל אביב",
+    "welcomeText": "ברוכים הבאים למלון דה טיילור הממוקם ברחוב נחלת בנימין – אחד הרחובות התוססים והאייקוניים של תל אביב, המזוהה עם עבר עשיר של טקסטיל, יצירה ואומנות בעבודת יד. המלון מציע חוויית אירוח עכשווית, מעוצבת ופונקציונלית, שתפורה בקפידה למידותיהם של אורחים מהארץ ומחו\"ל. כמו <0>חייט</0> המעניק תשומת לב לכל פרט ויוצר לכל אחד חליפה ייחודית, כך גם המלון שואב השראה מהרוח המקומית ומציע חוויה מדויקת, אישית ומלאת סטייל."
+  },
+  "homeShortAbout": {
+    "shortAboutTitle": "כותרת אודות קצר",
+    "shortAboutText": "short about text"
+  },
+  "homeRooms": {
+    "roomsTitle": "חדרים & סוויטות",
+    "roomsText": "rooms text placeholder"
+  },
+  "homeSeeMore": {
+    "seeMoreTitle": "עוד במלון",
+    "wineBarTitle": "בר יין",
+    "wineBarText": "בר היין של דה טיילור מזמין אתכם לעצור לרגע, ללגום יין איכותי, ליהנות מתפריט קליל וטעים – והכול באווירה אלגנטית אך נינוחה.",
+    "roofTopTitle": "ROOFTOP",
+    "roofTopText": "המקום המושלם להירגע, לתפוס רגע של שקט תחת השמש ולצפות בנופים המרהיבים של קו הרקיע של העיר והים התיכון.",
+    "breakfastTitle": "ארוחת בוקר",
+    "breakfastText": "ארוחת הבוקר שלנו מוגשת בסגנון אה-לה-קארט",
+    "breakfastHoursTitle": "שעות הגשה: ",
+    "breakfastHoursText": "ימים א’-ו’  07:30–10:30",
+    "breakfastHoursShabatText": "שבת  08:00–11:00"
+  },
+  "footer": {
+    "footerTitle": "מלון דה טיילור",
+    "footerSectionLeftContactUsText": "צרו קשר",
+    "footerSectionLeftFollowUsText": "עקבו אחרינו",
+    "footerSectionMiddleAttractionText": "אטרקציות",
+    "footerSectionMiddleMediaText": "מדיה",
+    "footerSectionMiddleSitemapText": "מפת האתר",
+    "footerSectionMiddleTermsAndConditionsText": "תקנון האתר",
+    "footerSectionRightWifiText": "וויפי חינם במלון",
+    "footerSectionRightAccessibilityText": "הצהרת נגישות",
+    "footerSectionRightPrivacyPolicyText": "מדיניות פרטיות",
+    "footerSecuredWebsiteText": "האתר מאובטח"
+  },
+  "accessibilityWidget": {
+    "accessibilityWidgetTitle": "כלי נגישות",
+    "increaseText": "הגדלת גופן",
+    "decreaseText": "הקטנת גופן",
+    "grayScale": "מונוכרום",
+    "highContrast": "נגודיות גבוהה",
+    "negativeContrast": "היפוך צבעים",
+    "lightBackground": "רקע בהיר",
+    "linkUnderline": "הדגשת קישורים",
+    "readableFont": "גופן קריא",
+    "resetAll": "איפוס"
+  }
+}

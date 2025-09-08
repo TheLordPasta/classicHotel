@@ -1,5 +1,5 @@
 import React from "react";
-import RoomGallery from "../components/room-gallery";
+//import RoomGallery from "../components/room-gallery";
 import FullWidthVideo from "../components/fullwidthvideo";
 import HotelWelcome from "../components/hotelwelcome";
 import SEO from "../components/seo"; // 👈 Import your SEO component

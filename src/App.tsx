@@ -4,8 +4,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import "./i18n";
 import Navbar from "./components/navbar";
-import Header from "./components/header";
 import Home from "./pages/home";
 import Footer from "./components/footer";
 import NotFound from "./pages/notfound";
@@ -23,7 +23,6 @@ function App() {
   return (
     <Router>
       <div id="app-root">
-        <Header />
         <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to="/maintenance" replace />} />

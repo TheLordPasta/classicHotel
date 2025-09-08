@@ -4,6 +4,12 @@
   z-index: 1000; /* Ensure it's above other elements */
   width: 100%;
 }
+.navbar-divider {
+  width: 1px;
+  background-color: var(--text-color);
+  margin-right: 150px;
+  height: 50px;
+}
 
 .navbar-container {
   background-color: transparent;
@@ -24,6 +30,7 @@
   background-color: var(--primary-color);
   display: block;
   align-items: center;
+  display: flex;
   padding: 10px 20px;
 }
 .navbar-logo {
@@ -83,6 +90,10 @@
 @media (max-width: 768px) {
   .desktop-navbar {
     display: none;
+  }
+  .navbar-divider {
+    margin-right: 100px;
+    height: 40px;
   }
 
   .mobile-navbar {

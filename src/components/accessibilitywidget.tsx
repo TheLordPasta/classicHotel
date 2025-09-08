@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../styles/accessibilitywidget.css";
+import { useTranslation } from "react-i18next";
 
 const AccessibilityWidget: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState({
     fontScale: 1,
@@ -53,11 +55,11 @@ const AccessibilityWidget: React.FC = () => {
       </button>
 
       <div className={`accessibility-drawer ${isOpen ? "open" : ""}`}>
-        <h2>Accessibility Tools</h2>
+        <h2>{t("accessibilityWidget.accessibilityWidgetTitle")}</h2>
         <ul>
           <li>
             <button onClick={() => applyFontScale(settings.fontScale + 0.1)}>
-              Increase Text
+              {t("accessibilityWidget.increaseText")}
             </button>
           </li>
           <li>
@@ -66,19 +68,19 @@ const AccessibilityWidget: React.FC = () => {
                 applyFontScale(Math.max(0.8, settings.fontScale - 0.1))
               }
             >
-              Decrease Text
+              {t("accessibilityWidget.decreaseText")}
             </button>
           </li>
           <li>
             <button onClick={() => toggleClass("grayscale", "grayscale-mode")}>
-              Grayscale
+              {t("accessibilityWidget.grayScale")}
             </button>
           </li>
           <li>
             <button
               onClick={() => toggleClass("highContrast", "high-contrast-mode")}
             >
-              High Contrast
+              {t("accessibilityWidget.highContrast")}
             </button>
           </li>
           <li>
@@ -87,14 +89,14 @@ const AccessibilityWidget: React.FC = () => {
                 toggleClass("negativeContrast", "negative-contrast-mode")
               }
             >
-              Negative Contrast
+              {t("accessibilityWidget.negativeContrast")}
             </button>
           </li>
           <li>
             <button
               onClick={() => toggleClass("lightBackground", "light-bg-mode")}
             >
-              Light Background
+              {t("accessibilityWidget.lightBackground")}
             </button>
           </li>
           <li>
@@ -103,19 +105,19 @@ const AccessibilityWidget: React.FC = () => {
                 toggleClass("underlineLinks", "underline-links-mode")
               }
             >
-              Links Underline
+              {t("accessibilityWidget.linkUnderline")}
             </button>
           </li>
           <li>
             <button
               onClick={() => toggleClass("readableFont", "readable-font-mode")}
             >
-              Readable Font
+              {t("accessibilityWidget.readableFont")}
             </button>
           </li>
           <li>
             <button className="reset" onClick={resetAll}>
-              Reset All
+              {t("accessibilityWidget.resetAll")}
             </button>
           </li>
         </ul>

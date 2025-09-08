@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 import "../styles/theme.css";
 import "../styles/navbar.css";
 import Logo from "../resources/logo-white.png";
+import Header from "./header";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const DesktopNavbar = () => {
+const DesktopNavbar: React.FC = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,6 +23,8 @@ const DesktopNavbar = () => {
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-logo-container">
+        <Header />
+        <div className="navbar-divider"></div>
         <div className="navbar-logo">
           <img
             src={Logo}
@@ -35,18 +40,20 @@ const DesktopNavbar = () => {
           className={`navbar-btn ${scrolled ? "scrolled" : ""}`}
           onClick={() => navigate("/rooms")}
         >
-          Rooms
+          {t("navbar.roomsButton")}
         </button>
         <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          About
+          {t("navbar.aboutButton")}
         </button>
         <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          Attractions
+          {t("navbar.attractionsButton")}
         </button>
         <button className={`navbar-btn ${scrolled ? "scrolled" : ""}`}>
-          Contact Us
+          {t("navbar.contactUsButton")}
         </button>
-        <button className="navbar-btn book-now">Book Now</button>
+        <button className="navbar-btn book-now">
+          {t("navbar.bookNowButton")}
+        </button>
       </div>
     </div>
   );

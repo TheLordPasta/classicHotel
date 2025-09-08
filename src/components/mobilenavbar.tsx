@@ -5,8 +5,11 @@ import "../styles/theme.css";
 import "../styles/navbar.css";
 import Logo from "../resources/logo-white.png";
 import { useNavigate } from "react-router-dom";
+import Header from "./header";
+import { useTranslation } from "react-i18next";
 
-const MobileNavbar = () => {
+const MobileNavbar: React.FC = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [opened, setOpened] = useState(false);
 
@@ -32,6 +35,8 @@ const MobileNavbar = () => {
   return (
     <div className="navbar-container">
       <div className="nav-logo-container">
+        <Header />
+        <div className="navbar-divider"></div>
         <div className="navbar-logo">
           <img
             src={Logo}
@@ -45,13 +50,15 @@ const MobileNavbar = () => {
       {/* Always render this div, just toggle the 'open' class */}
       <div className={`navbar-buttons ${opened ? "open" : ""}`}>
         <button className="navbar-btn" onClick={() => navigate("/rooms")}>
-          Rooms
+          {t("navbar.roomsButton")}
         </button>
 
-        <button className="navbar-btn">About</button>
-        <button className="navbar-btn">Attractions</button>
-        <button className="navbar-btn">Contact Us</button>
-        <button className="navbar-btn book-now">Book Now</button>
+        <button className="navbar-btn">{t("navbar.aboutButton")}</button>
+        <button className="navbar-btn">{t("navbar.attractionsButton")}</button>
+        <button className="navbar-btn">{t("navbar.contactUsButton")}</button>
+        <button className="navbar-btn book-now">
+          {t("navbar.bookNowButton")}
+        </button>
       </div>
     </div>
   );

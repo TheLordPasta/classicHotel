@@ -1,54 +1,29 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/page-section.css";
 
-const termsSections = [
-  {
-    title: "Reservations & Payments",
-    content: (
-      <ul>
-        <li>All reservations are subject to availability and confirmation.</li>
-        <li>
-          Payment must be completed prior to check-in unless otherwise agreed.
-        </li>
-        <li>Cancellation policies vary by rate and season.</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Guest Responsibilities",
-    content: (
-      <ul>
-        <li>Guests must comply with hotel rules and respect other guests.</li>
-        <li>Damage to property may result in additional charges.</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Privacy & Data",
-    content: (
-      <p>
-        We respect your privacy. Personal data collected during booking is
-        handled in accordance with our privacy policy.
-      </p>
-    ),
-  },
-];
-
 const TermsAndConditions = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "he";
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleSection = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const termsSections = t("termsPage.sections", { returnObjects: true }) as {
+    title: string;
+    items?: string[];
+    paragraph?: string;
+  }[];
+
   return (
-    <section className="page-section">
-      <h1>Terms & Conditions</h1>
-      <p>
-        These Terms & Conditions govern your use of Tailor Hotel’s website and
-        services. By accessing or booking with us, you agree to the following
-        terms:
-      </p>
+    <section
+      className={`page-section ${isRTL ? "rtl" : ""}`}
+      dir={isRTL ? "rtl" : "ltr"}
+    >
+      <h1>{t("termsPage.pageTitle")}</h1>
+      <p>{t("termsPage.introText")}</p>
 
       <ul className="accordion-list">
         {termsSections.map((section, index) => {
@@ -64,7 +39,16 @@ const TermsAndConditions = () => {
                 {section.title}
               </button>
               {isActive && (
-                <div className="accordion-content">{section.content}</div>
+                <div className="accordion-content">
+                  {section.items && (
+                    <ul>
+                      {section.items.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {section.paragraph && <p>{section.paragraph}</p>}
+                </div>
               )}
             </li>
           );

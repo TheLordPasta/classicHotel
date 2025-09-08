@@ -54,5 +54,139 @@
     "linkUnderline": "Link Underline",
     "readableFont": "Readable Font",
     "resetAll": "Reset All"
+  },
+  "accessibilityPage": {
+    "pageTitle": "Accessibility at Tailor Hotel",
+    "introText": "Tailor Hotel is committed to providing respectful, inclusive, and accessible service to all guests. In accordance with the Equal Rights for People with Disabilities Law (1998), we continuously invest in making our facilities and services accessible.",
+    "buildingFeatures": [
+      "Designated handicapped parking spaces near the entrance",
+      "Accessible reception desk and service counters",
+      "Wheelchair-accessible restrooms in the lobby",
+      "Clear signage for navigation and identification",
+      "Service animals are welcome throughout the property",
+      "Staff assistance available for form completion and guidance"
+    ],
+    "sections": {
+      "buildingTitle": "Building Accessibility",
+      "websiteTitle": "Website Accessibility"
+    },
+    "features": {
+      "keyboardNavigationTitle": "Keyboard Navigation",
+      "keyboardNavigationContent": "All menus, links, and form controls are reachable via Tab, Shift+Tab, Enter; plus a “Skip to Content” link at the top of each page.",
+      "semanticHtmlTitle": "Semantic HTML & ARIA",
+      "semanticHtmlContent": "Proper use of <nav>, <main>, <header>, landmarks, and aria-labels/roles to describe interactive components.",
+      "altTextTitle": "Alt Text & Media",
+      "altTextContent": "Meaningful alt attributes on images; captions for videos; transcripts for audio.",
+      "contrastTitle": "Color Contrast & Text Resize",
+      "contrastContent": "Contrast ratio ≥ 4.5:1; supports zoom up to 200% without loss of content.",
+      "responsiveTitle": "Responsive & Adaptive Layout",
+      "responsiveContent": "Flexible grid and breakpoints ensure readability on all screen sizes.",
+      "formLabelsTitle": "Form Labels & Error Handling",
+      "formLabelsContent": "Each input has an associated <label>; errors announced via aria-live regions with clear fix instructions."
+    },
+    "contactText": "If you experience any barrier or issue, please email us at",
+    "contactEmail": "hello@tailorhotel.com",
+    "contactFollowUp": "— we’ll do our best to help or provide you an alternative format."
+  },
+  "termsPage": {
+    "pageTitle": "Terms & Conditions",
+    "introText": "These Terms & Conditions govern your use of Tailor Hotel’s website and services. By accessing or booking with us, you agree to the following terms:",
+    "sections": [
+      {
+        "title": "Reservations & Payments",
+        "items": [
+          "All reservations are subject to availability and confirmation.",
+          "Payment must be completed prior to check-in unless otherwise agreed.",
+          "Cancellation policies vary by rate and season."
+        ]
+      },
+      {
+        "title": "Guest Responsibilities",
+        "items": [
+          "Guests must comply with hotel rules and respect other guests.",
+          "Damage to property may result in additional charges."
+        ]
+      },
+      {
+        "title": "Privacy & Data",
+        "paragraph": "We respect your privacy. Personal data collected during booking is handled in accordance with our privacy policy."
+      }
+    ]
+  },
+  "privacyPage": {
+    "pageTitle": "Privacy Policy",
+    "introText": "This Privacy Policy explains how we collect, use, and protect your personal data when you visit our website. By using our site, you agree to the practices described below, in accordance with GDPR and CCPA regulations.",
+    "sections": [
+      {
+        "title": "Data Collection",
+        "items": [
+          "We collect non-personal data such as browser type, device info, and pages visited to improve site performance.",
+          "Personal data (e.g., name, email) is only collected when you voluntarily submit it via forms or account registration.",
+          "We do not collect sensitive personal data unless explicitly required and consented to."
+        ]
+      },
+      {
+        "title": "Legal Basis for Processing",
+        "items": [
+          "We process personal data based on your consent, contractual necessity, legal obligations, or legitimate interests.",
+          "You may withdraw your consent at any time without affecting the lawfulness of prior processing."
+        ]
+      },
+      {
+        "title": "Cookies & Tracking",
+        "items": [
+          "We use cookies to remember preferences, analyze traffic, and improve user experience.",
+          "Google Analytics tracks usage patterns anonymously.",
+          "Meta Pixel helps us measure ad performance and retarget visitors.",
+          "Tracking scripts are only activated after you accept cookies via our cookie drawer."
+        ]
+      },
+      {
+        "title": "Third-Party Services",
+        "items": [
+          "We use Google and Meta platforms for analytics and advertising insights.",
+          "These services may store cookies or use similar technologies on your device.",
+          "We do not sell personal data. We only share data when legally required or with your explicit consent."
+        ]
+      },
+      {
+        "title": "International Data Transfers",
+        "items": [
+          "Your data may be transferred to and processed in countries outside your jurisdiction.",
+          "We implement appropriate safeguards to ensure your data is protected in accordance with applicable laws."
+        ]
+      },
+      {
+        "title": "Data Retention",
+        "items": [
+          "We retain personal data only as long as necessary for the purposes described or as required by law.",
+          "Retention periods vary depending on the nature of the data and legal obligations."
+        ]
+      },
+      {
+        "title": "Your Rights",
+        "items": [
+          "You have the right to access, correct, delete, or restrict your personal data.",
+          "You may request data portability or object to certain types of processing.",
+          "California residents may opt out of the sale of personal information.",
+          "To exercise these rights, contact us at: <strong>privacy@yourdomain.com</strong>"
+        ]
+      },
+      {
+        "title": "User Control",
+        "items": [
+          "You can accept or decline cookies via the cookie drawer on our site.",
+          "Declining cookies disables tracking scripts and analytics tools.",
+          "You may request deletion of any personal data you’ve submitted via contact forms."
+        ]
+      },
+      {
+        "title": "Policy Updates",
+        "items": [
+          "We may update this Privacy Policy periodically. Changes will be posted on this page with a revised date.",
+          "We encourage you to review this policy regularly to stay informed."
+        ]
+      }
+    ]
   }
 }

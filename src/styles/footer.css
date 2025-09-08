@@ -4,6 +4,7 @@
   padding: 40px 20px;
   font-family: var(--raleway);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
 }
 .footer-container[dir="rtl"] {
   text-align: right;
@@ -94,17 +95,15 @@ a:hover {
   }
 
   .footer-container[dir="rtl"] .hotel-name {
-    margin-right: 20%;
+    margin-right: 0;
     margin-left: 0;
   }
 
   .footer-container[dir="rtl"] .footer-content {
-    margin-right: 5%;
     flex-direction: column-reverse;
     text-align: right;
   }
   .footer-container[dir="rtl"] .footer-bottom {
-    margin-right: 5%;
     flex-direction: column-reverse;
     text-align: right;
   }

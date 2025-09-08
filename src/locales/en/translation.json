@@ -188,5 +188,14 @@
         ]
       }
     ]
+  },
+  "notFoundPage": {
+    "notFoundTitle": "404 - Page Not Found",
+    "notFoundText": "The page you are looking for doesn't exist.",
+    "goBackLinkText": "Go Back to Home Page"
+  },
+  "maintenancePage": {
+    "maintenanceTitle": "🚧 Site Under Maintenance",
+    "maintenanceText": "We're working hard to bring you something amazing. Please check back soon!"
   }
 }

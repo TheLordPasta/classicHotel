@@ -42,6 +42,10 @@
 .navbar-logo img {
   max-width: 150px; /* Adjust the size of the logo */
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-logo img:hover {
+  transform: translateY(-5px);
 }
 
 .navbar-buttons {
@@ -105,11 +109,19 @@
     cursor: pointer;
     margin-left: 2%;
     margin-top: 2%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hamburger-menu:hover {
+    transform: translateY(-5px);
   }
   .close-menu {
     cursor: pointer;
     margin-left: 2%;
     margin-top: 2%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .close-menu:hover {
+    transform: translateY(-5px);
   }
   .navbar-container {
     position: fixed; /* Fixed to viewport */

@@ -1,13 +1,12 @@
 import "../styles/maintenance.css";
+import { useTranslation } from "react-i18next";
 
 function MaintenancePage() {
+  const { t } = useTranslation();
   return (
     <div className="container">
-      <h1>🚧 Site Under Maintenance</h1>
-      <p>
-        We're working hard to bring you something amazing. Please check back
-        soon!
-      </p>
+      <h1>{t("maintenancePage.maintenanceTitle")}</h1>
+      <p>{t("maintenancePage.maintenanceText")}</p>
     </div>
   );
 }

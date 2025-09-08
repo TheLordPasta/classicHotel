@@ -1,14 +1,18 @@
 .container {
   text-align: center;
-  display: inline-block;
-  padding: 100px;
-  margin: 15%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
-  border-radius: 12px;
   background-color: var(--primary-color);
-  color: var(--text-color);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  /*background-image: url("../resources/images/cabin.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;  for texture*/
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 0px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 200px auto;
+  transition: transform 0.2s ease-in-out;
+  padding: 30px;
 }
 .container:hover {
   transform: translateY(-5px);

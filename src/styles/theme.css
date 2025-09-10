@@ -21,7 +21,8 @@
   background-size: 50%;
   background-position: center;
   background-repeat: repeat;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 body {
   font-family: var(--polin), serif !important;

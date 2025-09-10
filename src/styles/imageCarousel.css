@@ -4,14 +4,7 @@
   margin: 60px auto;
   padding: 30px;
   background-color: var(--primary-color);
-
-  /*
-  background-image: url("../resources/images/brandpatternp1.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: repeat;*/
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
 }
 
 .carousel-row {

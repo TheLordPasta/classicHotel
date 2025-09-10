@@ -23,7 +23,7 @@ const MobileNavbar: React.FC = () => {
       className="hamburger-menu"
       icon={faBars}
       size="2x"
-      color="#c4a484"
+      color="var(--text-color)"
       onClick={() => setOpened(!opened)}
     />
   );
@@ -32,7 +32,7 @@ const MobileNavbar: React.FC = () => {
       className="close-menu"
       icon={faRectangleXmark}
       size="2x"
-      color="#c4a484"
+      color="var(--text-color)"
       onClick={() => setOpened(!opened)}
     />
   );

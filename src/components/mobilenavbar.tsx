@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 import "../styles/theme.css";
@@ -7,12 +7,17 @@ import Logo from "../resources/logo-white.png";
 import { useNavigate } from "react-router-dom";
 import Header from "./header";
 import { useTranslation } from "react-i18next";
+import { subscribeLogo } from "../utils/logoManager"; // 👈
 
 const MobileNavbar: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [opened, setOpened] = useState(false);
+  const [logo, setLogoState] = useState<string>(Logo);
 
+  useEffect(() => {
+    subscribeLogo((newLogo) => setLogoState(newLogo));
+  });
   const Hamburger = (
     <FontAwesomeIcon
       className="hamburger-menu"
@@ -39,7 +44,7 @@ const MobileNavbar: React.FC = () => {
         <div className="navbar-divider"></div>
         <div className="navbar-logo">
           <img
-            src={Logo}
+            src={logo}
             alt="Hotel Logo"
             onClick={() => navigate("/homePage")}
           />

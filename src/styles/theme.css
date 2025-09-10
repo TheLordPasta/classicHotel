@@ -10,32 +10,40 @@
   --text-color: #ffffff; /* White (PANTONE White) */
   --secondary-text-color: #e3b09e; /* Soft Coral (PANTONE 693 C) */
   --highlight-color: #d1e7fe; /* Light Blue Accent (PANTONE 2717 C) */
+  --primary-background-image: url("../resources/images/brandpatternp3.png");
 
   /* Buttons & UI */
   --button-color: #e3b09e; /* Accent Orange-Pink */
   --button-hover-color: #f58266; /* Light Coral Hover */
 }
-
+.primary-container {
+  background-image: var(--primary-background-image);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: repeat;
+  padding: 30px;
+}
 body {
-  font-family: var(--polin), serif;
-  margin: 0;
-  background-color: var(--highlight-color);
+  font-family: var(--polin), serif !important;
+  margin: none;
+  background-color: var(--hotel-background) !important;
+
   color: var(--text-color);
 }
 h1 {
   font-family: var(--polin), serif;
-  font-weight: 200;
+  font-weight: 200 !important;
   color: var(--text-color);
 }
 h2 {
   font-family: var(--polin), serif;
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 p,
 button,
 a {
   font-family: var(--polin), serif;
-  font-weight: 200;
+  font-weight: 200 !important;
 }
 select {
   all: unset;

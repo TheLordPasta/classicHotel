@@ -55,7 +55,7 @@
 
 .navbar-btn {
   background-color: rgba(0, 0, 0, 0.5); /* Remove default background */
-  color: #ffffff;
+  color: var(--text-color);
   border: 2px solid transparent; /* No border until hover */
   padding: 10px 20px;
   cursor: pointer;

@@ -1,10 +1,56 @@
 import React, { useState } from "react";
 import "../styles/accessibilitywidget.css";
 import { useTranslation } from "react-i18next";
+import LigntbgPattern from "../resources/images/brandpatternp4.png";
+import DefaultbgPattern from "../resources/images/brandpatternp3.png";
+import { setLogo, WhiteLogo, BlackLogo } from "../utils/logoManager";
 
 const AccessibilityWidget: React.FC = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const defaultTheme = {
+    "--primary-color": "#245445",
+    "--accent-color": "#f58266",
+    "--hotel-background": "#f5d6ab",
+    "--dark-background": "#000000",
+    "--text-color": "#ffffff",
+    "--secondary-text-color": "#e3b09e",
+    "--highlight-color": "#d1e7fe",
+    "--button-color": "#e3b09e",
+    "--button-hover-color": "#f58266",
+    "--primary-background-image": `url(${DefaultbgPattern})`,
+  };
+
+  const lightTheme = {
+    "--primary-color": "#e3b09e",
+    "--accent-color": "#245445",
+    "--hotel-background": "#d1e7fe",
+    "--dark-background": "#000000",
+    "--text-color": "#000000",
+    "--secondary-text-color": "#333333",
+    "--highlight-color": "#245445",
+    "--button-color": "#d1e7fe",
+    "--button-hover-color": "#245445",
+    "--primary-logo-image": 'url("../resources/logo-black.png")',
+    "--primary-background-image": `url(${LigntbgPattern})`,
+  };
+  const applyTheme = (theme: Record<string, string>) => {
+    Object.entries(theme).forEach(([key, value]) => {
+      document.documentElement.style.setProperty(key, value);
+    });
+  };
+  const toggleLightBackground = () => {
+    const newValue = !settings.lightBackground;
+    if (newValue) {
+      applyTheme(lightTheme);
+      setLogo(BlackLogo);
+    } else {
+      applyTheme(defaultTheme);
+      setLogo(WhiteLogo);
+    }
+    setSettings((prev) => ({ ...prev, lightBackground: newValue }));
+  };
+
   const [settings, setSettings] = useState({
     fontScale: 1,
     grayscale: false,
@@ -43,6 +89,7 @@ const AccessibilityWidget: React.FC = () => {
       underlineLinks: false,
       readableFont: false,
     });
+    applyTheme(defaultTheme);
   };
 
   return (
@@ -93,9 +140,7 @@ const AccessibilityWidget: React.FC = () => {
             </button>
           </li>
           <li>
-            <button
-              onClick={() => toggleClass("lightBackground", "light-bg-mode")}
-            >
+            <button onClick={toggleLightBackground}>
               {t("accessibilityWidget.lightBackground")}
             </button>
           </li>

@@ -4,6 +4,9 @@ import FullWidthVideo from "../components/fullwidthvideo";
 import HotelWelcome from "../components/hotelwelcome";
 import SEO from "../components/seo"; // 👈 Import your SEO component
 import "../styles/theme.css";
+import HomeShortAbout from "../components/homeShortAbout";
+import HomeRooms from "../components/homeRooms";
+import ImageCarousel from "../components/imageCarousel";
 
 function Home() {
   return (
@@ -21,6 +24,9 @@ function Home() {
       />
       <FullWidthVideo />
       <HotelWelcome />
+      <HomeShortAbout />
+      <HomeRooms />
+      <ImageCarousel />
     </div>
   );
 }

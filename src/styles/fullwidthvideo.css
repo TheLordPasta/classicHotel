@@ -7,7 +7,6 @@
   left: 0;
   z-index: 0;
 }
-
 /* Hide video on screens 768px or smaller */
 @media (max-width: 768px) {
   .overlay-logo img {

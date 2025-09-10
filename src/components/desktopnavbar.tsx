@@ -5,17 +5,19 @@ import Logo from "../resources/logo-white.png";
 import Header from "./header";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { subscribeLogo } from "../utils/logoManager"; // 👈
 
 const DesktopNavbar: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const [logo, setLogoState] = useState<string>(Logo);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
+    subscribeLogo((newLogo) => setLogoState(newLogo));
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,7 +29,7 @@ const DesktopNavbar: React.FC = () => {
         <div className="navbar-divider"></div>
         <div className="navbar-logo">
           <img
-            src={Logo}
+            src={logo}
             alt="Hotel Logo"
             onClick={() => navigate("/homePage")}
           />

@@ -11,12 +11,14 @@
     "welcomeText": "Experience the charm and elegance of a <0>Tailored</0> visit. Indulge in luxury, comfort, and breathtaking views. Enjoy our exclusive offers and make unforgettable memories. Unwind in style — from plush suites to serene rooftop lounges, every space invites relaxation. Savor gourmet cuisine curated by world-class chefs, paired with fine wines and unforgettable ambiance. Rejuvenate your senses at our exclusive spa, where tranquility meets indulgence. Celebrate life’s moments with bespoke events, curated experiences, and personalized service that feels like home. Whether you're here for a romantic escape, a business retreat, or a weekend of discovery, The Tailor Hotel promises more than a stay — it offers a story worth telling."
   },
   "homeShortAbout": {
-    "shortAboutTitle": "short about placeholder",
+    "shortAboutTitle": "ABOUT US",
     "shortAboutText": "short about text"
   },
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
-    "roomsText": "rooms text placeholder"
+    "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, indulgent, and truly unforgettable stay.",
+    "roomsText2": "*Prices on booking websites do not include VAT.",
+    "roomsLinkText": "Explore Rooms →"
   },
   "homeSeeMore": {
     "seeMoreTitle": "SEE MORE",

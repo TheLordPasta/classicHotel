@@ -9,12 +9,12 @@
   cursor: pointer;
   font-size: 40px;
   list-style: none;
-  background-color: var(--primary-color);
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  background-color: color-mix(in srgb, var(--primary-color) 75%, transparent);
   border-radius: 8px;
+  transition: transform 0.3s ease;
 }
-.accessibility-toggle.open {
-  border-color: var(--button-color);
+.accessibility-toggle:hover {
+  transform: translateY(-5px);
 }
 
 .accessibility-drawer {

@@ -1,7 +1,6 @@
 .header-container {
   position: relative;
   display: flex; /* Changed from list-item to flex for proper layout */
-  background-color: var(--primary-color);
   padding: 10px auto;
   z-index: 0;
 }

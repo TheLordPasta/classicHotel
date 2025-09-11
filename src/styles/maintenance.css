@@ -1,4 +1,4 @@
-.container {
+.maintenance-container {
   text-align: center;
   background-color: var(--primary-color);
   /*background-image: url("../resources/images/cabin.jpg");
@@ -13,6 +13,9 @@
   margin: 200px auto;
   transition: transform 0.2s ease-in-out;
   padding: 30px;
+}
+.maintenance-container p {
+  color: var(--secondary-text-color);
 }
 .container:hover {
   transform: translateY(-5px);

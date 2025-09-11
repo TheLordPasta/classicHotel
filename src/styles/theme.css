@@ -6,7 +6,7 @@
   --primary-color: #245445; /* Deep Green (PANTONE 567 C) */
   --accent-color: #f58266; /* Warm Accent (PANTONE 486 C) */
   --hotel-background: #f5d6ab; /* Soft Tan (PANTONE 7507 C) */
-  --dark-background: #000000; /* Black (PANTONE Black C) */
+  --button-background: #000000; /* Black (PANTONE Black C) */
   --text-color: #ffffff; /* White (PANTONE White) */
   --secondary-text-color: #e3b09e; /* Soft Coral (PANTONE 693 C) */
   --highlight-color: #d1e7fe; /* Light Blue Accent (PANTONE 2717 C) */
@@ -69,4 +69,12 @@ a {
 }
 small {
   font-size: 0.82rem; /* ~18px */
+}
+a:hover,
+a:focus {
+  color: var(--accent-color) !important;
+}
+
+p {
+  color: var(--secondary-text-color) !important;
 }

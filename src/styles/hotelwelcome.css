@@ -4,7 +4,7 @@
   align-items: start; /* 👈 instead of center */
   background: var(--hotel-background);
   color: var(--text-color);
-  margin: 0px 360px;
+  margin: 0px 160px;
   margin-top: 100px;
   gap: 2rem;
 }

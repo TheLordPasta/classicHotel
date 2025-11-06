@@ -8,7 +8,7 @@
 }
 .header-container {
   align-items: start !important;
-  padding-left: 90px;
+  padding-left: 60px;
   padding-right: 90px;
 }
 .rooms-container.rtl {
@@ -71,4 +71,37 @@
 /* flip horizontally in LTR */
 .rooms-container:not(.rtl) .arrow-icon {
   transform: scaleX(-1);
+}
+.icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1500px; /* limits total width */
+  margin: 0 auto; /* centers the grid */
+  padding: 2rem;
+  row-gap: 2rem; /* vertical spacing */
+}
+.icons-grid.rtl {
+  direction: rtl;
+}
+
+.icon-with-subtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 115px; /* fixed width for consistent spacing */
+  text-align: center;
+}
+
+.icon-with-subtext img {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-side-note {
+  font-weight: 200 !important;
+  color: var(--text2-color) !important;
+  margin-top: 1rem;
+  max-width: 118px;
+  direction: rtl; /* Hebrew alignment */
 }

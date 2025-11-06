@@ -181,9 +181,9 @@
 .side-menu {
   position: fixed;
   top: 0;
-  right: -40%; /* hidden off-screen */
-  width: 30%;
-  height: 55rem;
+  right: -50%; /* hidden off-screen */
+  width: 42%;
+  height: 39rem;
   background: var(--text-color);
   color: var(--hotel-background);
   display: flex;
@@ -218,7 +218,7 @@
 .side-menu-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.7rem;
   margin-top: 2rem;
   margin: 0px 80px;
 }
@@ -243,7 +243,7 @@
   flex-direction: column;
   font-size: 0.9rem;
   opacity: 0.85;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 .side-menu-footer-contact.rtl {
   direction: rtl;
@@ -266,7 +266,7 @@
   justify-content: start;
   gap: 0.5rem;
   font-size: 0.8rem;
-  margin: 0px 80px;
+  margin: 20px 70px;
   color: var(--hotel-background) !important;
 }
 

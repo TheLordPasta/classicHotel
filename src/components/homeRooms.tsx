@@ -3,10 +3,18 @@ import { useTranslation, Trans } from "react-i18next";
 import RoomImg from "../resources/images/example1.png";
 import RoomsCarousel from "./roomCarousel";
 import ArrowLeftImg from "../resources/images/ArrowLeft.svg";
+import Bed from "../resources/images/bed.svg";
+import Desk from "../resources/images/desk.svg";
+import TV from "../resources/images/TV.svg";
+import Nespresso from "../resources/images/nespresso.svg";
+import SafeBox from "../resources/images/safebox.svg";
+import Minibar from "../resources/images/minibar.svg";
+import HotelMap from "./HotelMap";
 
 const HomeRooms: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "he";
+  //markers
 
   // Four duplicated rooms
   const rooms = [
@@ -91,6 +99,59 @@ const HomeRooms: React.FC = () => {
 
       {/* Carousel of 4 duplicated rooms */}
       <RoomsCarousel rooms={rooms} />
+      <div className="header-container">
+        <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
+          {t("homeRooms.roomsIncludeText")}
+        </p>
+        {/*icons with subtexts*/}
+      </div>
+      <div className={`icons-grid ${isRTL ? "rtl" : ""}`}>
+        <div className="icon-with-subtext">
+          <img src={Bed}></img>
+          <p className="icon-side-note">{t("homeRooms.roomsIncludeTextBed")}</p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={Desk}></img>
+          <p className="icon-side-note">
+            {t("homeRooms.roomsIncludeTextDesk")}
+          </p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={TV}></img>
+          <p className="icon-side-note">{t("homeRooms.roomsIncludeTextTV")}</p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={Nespresso}></img>
+          <p className="icon-side-note">
+            {t("homeRooms.roomsIncludeTextCoffee")}
+          </p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={SafeBox}></img>
+          <p className="icon-side-note">
+            {t("homeRooms.roomsIncludeTextSafeBox")}
+          </p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={Minibar}></img>
+          <p className="icon-side-note">
+            {t("homeRooms.roomsIncludeTextMinibar")}
+          </p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={Bed}></img>
+          <p className="icon-side-note">
+            {t("homeRooms.roomsIncludeTextItem1")}
+          </p>
+        </div>
+        <div className="icon-with-subtext">
+          <img src={Bed}></img>
+          <p className="icon-side-note">
+            {t("homeRooms.roomsIncludeTextItem2")}
+          </p>
+        </div>
+      </div>
+      <HotelMap />
     </div>
   );
 };

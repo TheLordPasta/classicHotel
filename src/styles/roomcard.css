@@ -1,6 +1,6 @@
 /* Styling for the card container */
 .card-container {
-  background-color: var(--primary-color);
+  background-color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 0px;
   overflow: hidden;
@@ -9,7 +9,7 @@
   margin: 50px 20px;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
-  color: var(--text2-color);
+  color: var(--text2-color) !important;
 }
 .card-container.rtl {
   direction: rtl !important;
@@ -35,7 +35,6 @@
 /* Styling for the text section of the card */
 .card-text {
   padding: 0px 25px;
-  color: var(--text-color);
 }
 .card-text .title {
   margin-top: 25px;

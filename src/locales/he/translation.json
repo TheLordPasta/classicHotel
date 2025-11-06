@@ -15,9 +15,18 @@
     "shortAboutText": "אודות קצר"
   },
   "homeRooms": {
-    "roomsTitle": "חדרים & סוויטות",
+    "roomsTitle": "חדרי המלון",
     "roomsText": "ברוכים הבאים למלון הטיילור בנחלת בנימין, אחד הרחובות התוססים והאייקוניים של תל אביב. המלון מציע חוויית אירוח עכשווית, מעוצבת ופונקציונלית, שתפורה בקפידה למידותיהם של אורחים מהארץ ומחו\"ל.",
-    "roomsSideNote": "צ׳ק אין החל מהשעה <1>12:00 בבוקר</1>. צ׳ק אאוט עד השעה <3>12:00 בבוקר</3> מדיניות הביטולים של מלון הטיילור היא עד 48 לפני השהייה."
+    "roomsSideNote": "צ׳ק אין החל מהשעה <1>12:00 בבוקר</1>. צ׳ק אאוט עד השעה <3>12:00 בבוקר</3> מדיניות הביטולים של מלון הטיילור היא עד 48 שעות לפני השהייה.",
+    "roomsIncludeText": "כל החדרים שלנו כוללים",
+    "roomsIncludeTextBed": "מצעים 100% כותנה",
+    "roomsIncludeTextDesk": "שולחן כתיבה",
+    "roomsIncludeTextTV": "טלוויזיה וערוצים לוויניים",
+    "roomsIncludeTextCoffee": "מכונת נספרסו",
+    "roomsIncludeTextSafeBox": "כספת",
+    "roomsIncludeTextMinibar": "מיניבר",
+    "roomsIncludeTextItem1": "1",
+    "roomsIncludeTextItem2": "2"
   },
   "roomCardAll": {
     "subInfoPeople": "עד 2 מבוגרים"

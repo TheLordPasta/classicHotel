@@ -41,9 +41,9 @@ const RoomGallery: React.FC = () => {
 
   return (
     <div className="room-gallery">
-      {rooms.map((room) => (
+      {/* {rooms.map((room) => (
         <RoomCard key={room._id} {...room} />
-      ))}
+      ))} */}
     </div>
   );
 };

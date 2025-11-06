@@ -5,7 +5,14 @@ console.log("Video Source:", VideoSrc);
 
 const FullWidthVideo: React.FC = () => {
   return (
-    <video className="video-container" autoPlay loop muted playsInline>
+    <video
+      className="video-container"
+      autoPlay
+      loop
+      muted
+      playsInline
+      disablePictureInPicture
+    >
       <source src={VideoSrc} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

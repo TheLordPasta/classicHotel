@@ -1,49 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap");
 :root {
   /* Font */
-  --polin: "Polin Sans", serif;
+  --font: "Noto Sans Hebrew", "Noto Sans", sans-serif;
 
   /* Tailor Hotel Color Palette */
-  --primary-color: #245445; /* Deep Green (PANTONE 567 C) */
-  --accent-color: #f58266; /* Warm Accent (PANTONE 486 C) */
-  --hotel-background: #f5d6ab; /* Soft Tan (PANTONE 7507 C) */
-  --button-background: #000000; /* Black (PANTONE Black C) */
-  --text-color: #ffffff; /* White (PANTONE White) */
-  --secondary-text-color: #e3b09e; /* Soft Coral (PANTONE 693 C) */
-  --highlight-color: #d1e7fe; /* Light Blue Accent (PANTONE 2717 C) */
-  --primary-background-image: url("../resources/images/brandpatternp3.png");
+  --hotel-background: #ffffff;
+  --side-menu-background: #000000;
+  --other-container-background: #d1e7fe33;
+  --border-color: #00000000;
+  --text-color: #000000;
+  --text2-color: #000000;
+}
 
-  /* Buttons & UI */
-  --button-color: #e3b09e; /* Accent Orange-Pink */
-  --button-hover-color: #f58266; /* Light Coral Hover */
-}
-.primary-container {
-  background-image: var(--primary-background-image);
-  background-size: 50%;
-  background-position: center;
-  background-repeat: repeat;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
 body {
-  font-family: var(--polin), serif !important;
+  font-family: var(--font) !important;
   margin: none;
   background-color: var(--hotel-background) !important;
 
   color: var(--text-color);
 }
 h1 {
-  font-family: var(--polin), serif;
+  font-family: var(--font), serif;
   font-weight: 200 !important;
   color: var(--text-color);
 }
 h2 {
-  font-family: var(--polin), serif;
+  font-family: var(--font), serif;
   font-weight: 100 !important;
 }
 p,
 button,
 a {
-  font-family: var(--polin), serif;
+  font-family: var(--font), serif;
   font-weight: 200 !important;
 }
 select {
@@ -51,13 +40,14 @@ select {
 }
 /*adjustable font*/
 html {
-  font-size: var(--base-font-size, 22px);
+  font-size: var(--base-font-size, 18px);
+  font-weight: 300;
 }
 h1 {
   font-size: 2.73rem; /* 60px */
 }
 h2 {
-  font-size: 1.36rem; /* 30px */
+  font-size: 1.56rem !important; /* 30px */
 }
 h3 {
   font-size: 1.18rem; /* ~26px */
@@ -65,7 +55,7 @@ h3 {
 p,
 button,
 a {
-  font-size: 1rem; /* 22px */
+  font-size: 0.82rem !important; /* 22px */
 }
 small {
   font-size: 0.82rem; /* ~18px */
@@ -74,7 +64,20 @@ a:hover,
 a:focus {
   color: var(--accent-color) !important;
 }
+a {
+  text-decoration: none !important;
+}
 
-p {
-  color: var(--secondary-text-color) !important;
+ul,
+li {
+  font-size: 20px; /* ~18px */
+}
+select {
+  appearance: none; /* removes default arrow in most browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}
+span {
+  font-size: 0.82rem !important ;
 }

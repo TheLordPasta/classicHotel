@@ -1,71 +1,116 @@
-import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
-import "../styles/theme.css";
-import "../styles/navbar.css";
-import Logo from "../resources/logo-white.png";
-import { useNavigate } from "react-router-dom";
-import Header from "./header";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { subscribeLogo } from "../utils/logoManager"; // 👈
 
-const MobileNavbar: React.FC = () => {
+type Props = {
+  scrolled: boolean;
+  darkMode: boolean;
+  menuOpen: boolean;
+  dropdownOpen: boolean;
+  isRTL: boolean;
+  logo: string;
+  globus: string;
+  arrow: string;
+  hamburgerIcon: string;
+  hamburgerIconClose: string;
+  closeButtonSideMenu: string;
+  mappinIcon: string;
+  mailIcon: string;
+  phoneIcon: string;
+  displayLang: string;
+  changeLanguage: (lng: string) => void;
+  toggleDropdown: () => void;
+  toggleTheme: () => void;
+  toggleMenu: () => void;
+  navigate: (path: string) => void;
+};
+
+const MobileNavbar: React.FC<Props> = (props) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-  const [opened, setOpened] = useState(false);
-  const [logo, setLogoState] = useState<string>(Logo);
-
-  useEffect(() => {
-    subscribeLogo((newLogo) => setLogoState(newLogo));
-  });
-  const Hamburger = (
-    <FontAwesomeIcon
-      className="hamburger-menu"
-      icon={faBars}
-      size="2x"
-      color="var(--text-color)"
-      onClick={() => setOpened(!opened)}
-    />
-  );
-  const Close = (
-    <FontAwesomeIcon
-      className="close-menu"
-      icon={faRectangleXmark}
-      size="2x"
-      color="var(--text-color)"
-      onClick={() => setOpened(!opened)}
-    />
-  );
 
   return (
-    <div className="navbar-container">
-      <div className="nav-logo-container">
-        <Header />
-        <div className="navbar-divider"></div>
-        <div className="navbar-logo">
-          <img
-            src={logo}
-            alt="Hotel Logo"
-            onClick={() => navigate("/homePage")}
-          />
+    <>
+      <div className={`navbar-container ${props.scrolled ? "scrolled" : ""}`}>
+        <div className="nav-logo-container">
+          <div className="navbar-logo">
+            <img
+              src={props.logo}
+              alt="Hotel Logo"
+              onClick={() => props.navigate("/homePage")}
+            />
+          </div>
+        </div>
+
+        <div className="hamburger-buttons" onClick={props.toggleMenu}>
+          <div className="hamburger-icon">
+            {props.menuOpen ? (
+              <img src={props.hamburgerIconClose} alt="Close menu" />
+            ) : (
+              <img src={props.hamburgerIcon} alt="Open menu" />
+            )}
+          </div>
         </div>
       </div>
-      {opened ? Close : Hamburger}
 
-      {/* Always render this div, just toggle the 'open' class */}
-      <div className={`navbar-buttons ${opened ? "open" : ""}`}>
-        <button className="navbar-btn" onClick={() => navigate("/rooms")}>
-          {t("navbar.roomsButton")}
-        </button>
+      <div className={`side-menu ${props.menuOpen ? "open" : ""}`}>
+        <div className="side-menu-header">
+          <div className="close-button" onClick={props.toggleMenu}>
+            <img src={props.closeButtonSideMenu} alt="Close menu" />
+          </div>
+        </div>
 
-        <button className="navbar-btn">{t("navbar.aboutButton")}</button>
-        <button className="navbar-btn">{t("navbar.attractionsButton")}</button>
-        <button className="navbar-btn">{t("navbar.contactUsButton")}</button>
-        <button className="navbar-btn book-now">
-          {t("navbar.bookNowButton")}
-        </button>
+        <div className={`side-menu-content ${props.isRTL ? "rtl" : ""}`}>
+          <div className="menu-item">
+            <h2>{t("navbar.homeButton")}</h2>
+          </div>
+          <div className="menu-item">
+            <h2>{t("navbar.roomsButton")}</h2>
+          </div>
+          <div className="menu-item">
+            <h2>{t("navbar.locationButton")}</h2>
+          </div>
+          <div className="menu-item">
+            <h2>{t("navbar.hotelServicesButton")}</h2>
+          </div>
+          <div className="menu-item">
+            <h2>{t("navbar.contactUsButton")}</h2>
+          </div>
+        </div>
+
+        <div className={`side-menu-footer-contact ${props.isRTL ? "rtl" : ""}`}>
+          <div className="side-menu-footer-item">
+            <img src={props.mappinIcon} alt="map" />
+            <span> Address Placeholder</span>
+          </div>
+          <div className="side-menu-footer-divider"></div>
+          <div className="side-menu-footer-item">
+            <img src={props.mailIcon} alt="mail" />
+            <a href="mailto:hello@tailorhotel.com"> hello@thetailortlv.com</a>
+          </div>
+          <div className="side-menu-footer-divider"></div>
+          <div className="side-menu-footer-item">
+            <img src={props.phoneIcon} alt="phone" />
+            <span className="contact-info"> +972-6598394</span>
+          </div>
+          <div className="side-menu-footer-divider"></div>
+        </div>
+
+        <div
+          className={`side-menu-footer-policies ${props.isRTL ? "rtl" : ""}`}
+        >
+          <div className="side-menu-policy-item">
+            <a>Cancellation Policy</a>
+          </div>
+          <div className="side-menu-policy-divider">|</div>
+          <div className="side-menu-policy-item">
+            <a>Update Reservation</a>
+          </div>
+          <div className="side-menu-policy-divider">|</div>
+          <div className="side-menu-policy-item">
+            <a>Accessibility Statement</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

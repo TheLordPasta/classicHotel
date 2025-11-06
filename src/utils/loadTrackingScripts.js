@@ -14,7 +14,7 @@ export const loadTrackingScripts = (options = {}) => {
       gaId
     )}`;
     gaScript.onload = () => {
-      console.log("✅ GA script loaded:", gaId);
+      console.log("✅ GA script loaded:");
       window.dataLayer = window.dataLayer || [];
       window.gtag = function gtag() {
         window.dataLayer.push(arguments);
@@ -54,7 +54,7 @@ export const loadTrackingScripts = (options = {}) => {
 
     window.fbq("init", pixelId);
     window.fbq("track", "PageView");
-    console.log("✅ Meta Pixel initialized:", pixelId);
+    console.log("✅ Meta Pixel initialized:");
   };
 
   if (pixelId && pixelId !== "YOUR_PIXEL_ID") {

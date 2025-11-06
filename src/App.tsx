@@ -19,13 +19,18 @@ import CookieDrawer from "./components/CookieDrawer";
 import PrivacyPolicy from "./pages/privacy-policy";
 import MaintenancePage from "./pages/maintenance";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
 function App() {
   return (
     <Router>
       <div id="app-root">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/maintenance" replace />} />
+          <Route path="/" element={<Navigate to="/homePage" replace />} />
           <Route path="/homePage" element={<Home />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="*" element={<NotFound />} /> {/* Catch-all route */}

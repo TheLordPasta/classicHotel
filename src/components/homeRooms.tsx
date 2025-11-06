@@ -1,31 +1,97 @@
 import "../styles/HomeRooms.css";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { useTranslation, Trans } from "react-i18next";
+import RoomImg from "../resources/images/example1.png";
+import RoomsCarousel from "./roomCarousel";
+import ArrowLeftImg from "../resources/images/ArrowLeft.svg";
 
 const HomeRooms: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "he";
+
+  // Four duplicated rooms
+  const rooms = [
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+    {
+      title: "ECONOMY",
+      subTitle: t("roomCardEconomy.subTitle"),
+      imageUrl: RoomImg,
+      description: t("roomCardEconomy.description"),
+      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+    },
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="primary-container"
-    >
-      <section className="rooms-section">
-        <h1 className="rooms-title">{t("homeRooms.roomsTitle")}</h1>
+    <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
+      <div className="text-container">
+        <p className="sub-header-rooms">{t("homeRooms.roomsTitle")}</p>
         <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
           {t("homeRooms.roomsText")}
         </p>
-        <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
-          {t("homeRooms.roomsText2")}
-        </p>
-        <a className="rooms-link-text" href="/rooms">
-          {t("homeRooms.roomsLinkText")}
-        </a>
-      </section>
-    </motion.div>
+        <div className="side-note-row">
+          <p className="rooms-side-note">
+            <Trans
+              i18nKey="homeRooms.roomsSideNote"
+              components={{
+                1: <span className="rooms-highlight" />,
+                3: <span className="rooms-highlight" />,
+              }}
+            />
+          </p>
+          <img src={ArrowLeftImg} className="arrow-swipper-icon" />
+        </div>
+      </div>
+
+      {/* Carousel of 4 duplicated rooms */}
+      <RoomsCarousel rooms={rooms} />
+    </div>
   );
 };
 

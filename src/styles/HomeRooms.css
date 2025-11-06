@@ -1,45 +1,72 @@
-.rooms-section {
-  text-align: center;
-  background-color: var(--primary-color);
-
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+.rooms-container {
+  background-color: var(--other-container-background);
+  align-items: start !important;
   border-radius: 0px;
-  width: 90%;
-  max-width: 1800px;
   margin: 60px auto;
   transition: transform 0.2s ease-in-out;
-  padding: 20px;
+  padding: 30px 90px;
+}
+.text-container {
+  align-items: start !important;
+}
+.rooms-container.rtl {
+  direction: rtl !important;
 }
 @media (max-width: 768px) {
   .welcome-section {
     width: 80%;
   }
 }
-.rooms-section:hover {
-  transform: translateY(-5px);
-}
 
-.rooms-title {
-  text-transform: uppercase;
-  margin-bottom: 15px;
+.sub-header-rooms {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: var(--text2-color) !important;
+  margin-bottom: 0.5rem;
 }
 
 .rooms-text {
-  max-width: 800px;
-  margin: 0 auto 15px;
-  color: var(--secondary-text-color);
+  font-size: 2rem !important;
+  font-weight: normal !important;
+  max-width: 1200px;
+  align-items: start;
 }
 .rooms-text.rtl {
   direction: rtl;
 }
-.rooms-link-text {
-  color: var(--text-color);
+
+.rooms-side-note {
+  font-size: 1.2rem !important;
+  font-weight: 200 !important;
+  color: var(--text2-color) !important;
+  margin-bottom: 0.5rem;
+  max-width: 660px;
 }
 
 .rooms-highlight {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.2rem !important;
+  font-weight: 600;
   color: var(--highlight-color);
 
   margin-bottom: 20px;
+}
+.side-note-row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* text takes remaining space, arrow auto */
+  align-items: center;
+  width: 100%;
+  gap: 16px; /* optional spacing between text and arrow */
+}
+
+/* arrow defaults to pointing left */
+.arrow-swipper-icon {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+  justify-self: end; /* push arrow to the far edge */
+}
+
+/* flip horizontally in LTR */
+.rooms-container:not(.rtl) .arrow-icon {
+  transform: scaleX(-1);
 }

@@ -1,14 +1,14 @@
 {
   "navbar": {
+    "homeButton": "Home",
     "roomsButton": "Rooms",
-    "aboutButton": "About",
-    "attractionsButton": "Attractions",
-    "contactUsButton": "Contact Us",
-    "bookNowButton": "Book Now"
+    "locationButton": "Location",
+    "hotelServicesButton": "Hotel Services",
+    "contactUsButton": "Contact"
   },
   "hotelWelcome": {
-    "welcomeTitle": "THE TAILOR ART HOTEL IN TEL AVIV",
-    "welcomeText": "Experience the charm and elegance of a <0>Tailored</0> visit. Indulge in luxury, comfort, and breathtaking views. Enjoy our exclusive offers and make unforgettable memories. Unwind in style — from plush suites to serene rooftop lounges, every space invites relaxation. Savor gourmet cuisine curated by world-class chefs, paired with fine wines and unforgettable ambiance. Rejuvenate your senses at our exclusive spa, where tranquility meets indulgence. Celebrate life’s moments with bespoke events, curated experiences, and personalized service that feels like home. Whether you're here for a romantic escape, a business retreat, or a weekend of discovery, The Tailor Hotel promises more than a stay — it offers a story worth telling."
+    "sub-header-welcome": "the Tailor TLV",
+    "sub-text-welcome": "Welcome to The Tailor Hotel, nestled on Nahalat Binyamin — one of Tel Aviv’s most vibrant and iconic streets. Our hotel offers a contemporary hospitality experience, thoughtfully designed and tailored to suit guests from Israel and around the world. Just like a tailor who crafts each garment with precision and care, we draw inspiration from the local spirit to create a stay that’s personal, stylish, and meticulously curated down to the last detail."
   },
   "homeShortAbout": {
     "shortAboutTitle": "ABOUT US",
@@ -17,8 +17,15 @@
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
     "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, indulgent, and truly unforgettable stay.",
-    "roomsText2": "*Prices on booking websites do not include VAT.",
-    "roomsLinkText": "Explore Rooms →"
+    "roomsSideNote": "Check‑in is available from <1>12:00 PM</1>. Check‑out is until <3>12:00 PM</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival."
+  },
+  "roomCardAll": {
+    "subInfoPeople": "Up to 2 adults"
+  },
+  "roomCardEconomy": {
+    "subTitle": "View of Nahalat Binyamin Street with Balcony",
+    "description": "In the heart of a street once known as a hub for textiles, markets, and local creativity, stands a hotel that tailors an urban hospitality experience – precise, elegant, and personal – to the measure of every guest.",
+    "subInfoMeter": "55 m²"
   },
   "homeSeeMore": {
     "seeMoreTitle": "SEE MORE",

@@ -1,78 +1,39 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import "../styles/roomcard.css";
-import { useNavigate } from "react-router-dom";
+import PeopleIcon from "../resources/images/people.svg";
+import MeterIcon from "../resources/images/meter.svg";
+import { useTranslation } from "react-i18next";
 
 interface RoomCardProps {
   title: string;
+  subTitle: string;
   imageUrl: string;
-  basePrice: number; // Base price in default currency (USD)
   description: string;
-  seeMoreRoute: string;
+  sideInfoMeter: string;
 }
 
 const RoomCard: React.FC<RoomCardProps> = ({
   title,
+  subTitle,
   imageUrl,
-  basePrice,
   description,
-  seeMoreRoute,
+  sideInfoMeter,
 }) => {
-  const navigate = useNavigate();
-  const [currency, setCurrency] = useState("USD");
-  const [price, setPrice] = useState(basePrice);
-
-  useEffect(() => {
-    const fetchExchangeRate = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.exchangerate-api.com/v4/latest/USD`
-        );
-        if (response.data.rates[currency]) {
-          const rate = response.data.rates[currency];
-          setPrice(basePrice * rate);
-        }
-      } catch (error) {
-        console.error("Error fetching exchange rate", error);
-      }
-    };
-
-    fetchExchangeRate();
-  }, [currency, basePrice]);
-
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "he";
   return (
-    <div className="card-container">
+    <div className={`card-container ${isRTL ? "rtl" : ""}`}>
       <img src={imageUrl} alt={title} className="card-image" />
       <div className="card-text">
         <h2 className="title">{title}</h2>
-        <div className="title-spacer">____________</div>
+        <div className="sub-title">{subTitle}</div>
         <p className="description">{description}</p>
-        <div className="price-container">
-          <span className="price-label">From</span>
-          <div className="currency-selector-container">
-            <select
-              className="currency-selector"
-              value={currency}
-              onChange={(e) => setCurrency(e.target.value)}
-            >
-              <option value="USD">USD</option>
-              <option value="ILS">ILS</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
-            <span>{"\u25BE"}</span>
-          </div>
-          <span className="price-value">{price.toFixed(2)}</span>
-        </div>
       </div>
-      <div className="buttons-container">
-        <button className="book-now-button">Book Now</button>
-        <button
-          className="see-more-button"
-          onClick={() => navigate(seeMoreRoute)}
-        >
-          See More
-        </button>
+      <div className="side-info-container">
+        <img src={PeopleIcon}></img>
+        <span>{t("roomCardAll.subInfoPeople")}</span>
+        <img src={MeterIcon}></img>
+        <span> {sideInfoMeter}</span>
       </div>
     </div>
   );

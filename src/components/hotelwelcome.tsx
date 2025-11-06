@@ -1,28 +1,21 @@
 import "../styles/hotelwelcome.css";
-import { useTranslation, Trans } from "react-i18next";
-import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import CoverImage from "../resources/images/coverImageWelcome.png";
 
 const HotelWelcome: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "he";
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="primary-container"
-    >
-      <section className="welcome-section">
-        <h1 className="welcome-title">{t("hotelWelcome.welcomeTitle")}</h1>
-        <p className={`welcome-text ${isRTL ? "rtl" : ""}`}>
-          <Trans
-            i18nKey="hotelWelcome.welcomeText"
-            components={[<span className="tailored-word" />]}
-          />
+    <div className={`hotel-welcome-container ${isRTL ? "rtl" : ""}`}>
+      <img src={CoverImage}></img>
+      <div className="text-container-welcome">
+        <p className="sub-header-welcome">
+          {t("hotelWelcome.sub-header-welcome")}
         </p>
-      </section>
-    </motion.div>
+        <h1 className="header-welcome">Where Every Stay is Handcrafted</h1>
+        <p className="sub-text-welcome">{t("hotelWelcome.sub-text-welcome")}</p>
+      </div>
+    </div>
   );
 };
 

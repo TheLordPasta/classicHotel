@@ -1,13 +1,18 @@
 /* Styling for the card container */
 .card-container {
   background-color: var(--primary-color);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 0px;
   overflow: hidden;
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: 450px;
+  max-height: 1000px;
+  margin: 50px 20px;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
+  color: var(--text2-color);
+}
+.card-container.rtl {
+  direction: rtl !important;
 }
 @media (max-width: 768px) {
   .card-container {
@@ -22,137 +27,64 @@
 /* Styling for the image inside the card */
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
 
 /* Styling for the text section of the card */
 .card-text {
-  padding: 25px;
+  padding: 0px 25px;
   color: var(--text-color);
-  font-family: --;
 }
-
-.title {
-  margin-bottom: 10px;
+.card-text .title {
+  margin-top: 25px;
+  line-height: 1rem;
 }
-
-.title-spacer {
-  padding-bottom: 20px;
+.card-text .sub-title {
+  margin-bottom: 12px;
+  font-weight: lighter;
 }
 
 .description {
-  color: var(--secondary-text-color);
   margin-bottom: 15px;
 }
 
-/* Styling for the price tag */
-.price-container {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: var(--text-color);
+.side-info-container {
+  display: flex; /* force horizontal layout */
+  align-items: center; /* vertically center icons + text */
+  gap: 8px; /* control spacing between items */
+  background-color: black;
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: lighter !important;
+  white-space: nowrap; /* prevent text wrapping to next line */
 }
 
-.price-label {
-  margin-right: 5px;
-  color: var(--text-color);
-  font-family: var(--polin);
-  font-weight: normal;
+/* Ensure icons and text behave inline */
+.side-info-container img {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.currency {
-  margin-right: 2px;
-  font-weight: normal;
-  color: var(--secondary-text-color);
-  font-family: var(--polin);
+/* Optional: tighten spacing around icons specifically */
+.side-info-container span {
+  display: inline-block;
+  line-height: 2;
+}
+.side-info-container img {
+  width: 14px;
+  height: 14px;
+  margin: 0px 2px;
+}
+.slick-track {
+  display: flex !important; /* force horizontal row */
 }
 
-.price-value {
-  font-weight: 100;
-  font-family: var(--polin);
-  margin-left: 5px;
-}
-
-/* Styling for the currency selector */
-.currency-selector {
-  font-family: var(--polin);
-  background-color: var(--primary-color);
-  color: var(--secondary-text-color);
-  font-weight: 400;
-  border: none;
-}
-.currency-selector-container {
-  font-family: var(--polin);
-  background-color: var(--primary-color);
-  color: var(--secondary-text-color);
-  font-weight: 100;
-  border: none;
-  padding: 3px;
-  border-bottom: 1px solid var(--secondary-text-color);
-  cursor: pointer;
-}
-
-.currency-selector label {
-  margin-right: 10px;
-  color: var(--secondary-text-color);
-  font-family: var(--raleway);
-}
-
-.currency-selector select {
-  padding: 5px;
-  font-family: var(--polin);
-  color: var(--secondary-text-color);
-  outline: none; /* Remove focus outline */
-  appearance: none; /* Hide default dropdown arrow */
-  text-align: center; /* Center text */
-  cursor: pointer;
-}
-
-/* Styling for the buttons */
-.book-now-button,
-.see-more-button {
-  margin-top: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 10px;
-  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.book-now-button {
-  background-color: var(--button-color);
-  color: var(--text-color);
-  border: none;
-}
-
-.book-now-button:hover {
-  background-color: var(--button-hover-color);
-}
-
-.see-more-button {
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: var(--text-color);
-}
-
-.see-more-button:hover {
-  background-color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
-}
-
-.buttons-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.buttons-container button {
-  width: 50%;
+.slick-slide {
+  height: auto !important; /* let cards size naturally */
+  display: flex !important; /* prevent inline-block gaps */
+  justify-content: center; /* center your RoomCard inside */
 }

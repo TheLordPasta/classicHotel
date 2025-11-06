@@ -89,7 +89,11 @@ const DesktopNavbar: React.FC<Props> = (props) => {
         </div>
       </div>
 
-      <div className={`side-menu ${props.menuOpen ? "open" : ""}`}>
+      <div
+        className={`side-menu ${props.menuOpen ? "open" : ""} ${
+          props.scrolled ? "scrolled" : ""
+        }`}
+      >
         <div className="side-menu-header">
           <div className="close-button" onClick={props.toggleMenu}>
             <img src={props.closeButtonSideMenu} alt="Close menu" />

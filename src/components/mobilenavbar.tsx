@@ -30,6 +30,37 @@ const MobileNavbar: React.FC<Props> = (props) => {
   return (
     <>
       <div className={`navbar-container ${props.scrolled ? "scrolled" : ""}`}>
+        <div className="color-theme-and-language-container">
+          <div className="color-theme-button" onClick={props.toggleTheme}>
+            <span className="theme-dot"></span>
+          </div>
+
+          <div className="language-picker">
+            <button
+              className="dropdown-toggle-new"
+              onClick={props.toggleDropdown}
+            >
+              <div className="globus-container">
+                <img src={props.globus} alt="Globus" />
+              </div>
+            </button>
+
+            <ul
+              className={`dropdown-menu-new ${
+                props.dropdownOpen ? "show" : ""
+              }`}
+            >
+              <li onClick={() => props.changeLanguage("en")}>English</li>
+              <div className="dropdown-divider"></div>
+              <li onClick={() => props.changeLanguage("he")}>עברית</li>
+              <div className="dropdown-divider"></div>
+              <li onClick={() => props.changeLanguage("es")}>Español</li>
+              <div className="dropdown-divider"></div>
+              <li onClick={() => props.changeLanguage("fr")}>Français</li>
+            </ul>
+          </div>
+        </div>
+
         <div className="nav-logo-container">
           <div className="navbar-logo">
             <img

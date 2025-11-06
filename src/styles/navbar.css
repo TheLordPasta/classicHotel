@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr auto 1.2fr;
   align-items: center;
-  padding: 1rem 6rem;
+  padding: 1rem;
   background-color: var(--hotel-background);
   color: var(--text-color);
   position: fixed;
@@ -30,6 +30,7 @@
   gap: 0.6rem; /* space between dot and dropdown */
   justify-content: flex-start;
   max-width: 180px;
+  margin-left: 80px;
 }
 
 /* Theme Button */
@@ -160,6 +161,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 80px;
 }
 
 .hamburger-icon {
@@ -179,7 +181,7 @@
 .side-menu {
   position: fixed;
   top: 0;
-  right: -30%; /* hidden off-screen */
+  right: -40%; /* hidden off-screen */
   width: 30%;
   height: 55rem;
   background: var(--text-color);
@@ -285,7 +287,7 @@
 @media (max-width: 768px) {
   .navbar-container {
     grid-template-columns: 1fr auto 1fr;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
   }
 }
 
@@ -318,7 +320,7 @@
     margin-left: 0px;
   }
   .side-menu {
-    right: -100%; /* hidden off-screen */
+    right: -110%; /* hidden off-screen */
     width: 100%;
     height: 100%;
   }

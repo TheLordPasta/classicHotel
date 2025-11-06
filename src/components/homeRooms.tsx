@@ -70,7 +70,7 @@ const HomeRooms: React.FC = () => {
 
   return (
     <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
-      <div className="text-container">
+      <div className="header-container">
         <p className="sub-header-rooms">{t("homeRooms.roomsTitle")}</p>
         <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
           {t("homeRooms.roomsText")}

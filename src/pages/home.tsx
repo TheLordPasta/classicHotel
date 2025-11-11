@@ -3,6 +3,7 @@ import HotelWelcome from "../components/hotelwelcome";
 import SEO from "../components/seo"; // 👈 Import your SEO component
 import "../styles/theme.css";
 import HomeRooms from "../components/homeRooms";
+import HomeMap from "../components/HomeMap";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <FullWidthVideo />
       <HotelWelcome />
       <HomeRooms />
+      <HomeMap />
     </div>
   );
 }

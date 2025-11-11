@@ -151,7 +151,6 @@ const HomeRooms: React.FC = () => {
           </p>
         </div>
       </div>
-      <HotelMap />
     </div>
   );
 };

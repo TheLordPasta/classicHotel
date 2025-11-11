@@ -16,7 +16,7 @@
   },
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
-    "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, indulgent, and truly unforgettable stay.",
+    "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, enelant, and truly unforgettable stay.",
     "roomsSideNote": "Check‑in is available from <1>12:00 PM</1>. Check‑out is until <3>12:00 PM</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival."
   },
   "roomCardAll": {
@@ -27,17 +27,9 @@
     "description": "In the heart of a street once known as a hub for textiles, markets, and local creativity, stands a hotel that tailors an urban hospitality experience – precise, elegant, and personal – to the measure of every guest.",
     "subInfoMeter": "55 m²"
   },
-  "homeSeeMore": {
-    "seeMoreTitle": "SEE MORE",
-    "wineBarTitle": "Wine Bar",
-    "wineBarText": "wineBarText",
-    "roofTopTitle": "ROOFTOP",
-    "roofTopText": "roofTopText",
-    "breakfastTitle": "Breakfast",
-    "breakfastText": "breakfastText",
-    "breakfastHoursTitle": "Serving hours: ",
-    "breakfastHoursText": "Sunday-Friday 07:30–10:30",
-    "breakfastHoursShabatText": "Saturday 08:00–11:00"
+  "homeMap": {
+    "sub-header-map": "The Center of Center TLV",
+    "sub-text-map": "SAS"
   },
   "footer": {
     "footerTitle": "The Tailor Hotel",

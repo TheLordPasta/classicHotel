@@ -6,67 +6,59 @@ import {
   faInstagram,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { useLayoutContext } from "../contexts/LayoutContext";
+import Banner from "../resources/images/patternBanner2x.png";
 
 export default function Footer() {
   const { i18n, t } = useTranslation();
   const direction = i18n.language === "he" ? "rtl" : "ltr";
+  const layout = useLayoutContext();
 
   return (
     <footer className="footer-container" dir={direction}>
-      <h1 className="hotel-name">{t("footer.footerTitle")}</h1>
-      <div className="footer-content">
-        <div className="footer-section left">
-          <p>{t("footer.footerSectionLeftContactUsText")}</p>
-          <p className="contact-info">📞 +972-6598394</p>
-          <p>
-            ✉️&nbsp;
-            <a className="contact-info" href="mailto:hello@tailorhotel.com">
-              hello@thetailortlv.com
-            </a>
-          </p>
+      <div className="logo-with-text-grid">
+        <img className="logo-footer" src={layout.bigLogo}></img>
+        <div className="footer-text">
+          <div className={`footer-contact ${layout.isRTL ? "rtl" : ""}`}>
+            <div className="footer-item">
+              <img src={layout.mappinIconRev} alt="map" />
 
-          <div className="social-icons">
-            <p>{t("footer.footerSectionLeftFollowUsText")}</p>
-            <span className="social-icon">
-              <FontAwesomeIcon icon={faInstagram} color="#C13584" />
-            </span>
-            <span className="social-icon">
-              <FontAwesomeIcon icon={faLinkedin} color="#0077B5" />
-            </span>
-            <span className="social-icon">
-              <FontAwesomeIcon icon={faFacebook} color="#1877F2" />
-            </span>
+              <span> {t("navbar.addressText")}</span>
+            </div>
+            <div className="footer-divider"></div>
+            <div className="footer-item">
+              <img src={layout.mailIconRev} alt="mail" />
+              <a href="mailto:hello@tailorhotel.com"> hello@thetailortlv.com</a>
+            </div>
+            <div className="footer-divider"></div>
+            <div className="footer-item">
+              <img src={layout.phoneIconRev} alt="phone" />
+              <span> </span>
+              <span className="contact-info"> +972-6598394</span>
+            </div>
+            <div className="footer-divider"></div>
+          </div>
+
+          <div className={`footer-policies ${layout.isRTL ? "rtl" : ""}`}>
+            <div className="policy-item">
+              <a>Cancellation Policy</a>
+            </div>
+            <div className="policy-divider"></div>
+            <div className="side-menu-policy-item">
+              <a>Update Reservation</a>
+            </div>
+            <div className="policy-divider"></div>
+            <div className="policy-item">
+              <a>Accessibility Statement</a>
+            </div>
           </div>
         </div>
-
-        <div className="footer-divider" />
-
-        <div className="footer-section middle">
-          <a href="/attractions">
-            {t("footer.footerSectionMiddleAttractionText")}
-          </a>
-          <a href="/Media">{t("footer.footerSectionMiddleMediaText")}</a>
-          <a href="/Sitemap">{t("footer.footerSectionMiddleSitemapText")}</a>
-          <a href="/terms&conditions">
-            {t("footer.footerSectionMiddleTermsAndConditionsText")}
-          </a>
-        </div>
-
-        <div className="footer-divider" />
-
-        <div className="footer-section right">
-          <p>📶 {t("footer.footerSectionRightWifiText")}</p>
-          <a href="/accessibility">
-            {t("footer.footerSectionRightAccessibilityText")}
-          </a>
-          <a href="/Privacy-Policy">
-            {t("footer.footerSectionRightPrivacyPolicyText")}
-          </a>
-        </div>
       </div>
-
-      <div className="footer-bottom">
-        <p>🔒 {t("footer.footerSecuredWebsiteText")}</p>
+      <div className="banner-image"></div>
+      <div className="credits-grid">
+        <span className="tailor-rights"> כל הזכויות שמורות לטיילור</span>
+        <span className="dev-rights">Dev: Ariel Shirkani</span>
+        <span className="BT-design-rights">Designer: B/T Design</span>
       </div>
     </footer>
   );

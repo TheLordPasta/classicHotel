@@ -4,7 +4,8 @@
     "roomsButton": "חדרים",
     "locationButton": "מיקום",
     "hotelServicesButton": "שירותי המלון",
-    "contactUsButton": "צרו קשר"
+    "contactUsButton": "צרו קשר",
+    "addressText": "נחלת בנימין 23, תל אביב-יפו"
   },
   "hotelWelcome": {
     "sub-header-welcome": "הטיילור תל אביב",
@@ -35,6 +36,17 @@
     "subTitle": "נוף לרחוב נחלת בנימין עם מרפסת",
     "description": "בלב הרחוב שידוע בעברו כמרכז של טקסטיל, שווקים ויצירה מקומית, שוכן מלון שתופר חוויית אירוח עירונית – מדויקת, אלגנטית ואישית – למידותיו של כל אורח. ",
     "subInfoMeter": "55 מ\"ר"
+  },
+  "homeServices": {
+    "homeServicesText": "שירותי המלון",
+    "homeServicesBreakfast": "ארוחת בוקר ישראלית עשירה",
+    "homeServicesReseption": "קבלה פעילה 24 שעות",
+    "homeServicesInternet": "אינטרנט אלחוטי חינם בכל שטחי המלון",
+    "homeServicesHouseCleaning": "ניקיון יומי / שירות חדרים",
+    "homeServicesLuggage": "חדר מזוודות",
+    "homeServicesLaundry": "שירות כביסה וגיהוץ",
+    "homeServicesRoomService": "שירות חדרים",
+    "homeServicesRooftop": "גג (Rooftop) עם נוף לעיר"
   },
   "homeMap": {
     "sub-header-map": "המרכז של מרכז תל אביב",

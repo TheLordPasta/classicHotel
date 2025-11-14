@@ -18,6 +18,16 @@
   .welcome-section {
     width: 80%;
   }
+  .rooms-text.rtl {
+    font-size: 1.4rem !important;
+  }
+  .rooms-text {
+    font-size: 1.4rem !important;
+  }
+  .header-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .sub-header-rooms {
@@ -28,10 +38,11 @@
 }
 
 .rooms-text {
-  font-size: 2rem !important;
+  font-size: 2rem;
   font-weight: normal !important;
   max-width: 1200px;
   align-items: start;
+  color: var(--text2-color);
 }
 .rooms-text.rtl {
   direction: rtl;

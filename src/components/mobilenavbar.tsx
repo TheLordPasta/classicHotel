@@ -110,7 +110,7 @@ const MobileNavbar: React.FC<Props> = (props) => {
         <div className={`side-menu-footer-contact ${props.isRTL ? "rtl" : ""}`}>
           <div className="side-menu-footer-item">
             <img src={props.mappinIcon} alt="map" />
-            <span> Address Placeholder</span>
+            <span> {t("navbar.addressText")}</span>
           </div>
           <div className="side-menu-footer-divider"></div>
           <div className="side-menu-footer-item">
@@ -131,11 +131,11 @@ const MobileNavbar: React.FC<Props> = (props) => {
           <div className="side-menu-policy-item">
             <a>Cancellation Policy</a>
           </div>
-          <div className="side-menu-policy-divider">|</div>
+          <div className="side-menu-policy-divider"></div>
           <div className="side-menu-policy-item">
             <a>Update Reservation</a>
           </div>
-          <div className="side-menu-policy-divider">|</div>
+          <div className="side-menu-policy-divider"></div>
           <div className="side-menu-policy-item">
             <a>Accessibility Statement</a>
           </div>

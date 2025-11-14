@@ -18,6 +18,7 @@ import Accessibility from "./pages/accessibility";
 import CookieDrawer from "./components/CookieDrawer";
 import PrivacyPolicy from "./pages/privacy-policy";
 import MaintenancePage from "./pages/maintenance";
+import { LayoutProvider } from "./contexts/LayoutContext";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,20 +29,22 @@ function App() {
   return (
     <Router>
       <div id="app-root">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Navigate to="/homePage" replace />} />
-          <Route path="/homePage" element={<Home />} />
-          <Route path="/rooms" element={<Rooms />} />
-          <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
-          <Route path="/accessibility" element={<Accessibility />} />
-          <Route path="/terms&conditions" element={<TermsAndConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/maintenance" element={<MaintenancePage />} />
-        </Routes>
-        <Footer />
-        <AccessibilityWidget />
-        <CookieDrawer />
+        <LayoutProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Navigate to="/homePage" replace />} />
+            <Route path="/homePage" element={<Home />} />
+            <Route path="/rooms" element={<Rooms />} />
+            <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/terms&conditions" element={<TermsAndConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/maintenance" element={<MaintenancePage />} />
+          </Routes>
+          <Footer />
+          <AccessibilityWidget />
+          <CookieDrawer />
+        </LayoutProvider>
       </div>
     </Router>
   );

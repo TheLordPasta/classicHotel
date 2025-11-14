@@ -3,8 +3,9 @@
   bottom: -200px;
   left: 10%;
   right: 10%;
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--side-menu-background);
+  opacity: 0.9;
+  color: var(--hotel-background);
   padding: 20px;
   text-align: center;
   transition: bottom 0.5s ease-in-out;
@@ -30,28 +31,25 @@
   width: 50%;
   margin: 10px;
   padding: 10px 0;
-  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .consent-approve {
-  background-color: var(--button-color);
-  color: var(--text-color);
+  background-color: var(--hotel-background);
+  color: var(--side-menu-background);
   border: none;
 }
 
 .consent-approve:hover {
-  background-color: var(--button-hover-color);
+  opacity: 0.9;
 }
 
 .consent-reject {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: var(--text-color);
+  border: 0.1px solid var(--hotel-background);
+  color: var(--hotel-background);
 }
 
 .consent-reject:hover {
-  background-color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
+  opacity: 0.9;
 }

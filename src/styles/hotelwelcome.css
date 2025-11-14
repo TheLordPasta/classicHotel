@@ -53,8 +53,19 @@
   .hotel-welcome-container {
     grid-template-columns: 1fr;
     text-align: center;
+    margin: 0px 40px;
   }
-
+  .sub-text-welcome {
+    font-size: 1.4rem !important;
+  }
+  .hotel-welcome-container.rtl {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 0px 40px;
+  }
+  .sub-header-text {
+    font-size: 1rem !important;
+  }
   .hotel-welcome-container img {
     order: 2;
     margin-top: 2rem;

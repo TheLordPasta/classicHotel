@@ -4,7 +4,8 @@
     "roomsButton": "Rooms",
     "locationButton": "Location",
     "hotelServicesButton": "Hotel Services",
-    "contactUsButton": "Contact"
+    "contactUsButton": "Contact",
+    "addressText": "Nah'alat Benyamin street 23, Tel Aviv-Yafo"
   },
   "hotelWelcome": {
     "sub-header-welcome": "the Tailor TLV",
@@ -14,10 +15,20 @@
     "shortAboutTitle": "ABOUT US",
     "shortAboutText": "short about text"
   },
+
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
     "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, enelant, and truly unforgettable stay.",
-    "roomsSideNote": "Check‑in is available from <1>12:00 PM</1>. Check‑out is until <3>12:00 PM</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival."
+    "roomsSideNote": "Check‑in is available from <1>12:00 PM</1>. Check‑out is until <3>12:00 PM</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival.",
+    "roomsIncludeText": "Our rooms included with",
+    "roomsIncludeTextBed": "100% Cotton sheets",
+    "roomsIncludeTextDesk": "Desk",
+    "roomsIncludeTextTV": "Smart TV with satellite",
+    "roomsIncludeTextCoffee": "Nespresso machine",
+    "roomsIncludeTextSafeBox": "Safe box",
+    "roomsIncludeTextMinibar": "Minibar",
+    "roomsIncludeTextItem1": "1",
+    "roomsIncludeTextItem2": "2"
   },
   "roomCardAll": {
     "subInfoPeople": "Up to 2 adults"
@@ -26,6 +37,17 @@
     "subTitle": "View of Nahalat Binyamin Street with Balcony",
     "description": "In the heart of a street once known as a hub for textiles, markets, and local creativity, stands a hotel that tailors an urban hospitality experience – precise, elegant, and personal – to the measure of every guest.",
     "subInfoMeter": "55 m²"
+  },
+  "homeServices": {
+    "homeServicesText": "Hotel Services",
+    "homeServicesBreakfast": "Rich Israeli breakfast",
+    "homeServicesReseption": "24-hour reception",
+    "homeServicesInternet": "Free Wi-Fi throughout the hotel",
+    "homeServicesHouseCleaning": "Daily cleaning / room service",
+    "homeServicesLuggage": "Luggage room",
+    "homeServicesLaundry": "Laundry and ironing service",
+    "homeServicesRoomService": "Room Service",
+    "homeServicesRooftop": "Rooftop with a city view"
   },
   "homeMap": {
     "sub-header-map": "The Center of Center TLV",

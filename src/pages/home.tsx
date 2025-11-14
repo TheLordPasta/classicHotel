@@ -4,6 +4,7 @@ import SEO from "../components/seo"; // 👈 Import your SEO component
 import "../styles/theme.css";
 import HomeRooms from "../components/homeRooms";
 import HomeMap from "../components/HomeMap";
+import HomeServices from "../components/homeServices";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <HotelWelcome />
       <HomeRooms />
       <HomeMap />
+      <HomeServices />
     </div>
   );
 }

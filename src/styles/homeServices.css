@@ -1,0 +1,53 @@
+.hotel-services-container {
+  margin-top: 100px;
+  background-color: var(--other-container-background);
+}
+.hotel-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* text left, image right */
+  align-items: start; /* 👈 instead of center */
+  margin: 0px 160px;
+  color: var(--text2-color) !important ;
+  gap: 2rem;
+  padding: 100px 0px;
+}
+@media (max-width: 1000px) {
+  .hotel-services-grid {
+    grid-template-columns: 1fr !important;
+    margin: 0px 100px;
+  }
+}
+
+.hotel-services-grid.rtl {
+  direction: rtl;
+  grid-template-columns: 1fr 1fr; /* still two columns */
+}
+.sub-header-services {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: var(--text2-color);
+  margin-bottom: 0.5rem;
+  font-family: "Noto Sans Hebrew", "Noto Sans", sans-serif;
+}
+.sub-text-services {
+  font-size: 2rem !important;
+  font-weight: normal !important;
+  max-width: 850px;
+}
+.sub-text-services-list {
+  list-style-type: disc !important;
+}
+.sub-text-services-list li::marker {
+  font-size: 0.6em;
+}
+.sub-text-services-list li {
+  text-indent: 10px;
+  margin: 5px 0px;
+}
+.qa-container span {
+  font-size: 2rem !important;
+}
+.qa-container p {
+  font-size: 1.4rem !important;
+  color: var(--text2-color) !important;
+}

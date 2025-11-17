@@ -44,7 +44,7 @@ export default function Footer() {
               <a>Cancellation Policy</a>
             </div>
             <div className="policy-divider"></div>
-            <div className="side-menu-policy-item">
+            <div className="policy-item">
               <a>Update Reservation</a>
             </div>
             <div className="policy-divider"></div>

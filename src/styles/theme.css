@@ -11,6 +11,7 @@
   --border-color: #00000000;
   --text-color: #000000;
   --text2-color: #000000;
+  --hover-color: #d1e7fe;
 }
 
 body {
@@ -62,7 +63,7 @@ small {
 }
 a:hover,
 a:focus {
-  color: var(--accent-color) !important;
+  color: var(--hover-color) !important;
 }
 a {
   text-decoration: none !important;

@@ -14,7 +14,13 @@
 @media (max-width: 1000px) {
   .hotel-services-grid {
     grid-template-columns: 1fr !important;
-    margin: 0px 100px;
+    margin: 0px 40px;
+  }
+  .qa-container span {
+    font-size: 1.2rem !important;
+  }
+  .qa-container p {
+    font-size: 0.9rem !important;
   }
 }
 
@@ -45,9 +51,9 @@
   margin: 5px 0px;
 }
 .qa-container span {
-  font-size: 2rem !important;
+  font-size: 2rem;
 }
 .qa-container p {
-  font-size: 1.4rem !important;
+  font-size: 1.4rem;
   color: var(--text2-color) !important;
 }

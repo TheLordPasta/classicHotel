@@ -190,7 +190,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: right 0.3s ease-in-out;
-  z-index: 2000;
+  z-index: 100001;
   padding: 20px;
 }
 .side-menu a {
@@ -234,7 +234,7 @@
 }
 
 .menu-item:hover {
-  color: #f0c040; /* accent hover color */
+  color: var(--hover-color); /* accent hover color */
 }
 
 /* Footer placeholders */
@@ -292,6 +292,13 @@
   .navbar-container {
     grid-template-columns: 1fr auto 1fr;
     padding: 0.5rem;
+  }
+  .color-theme-and-language-container {
+    max-width: 80px;
+    margin-left: 10px;
+  }
+  .hamburger-buttons {
+    margin-right: 50px;
   }
 }
 

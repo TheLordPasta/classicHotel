@@ -39,14 +39,17 @@
 .card-text .title {
   margin-top: 25px;
   line-height: 1rem;
+  font-size: 1.375rem !important;
 }
 .card-text .sub-title {
   margin-bottom: 12px;
   font-weight: lighter;
+  font-size: 1rem !important;
 }
 
 .description {
   margin-bottom: 15px;
+  font-size: 0.875rem;
 }
 
 .side-info-container {
@@ -72,6 +75,7 @@
 .side-info-container span {
   display: inline-block;
   line-height: 2;
+  font-size: 0.75rem !important;
 }
 .side-info-container img {
   width: 14px;

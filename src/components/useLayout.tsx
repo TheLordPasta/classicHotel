@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-// import all your assets here
+// Assets
 import LogoBlack from "../resources/images/newLogoBlack.svg";
 import LogoWhite from "../resources/images/newLogoWhite.svg";
-import LogoBlackPNG from "../resources/images/logoBlack1.5x.png";
-import LogoWhitePNG from "../resources/images/logoWhite1.5x.png";
+import LogoBlackPNG from "../resources/images/logoBlack1x.png";
+import LogoWhitePNG from "../resources/images/logoWhite1x.png";
 import tinyLogoBlack from "../resources/images/newTinyLogoBlack.svg";
 import tinyLogoWhite from "../resources/images/newTinyLogoWhite.svg";
 import GlobusBlack from "../resources/images/globusBlack.svg";
-import Globuswhite from "../resources/images/globusWhite.svg";
+import GlobusWhite from "../resources/images/globusWhite.svg";
 import ArrowBlack from "../resources/images/arrowBlack.svg";
 import ArrowWhite from "../resources/images/arrowWhite.svg";
 import HamburgerIconBlack from "../resources/images/hamburgerIcon.svg";
@@ -31,6 +31,7 @@ export const useLayout = () => {
 
   const isRTL = i18n.language === "he";
   const currentLang = i18n.language;
+
   const langLabels: Record<string, string> = {
     en: "English",
     he: "עברית",
@@ -39,13 +40,13 @@ export const useLayout = () => {
   };
   const displayLang = langLabels[currentLang] || currentLang;
 
-  // shared UI state
+  // UI state
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // shared assets state
+  // Asset state
   const [logo, setLogo] = useState(LogoBlack);
   const [bigLogo, setBigLogo] = useState(LogoBlackPNG);
   const [globus, setGlobus] = useState(GlobusBlack);
@@ -57,6 +58,7 @@ export const useLayout = () => {
   const [closeButtonSideMenu, setCloseButtonSideMenu] = useState(
     HamburgerIconCloseWhite
   );
+
   const [mappinIcon, setMappinIcon] = useState(MappinIconWhite);
   const [mailIcon, setMailIcon] = useState(MailIconWhite);
   const [phoneIcon, setPhoneIcon] = useState(PhoneIconWhite);
@@ -65,7 +67,7 @@ export const useLayout = () => {
   const [mailIconRev, setMailIconRev] = useState(MailIconBlack);
   const [phoneIconRev, setPhoneIconRev] = useState(PhoneIconBlack);
 
-  // theme CSS variables
+  // Themes
   const darkTheme = {
     "--hotel-background": "#000000",
     "--side-menu-background": "#ffffff",
@@ -81,75 +83,66 @@ export const useLayout = () => {
     "--other-container-background": "#d1e7fe33",
   };
 
-  // language change
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem("appLanguage", lng);
-    setDropdownOpen(false);
+  /** Apply CSS variables + images */
+  const applyTheme = (isDark: boolean) => {
+    setDarkMode(isDark);
+    localStorage.setItem("themeColor", isDark ? "dark" : "white");
+
+    const theme = isDark ? darkTheme : lightTheme;
+    Object.entries(theme).forEach(([key, value]) => {
+      document.documentElement.style.setProperty(key, value);
+    });
+
+    // Full theme asset swap
+    setBigLogo(isDark ? LogoWhitePNG : LogoBlackPNG);
+    setGlobus(isDark ? GlobusWhite : GlobusBlack);
+    setArrow(isDark ? ArrowWhite : ArrowBlack);
+
+    setHamburgerIcon(isDark ? HamburgerIconWhite : HamburgerIconBlack);
+    setHamburgerIconClose(
+      isDark ? HamburgerIconCloseWhite : HamburgerIconCloseBlack
+    );
+    setCloseButtonSideMenu(
+      isDark ? HamburgerIconCloseBlack : HamburgerIconCloseWhite
+    );
+
+    setMappinIcon(isDark ? MappinIconBlack : MappinIconWhite);
+    setMailIcon(isDark ? MailIconBlack : MailIconWhite);
+    setPhoneIcon(isDark ? PhoneIconBlack : PhoneIconWhite);
+
+    setMappinIconRev(isDark ? MappinIconWhite : MappinIconBlack);
+    setMailIconRev(isDark ? MailIconWhite : MailIconBlack);
+    setPhoneIconRev(isDark ? PhoneIconWhite : PhoneIconBlack);
   };
 
-  const toggleDropdown = () => setDropdownOpen((s) => !s);
-  const toggleMenu = () => setMenuOpen((s) => !s);
-
-  // initialize theme and scroll listener on mount
+  /** Load saved theme once */
   useEffect(() => {
-    const savedTheme = localStorage.getItem("themeColor") || "white";
-    setDarkMode(savedTheme === "dark");
-    applyThemeColors(savedTheme === "dark" ? darkTheme : lightTheme);
+    const savedTheme = localStorage.getItem("themeColor") === "dark";
+    applyTheme(savedTheme);
 
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // keep logo in sync with scrolled + darkMode
+  /** Only logo changes when scrolling */
   useEffect(() => {
-    if (scrolled) setLogo(darkMode ? tinyLogoWhite : tinyLogoBlack);
-    else setLogo(darkMode ? LogoWhite : LogoBlack);
+    const newLogo = scrolled
+      ? darkMode
+        ? tinyLogoWhite
+        : tinyLogoBlack
+      : darkMode
+      ? LogoWhite
+      : LogoBlack;
+
+    setLogo(newLogo);
   }, [scrolled, darkMode]);
 
-  const applyThemeColors = (theme: Record<string, string>) => {
-    Object.entries(theme).forEach(([key, value]) => {
-      document.documentElement.style.setProperty(key, value);
-    });
-  };
-
-  const toggleTheme = () => {
-    setDarkMode((prev) => {
-      const newMode = !prev;
-      localStorage.setItem("themeColor", newMode ? "dark" : "white");
-
-      // update assets in one place
-      setLogo(
-        scrolled
-          ? newMode
-            ? tinyLogoWhite
-            : tinyLogoBlack
-          : newMode
-          ? LogoWhite
-          : LogoBlack
-      );
-      setBigLogo(newMode ? LogoWhitePNG : LogoBlackPNG);
-      setGlobus(newMode ? Globuswhite : GlobusBlack);
-      setArrow(newMode ? ArrowWhite : ArrowBlack);
-      setHamburgerIcon(newMode ? HamburgerIconWhite : HamburgerIconBlack);
-      setHamburgerIconClose(
-        newMode ? HamburgerIconCloseWhite : HamburgerIconCloseBlack
-      );
-      setCloseButtonSideMenu(
-        newMode ? HamburgerIconCloseBlack : HamburgerIconCloseWhite
-      );
-      setMappinIcon(newMode ? MappinIconBlack : MappinIconWhite);
-      setMailIcon(newMode ? MailIconBlack : MailIconWhite);
-      setPhoneIcon(newMode ? PhoneIconBlack : PhoneIconWhite);
-
-      setMappinIconRev(newMode ? MappinIconWhite : MappinIconBlack);
-      setMailIconRev(newMode ? MailIconWhite : MailIconBlack);
-      setPhoneIconRev(newMode ? PhoneIconWhite : PhoneIconBlack);
-
-      applyThemeColors(newMode ? darkTheme : lightTheme);
-      return newMode;
-    });
+  // Actions
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem("appLanguage", lng);
+    setDropdownOpen(false);
   };
 
   return {
@@ -173,9 +166,9 @@ export const useLayout = () => {
     phoneIconRev,
     displayLang,
     changeLanguage,
-    toggleDropdown,
-    toggleTheme,
-    toggleMenu,
+    toggleDropdown: () => setDropdownOpen((s) => !s),
+    toggleTheme: () => applyTheme(!darkMode),
+    toggleMenu: () => setMenuOpen((s) => !s),
     navigate,
   };
 };

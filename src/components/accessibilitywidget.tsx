@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../styles/accessibilitywidget.css";
 import { useTranslation } from "react-i18next";
-import LigntbgPattern from "../resources/images/brandpatternp4.png";
-import DefaultbgPattern from "../resources/images/brandpatternp3.png";
 
 const AccessibilityWidget: React.FC = () => {
   const { t } = useTranslation();
@@ -17,7 +15,6 @@ const AccessibilityWidget: React.FC = () => {
     "--highlight-color": "#d1e7fe",
     "--button-color": "#e3b09e",
     "--button-hover-color": "#f58266",
-    "--primary-background-image": `url(${DefaultbgPattern})`,
   };
 
   const lightTheme = {
@@ -31,7 +28,6 @@ const AccessibilityWidget: React.FC = () => {
     "--button-color": "#d1e7fe",
     "--button-hover-color": "#245445",
     "--primary-logo-image": 'url("../resources/logo-black.png")',
-    "--primary-background-image": `url(${LigntbgPattern})`,
   };
   const applyTheme = (theme: Record<string, string>) => {
     Object.entries(theme).forEach(([key, value]) => {

@@ -47,9 +47,6 @@ html {
 h1 {
   font-size: 2.73rem; /* 60px */
 }
-h2 {
-  font-size: 1.56rem !important; /* 30px */
-}
 h3 {
   font-size: 1.18rem; /* ~26px */
 }
@@ -69,9 +66,8 @@ a {
   text-decoration: none !important;
 }
 
-ul,
-li {
-  font-size: 20px; /* ~18px */
+ul {
+  font-size: 1rem; /* ~18px */
 }
 select {
   appearance: none; /* removes default arrow in most browsers */

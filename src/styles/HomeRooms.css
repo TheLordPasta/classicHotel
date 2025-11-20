@@ -11,34 +11,41 @@
   padding-left: 60px;
   padding-right: 90px;
 }
+.header-include-container {
+  align-items: start !important;
+  padding-left: 60px;
+  padding-right: 90px;
+}
 .rooms-container.rtl {
   direction: rtl !important;
 }
 @media (max-width: 768px) {
-  .welcome-section {
-    width: 80%;
-  }
-  .rooms-text.rtl {
-    font-size: 1.4rem !important;
+  .header-container {
+    align-items: start !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 0px 20px;
   }
   .rooms-text {
-    font-size: 1.4rem !important;
+    font-size: 1.125rem !important;
   }
-  .header-container {
-    padding-left: 50px;
-    padding-right: 50px;
+  .rooms-text.rtl {
+    font-size: 1.125rem !important;
+  }
+  .rooms-side-note {
+    font-size: 0.875rem !important;
   }
 }
 
 .sub-header-rooms {
-  font-size: 1.2rem !important;
+  font-size: 0.75rem !important;
   font-weight: 600 !important;
   color: var(--text2-color) !important;
   margin-bottom: 0.5rem;
 }
 
 .rooms-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: normal !important;
   max-width: 1200px;
   align-items: start;
@@ -49,30 +56,29 @@
 }
 
 .rooms-side-note {
-  font-size: 1.2rem !important;
+  font-size: 1rem;
   font-weight: 200 !important;
   color: var(--text2-color) !important;
   margin-bottom: 0.5rem;
-  max-width: 660px;
+  max-width: 550px;
 }
 
 .rooms-highlight {
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
   font-weight: 600;
   color: var(--highlight-color);
 
   margin-bottom: 20px;
 }
-.side-note-row {
-  display: grid;
-  grid-template-columns: 1fr auto; /* text takes remaining space, arrow auto */
-  align-items: center;
-  width: 100%;
-  gap: 16px; /* optional spacing between text and arrow */
-}
 
 /* arrow defaults to pointing left */
+.arrow-wrapper {
+  display: flex;
+  justify-content: end;
+  padding: 0px 90px;
+}
 .arrow-swipper-icon {
+  display: flex;
   width: 60px;
   height: auto;
   transition: transform 0.3s ease;
@@ -115,4 +121,5 @@
   margin-top: 1rem;
   max-width: 118px;
   direction: rtl; /* Hebrew alignment */
+  font-size: 0.875rem;
 }

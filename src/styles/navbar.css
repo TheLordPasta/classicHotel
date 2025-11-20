@@ -182,8 +182,8 @@
   position: fixed;
   top: 0;
   right: -50%; /* hidden off-screen */
-  width: 42%;
-  height: 42rem;
+  width: 725px;
+  height: 810px;
   background: var(--text-color);
   color: var(--hotel-background);
   display: flex;
@@ -218,7 +218,6 @@
 .side-menu-content {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
   margin-top: 2rem;
   margin: 0px 80px;
 }
@@ -227,7 +226,7 @@
 }
 
 .menu-item {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
   transition: color 0.2s ease;

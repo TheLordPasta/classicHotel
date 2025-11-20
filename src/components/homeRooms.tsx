@@ -83,23 +83,22 @@ const HomeRooms: React.FC = () => {
         <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
           {t("homeRooms.roomsText")}
         </p>
-        <div className="side-note-row">
-          <p className="rooms-side-note">
-            <Trans
-              i18nKey="homeRooms.roomsSideNote"
-              components={{
-                1: <span className="rooms-highlight" />,
-                3: <span className="rooms-highlight" />,
-              }}
-            />
-          </p>
-          <img src={ArrowLeftImg} className="arrow-swipper-icon" />
-        </div>
+        <p className="rooms-side-note">
+          <Trans
+            i18nKey="homeRooms.roomsSideNote"
+            components={{
+              1: <span className="rooms-highlight" />,
+              3: <span className="rooms-highlight" />,
+            }}
+          />
+        </p>
       </div>
-
+      <div className="arrow-wrapper">
+        <img src={ArrowLeftImg} className="arrow-swipper-icon" />
+      </div>
       {/* Carousel of 4 duplicated rooms */}
       <RoomsCarousel rooms={rooms} />
-      <div className="header-container">
+      <div className="header-include-container">
         <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
           {t("homeRooms.roomsIncludeText")}
         </p>

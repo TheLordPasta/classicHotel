@@ -82,7 +82,11 @@ const MobileNavbar: React.FC<Props> = (props) => {
         </div>
       </div>
 
-      <div className={`side-menu ${props.menuOpen ? "open" : ""}`}>
+      <div
+        className={`side-menu ${props.menuOpen ? "open" : ""} ${
+          props.isRTL ? "rtl" : ""
+        }`}
+      >
         <div className="side-menu-header">
           <div className="close-button" onClick={props.toggleMenu}>
             <img src={props.closeButtonSideMenu} alt="Close menu" />
@@ -90,20 +94,20 @@ const MobileNavbar: React.FC<Props> = (props) => {
         </div>
 
         <div className={`side-menu-content ${props.isRTL ? "rtl" : ""}`}>
-          <div className="menu-item">
-            <h2>{t("navbar.homeButton")}</h2>
+          <div className="side-menu-item">
+            <p>{t("navbar.homeButton")}</p>
           </div>
-          <div className="menu-item">
-            <h2>{t("navbar.roomsButton")}</h2>
+          <div className="side-menu-item">
+            <p>{t("navbar.roomsButton")}</p>
           </div>
-          <div className="menu-item">
-            <h2>{t("navbar.locationButton")}</h2>
+          <div className="side-menu-item">
+            <p>{t("navbar.locationButton")}</p>
           </div>
-          <div className="menu-item">
-            <h2>{t("navbar.hotelServicesButton")}</h2>
+          <div className="side-menu-item">
+            <p>{t("navbar.hotelServicesButton")}</p>
           </div>
-          <div className="menu-item">
-            <h2>{t("navbar.contactUsButton")}</h2>
+          <div className="side-menu-item">
+            <p>{t("navbar.contactUsButton")}</p>
           </div>
         </div>
 

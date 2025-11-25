@@ -181,9 +181,9 @@
 .side-menu {
   position: fixed;
   top: 0;
-  right: -50%; /* hidden off-screen */
-  width: 725px;
-  height: 810px;
+  right: -100%; /* hidden off-screen */
+  max-width: 725px;
+  max-height: 810px;
   background: var(--text-color);
   color: var(--hotel-background);
   display: flex;
@@ -192,6 +192,9 @@
   transition: right 0.3s ease-in-out;
   z-index: 100001;
   padding: 20px;
+}
+.side-menu.rtl {
+  direction: rtl;
 }
 .side-menu a {
   color: var(--hotel-background);
@@ -216,23 +219,21 @@
 
 /* Menu content */
 .side-menu-content {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
   margin: 0px 80px;
+  width: 222px;
+  height: 276px;
 }
 .side-menu-content.rtl {
   direction: rtl;
 }
 
-.menu-item {
-  font-size: 1.5rem;
+.side-menu-item {
   font-weight: 500;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
-.menu-item:hover {
+.side-menu-item:hover {
   color: var(--hover-color); /* accent hover color */
 }
 

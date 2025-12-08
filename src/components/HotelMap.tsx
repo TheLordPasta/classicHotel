@@ -2,6 +2,7 @@ import { FC } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import "../styles/hotelMap.css";
 
 const iconRed = L.icon({
   iconUrl:
@@ -93,10 +94,9 @@ const markers: MarkerData[] = [
 const HotelMap: FC<MapProps> = ({
   center = [32.067212145748414, 34.77032223449812],
   zoom = 40,
-  height = "500px",
 }) => {
   return (
-    <div style={{ height, width: "100%" }}>
+    <div className="hotel-map-container">
       {" "}
       <MapContainer
         center={center}

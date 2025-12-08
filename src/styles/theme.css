@@ -1,8 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap");
+/* POLIN FULL FAMILY */
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Hairline.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Thin.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Extralight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Light.otf") format("opentype");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("../assets/fonts/polin/Polin-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 :root {
   /* Font */
-  --font: "Noto Sans Hebrew", "Noto Sans", sans-serif;
+  --font: "Polin", "Noto Sans", sans-serif;
 
   /* Tailor Hotel Color Palette */
   --hotel-background: #ffffff;
@@ -53,7 +124,7 @@ h3 {
 
 button,
 a {
-  font-size: 0.82rem !important; /* 22px */
+  font-size: 0.82rem; /* 22px */
 }
 small {
   font-size: 0.82rem; /* ~18px */
@@ -68,6 +139,7 @@ a {
 
 ul {
   font-size: 1rem; /* ~18px */
+  padding: 0 10px; /* To remove default bottom margin */
 }
 select {
   appearance: none; /* removes default arrow in most browsers */
@@ -77,4 +149,30 @@ select {
 }
 span {
   font-size: 0.82rem;
+}
+
+/*the momment i broke shit*/
+.component-wrapper {
+  max-width: 1440px; /* content stays exactly the same even on bigger screens */
+  margin: 0 auto; /* center it horizontally */
+  padding: 0; /* keep fixed spacing */
+}
+.blue-wrapper {
+  background-color: var(--other-container-background) !important;
+}
+
+/* Lock your main sections */
+.section {
+  padding: 80px 100px; /* fixed padding */
+  margin: 0 auto; /* fixed margin */
+}
+
+/* For flex containers */
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping */
+}
+
+.flex-container > * {
+  flex-shrink: 0; /* prevent shrinking */
 }

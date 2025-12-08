@@ -1,6 +1,5 @@
 .hotel-services-container {
   margin-top: 100px;
-  background-color: var(--other-container-background);
 }
 .hotel-services-grid {
   display: grid;
@@ -32,22 +31,18 @@
   font-size: 0.75rem !important;
   font-weight: 600 !important;
   color: var(--text2-color);
-  margin-bottom: 0.5rem;
-  font-family: "Noto Sans Hebrew", "Noto Sans", sans-serif;
-}
-.sub-text-services {
-  font-size: 1rem !important;
-  font-weight: normal !important;
-  max-width: 850px;
+  line-height: 25px;
+  margin: 0 !important; /* remove default margins */
 }
 .sub-text-services-list {
   list-style-type: disc !important;
+  margin: 10px 5px !important; /* remove default margins */
 }
 .sub-text-services-list li::marker {
   font-size: 0.4em;
 }
 .sub-text-services-list li {
-  text-indent: 10px;
+  text-indent: 5px;
   margin: 5px 0px;
 }
 .qa-container span {

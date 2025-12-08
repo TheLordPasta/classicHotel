@@ -4,12 +4,12 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 0px;
   overflow: hidden;
-  max-width: 450px;
-  max-height: 1000px;
-  margin: 50px 20px;
+  width: 400px;
+  height: 467px;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
   color: var(--text2-color) !important;
+  line-height: normal !important;
 }
 .card-container.rtl {
   direction: rtl !important;
@@ -27,28 +27,30 @@
 /* Styling for the image inside the card */
 .card-image {
   width: 100%;
-  height: 300px;
+  height: 266px;
   object-fit: cover;
   display: block;
 }
 
 /* Styling for the text section of the card */
 .card-text {
-  padding: 0px 25px;
+  padding: 0px 20px;
 }
 .card-text .title {
-  margin-top: 25px;
-  line-height: 1rem;
+  margin-top: 26px;
+  line-height: 15px;
   font-size: 1.375rem !important;
+  font-weight: 400 !important;
+  height: 15px;
 }
 .card-text .sub-title {
-  margin-bottom: 12px;
-  font-weight: lighter;
+  font-weight: 400;
+  margin-top: 6px;
   font-size: 1rem !important;
 }
 
 .description {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 0.875rem;
 }
 

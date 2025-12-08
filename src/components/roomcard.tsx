@@ -25,7 +25,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
     <div className={`card-container ${isRTL ? "rtl" : ""}`}>
       <img src={imageUrl} alt={title} className="card-image" />
       <div className="card-text">
-        <h2 className="title">{title}</h2>
+        <div className="title">{title}</div>
         <div className="sub-title">{subTitle}</div>
         <p className="description">{description}</p>
       </div>

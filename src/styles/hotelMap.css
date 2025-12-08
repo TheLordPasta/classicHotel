@@ -1,0 +1,12 @@
+.hotel-map-container {
+  width: 713px;
+  height: 394px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hotel-map-container {
+    width: 363px !important;
+    height: 461px !important; /* or whatever height you want */
+  }
+}

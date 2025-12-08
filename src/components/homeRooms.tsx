@@ -9,7 +9,7 @@ import TV from "../resources/images/TV.svg";
 import Nespresso from "../resources/images/nespresso.svg";
 import SafeBox from "../resources/images/safebox.svg";
 import Minibar from "../resources/images/minibar.svg";
-import HotelMap from "./HotelMap";
+import Cosmetic from "../resources/images/cosmetic.svg";
 
 const HomeRooms: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -77,77 +77,87 @@ const HomeRooms: React.FC = () => {
   ];
 
   return (
-    <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
-      <div className="header-container">
-        <p className="sub-header-rooms">{t("homeRooms.roomsTitle")}</p>
-        <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
-          {t("homeRooms.roomsText")}
-        </p>
-        <p className="rooms-side-note">
-          <Trans
-            i18nKey="homeRooms.roomsSideNote"
-            components={{
-              1: <span className="rooms-highlight" />,
-              3: <span className="rooms-highlight" />,
-            }}
-          />
-        </p>
-      </div>
-      <div className="arrow-wrapper">
-        <img src={ArrowLeftImg} className="arrow-swipper-icon" />
+    <div className="rooms-wrapper">
+      <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
+        <div className="header-container">
+          <p className="sub-header-rooms">{t("homeRooms.roomsTitle")}</p>
+          <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
+            {t("homeRooms.roomsText")}
+          </p>
+          <p className="rooms-side-note">
+            <Trans
+              i18nKey="homeRooms.roomsSideNote"
+              components={{
+                1: <span className="rooms-highlight" />,
+                3: <span className="rooms-highlight" />,
+              }}
+            />
+          </p>
+        </div>
+        <div className={`arrow-wrapper ${isRTL ? "rtl" : ""}`}>
+          <img src={ArrowLeftImg} className="arrow-swipper-icon" />
+        </div>
       </div>
       {/* Carousel of 4 duplicated rooms */}
-      <RoomsCarousel rooms={rooms} />
-      <div className="header-include-container">
-        <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
-          {t("homeRooms.roomsIncludeText")}
-        </p>
-        {/*icons with subtexts*/}
+      <div className={`carousel-container ${isRTL ? "rtl" : ""}`}>
+        <RoomsCarousel rooms={rooms} />
       </div>
-      <div className={`icons-grid ${isRTL ? "rtl" : ""}`}>
-        <div className="icon-with-subtext">
-          <img src={Bed}></img>
-          <p className="icon-side-note">{t("homeRooms.roomsIncludeTextBed")}</p>
-        </div>
-        <div className="icon-with-subtext">
-          <img src={Desk}></img>
-          <p className="icon-side-note">
-            {t("homeRooms.roomsIncludeTextDesk")}
+      <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
+        <div className="header-include-container">
+          <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
+            {t("homeRooms.roomsIncludeText")}
           </p>
+          {/*icons with subtexts*/}
         </div>
-        <div className="icon-with-subtext">
-          <img src={TV}></img>
-          <p className="icon-side-note">{t("homeRooms.roomsIncludeTextTV")}</p>
-        </div>
-        <div className="icon-with-subtext">
-          <img src={Nespresso}></img>
-          <p className="icon-side-note">
-            {t("homeRooms.roomsIncludeTextCoffee")}
-          </p>
-        </div>
-        <div className="icon-with-subtext">
-          <img src={SafeBox}></img>
-          <p className="icon-side-note">
-            {t("homeRooms.roomsIncludeTextSafeBox")}
-          </p>
-        </div>
-        <div className="icon-with-subtext">
-          <img src={Minibar}></img>
-          <p className="icon-side-note">
-            {t("homeRooms.roomsIncludeTextMinibar")}
-          </p>
-        </div>
-        <div className="icon-with-subtext">
-          <img src={Bed}></img>
-          <p className="icon-side-note">
-            {t("homeRooms.roomsIncludeTextItem1")}
-          </p>
-        </div>
-        <div className="icon-with-subtext">
-          <img src={Bed}></img>
-          <p className="icon-side-note">
-            {t("homeRooms.roomsIncludeTextItem2")}
-          </p>
+        <div className={`icons-grid ${isRTL ? "rtl" : ""}`}>
+          <div className="icon-with-subtext">
+            <img src={Bed}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextBed")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={Desk}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextDesk")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={TV}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextTV")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={Nespresso}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextCoffee")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={SafeBox}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextSafeBox")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={Minibar}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextMinibar")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={Cosmetic}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeCosmetic")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={Bed}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeTextItem2")}
+            </p>
+          </div>
         </div>
       </div>
     </div>

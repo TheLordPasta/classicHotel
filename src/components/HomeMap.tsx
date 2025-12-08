@@ -1,6 +1,5 @@
 import "../styles/hotelwelcome.css";
 import { useTranslation } from "react-i18next";
-import CoverImage from "../resources/images/coverImageWelcome.png";
 import HotelMap from "./HotelMap";
 
 const HomeMap: React.FC = () => {

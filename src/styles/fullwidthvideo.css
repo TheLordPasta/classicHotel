@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 0;
-  margin-top: 102px;
+  margin-top: 85px;
 }
 /* Hide video on screens 768px or smaller */
 @media (max-width: 768px) {

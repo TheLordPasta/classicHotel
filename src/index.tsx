@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./assets/fonts/polin-sans.css";
 import { HelmetProvider } from "react-helmet-async";
 
 const root = ReactDOM.createRoot(

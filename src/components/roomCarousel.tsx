@@ -24,12 +24,12 @@ const RoomsCarousel: React.FC<RoomsCarouselProps> = ({ rooms }) => {
       modules={[FreeMode]}
       freeMode={true} // drag freely
       slidesPerView={"auto"} // cards size themselves
-      spaceBetween={16} // gap between cards
-      centeredSlides={true} // 👈 Swiper’s “center mode”
+      spaceBetween={"20px"} // gap between cards
+      centeredSlides={false} // 👈 Swiper’s “center mode”
       dir={isRTL ? "rtl" : "ltr"} // 👈 RTL/LTR aware
     >
       {rooms.map((room, idx) => (
-        <SwiperSlide key={idx} style={{ width: "450px" }}>
+        <SwiperSlide key={idx} style={{ width: "400px" }}>
           <RoomCard {...room} />
         </SwiperSlide>
       ))}

@@ -28,34 +28,40 @@
     box-shadow: none;
   }
 }
-
+.footer-item {
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
 .footer-item span,
 .footer-item a {
   font-size: 1rem !important;
   font-family: var(--font) !important;
-  line-height: 60px;
+  line-height: 22px;
   font-weight: 100;
   color: var(--text-color);
 }
 
 .footer-item img {
-  width: 30px;
-  height: 30px;
+  align-items: center;
+  width: 24px;
+  height: 24px;
 }
 .footer-divider {
   height: 1px;
+  margin: 10px 0;
   background-color: var(--side-menu-background);
 }
 
 .footer-policies,
 .footer-policies a {
   display: flex;
-  max-width: 600px;
   justify-content: start;
   font-size: 1rem !important;
   margin: 20px 0px;
-  justify-content: space-around;
   color: var(--side-menu-background) !important;
+  gap: 0.5rem;
 }
 .policy-item a:hover {
   color: var(--hover-color) !important;
@@ -68,6 +74,10 @@
 .policy-item {
   cursor: pointer;
   transition: color 0.2s ease;
+}
+.policy-item p {
+  line-height: 25px !important;
+  padding: 0 0 !important;
 }
 
 .policy-divider {
@@ -83,6 +93,9 @@
   background-image: url("../resources/images/patternBanner2x.png");
   background-repeat: repeat; /* repeat both directions */
   background-size: 720px 69px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.banner-image img {
 }
 .credits-grid {
   display: flex;

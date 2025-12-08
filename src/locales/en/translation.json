@@ -27,15 +27,15 @@
     "roomsIncludeTextCoffee": "Nespresso machine",
     "roomsIncludeTextSafeBox": "Safe box",
     "roomsIncludeTextMinibar": "Minibar",
-    "roomsIncludeTextItem1": "1",
+    "roomsIncludeCosmetic": "Care & Comfort Products",
     "roomsIncludeTextItem2": "2"
   },
   "roomCardAll": {
     "subInfoPeople": "Up to 2 adults"
   },
   "roomCardEconomy": {
-    "subTitle": "View of Nahalat Binyamin Street with Balcony",
-    "description": "In the heart of a street once known as a hub for textiles, markets, and local creativity, stands a hotel that tailors an urban hospitality experience – precise, elegant, and personal – to the measure of every guest.",
+    "subTitle": "Street view with Balcony",
+    "description": "In the heart of a historic textile and market street, our hotel offers a precise, elegant, and personal urban hospitality experience.",
     "subInfoMeter": "55 m²"
   },
   "homeServices": {

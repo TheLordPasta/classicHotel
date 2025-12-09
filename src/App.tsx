@@ -24,6 +24,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function App() {
   return (

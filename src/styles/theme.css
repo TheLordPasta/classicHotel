@@ -105,7 +105,7 @@ p,
 button,
 a {
   font-family: var(--font), serif;
-  font-weight: 200 !important;
+  font-weight: 300 !important;
 }
 select {
   all: unset;

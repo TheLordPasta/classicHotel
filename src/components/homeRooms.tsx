@@ -10,6 +10,7 @@ import Nespresso from "../resources/images/nespresso.svg";
 import SafeBox from "../resources/images/safebox.svg";
 import Minibar from "../resources/images/minibar.svg";
 import Cosmetic from "../resources/images/cosmetic.svg";
+import EmbelaRoomCarousel from "./embelaRoomCarousel";
 
 const HomeRooms: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -102,6 +103,10 @@ const HomeRooms: React.FC = () => {
       <div className={`carousel-container ${isRTL ? "rtl" : ""}`}>
         <RoomsCarousel rooms={rooms} />
       </div>
+      <div className={`carousel-container ${isRTL ? "rtl" : ""}`}>
+        <EmbelaRoomCarousel rooms={rooms} />
+      </div>
+
       <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
         <div className="header-include-container">
           <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>

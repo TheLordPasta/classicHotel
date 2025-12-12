@@ -52,6 +52,7 @@
 .description {
   margin-bottom: 30px;
   font-size: 0.875rem;
+  min-height: 95.5001px;
 }
 
 .side-info-container {

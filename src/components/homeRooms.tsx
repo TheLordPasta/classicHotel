@@ -27,53 +27,46 @@ const HomeRooms: React.FC = () => {
       sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
     },
     {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
+      title: "STANDARD",
+      subTitle: t("roomCardStandard.subTitle"),
       imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+      description: t("roomCardStandard.description"),
+      sideInfoMeter: t("roomCardStandard.subInfoMeter"),
     },
     {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
+      title: "SUPERIOR",
+      subTitle: t("roomCardSuperior.subTitle"),
       imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+      description: t("roomCardSuperior.description"),
+      sideInfoMeter: t("roomCardSuperior.subInfoMeter"),
     },
     {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
+      title: "SUPERIOR BALCONY",
+      subTitle: t("roomCardSuperiorBalcony.subTitle"),
       imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+      description: t("roomCardSuperiorBalcony.description"),
+      sideInfoMeter: t("roomCardSuperiorBalcony.subInfoMeter"),
     },
     {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
+      title: "DELUXE",
+      subTitle: t("roomCardDeluxe.subTitle"),
       imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+      description: t("roomCardDeluxe.description"),
+      sideInfoMeter: t("roomCardDeluxe.subInfoMeter"),
     },
     {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
+      title: "DELUXE BALCONY",
+      subTitle: t("roomCardDeluxeBalcony.subTitle"),
       imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+      description: t("roomCardDeluxeBalcony.description"),
+      sideInfoMeter: t("roomCardDeluxeBalcony.subInfoMeter"),
     },
     {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
+      title: "SUITE",
+      subTitle: t("roomCardSuite.subTitle"),
       imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
-    },
-    {
-      title: "ECONOMY",
-      subTitle: t("roomCardEconomy.subTitle"),
-      imageUrl: RoomImg,
-      description: t("roomCardEconomy.description"),
-      sideInfoMeter: t("roomCardEconomy.subInfoMeter"),
+      description: t("roomCardSuite.description"),
+      sideInfoMeter: t("roomCardSuite.subInfoMeter"),
     },
   ];
 
@@ -100,9 +93,9 @@ const HomeRooms: React.FC = () => {
         </div>
       </div>
       {/* Carousel of 4 duplicated rooms */}
-      <div className={`carousel-container ${isRTL ? "rtl" : ""}`}>
+      {/* <div className={`carousel-container ${isRTL ? "rtl" : ""}`}>
         <RoomsCarousel rooms={rooms} />
-      </div>
+      </div> */}
       <div className={`carousel-container ${isRTL ? "rtl" : ""}`}>
         <EmbelaRoomCarousel rooms={rooms} />
       </div>

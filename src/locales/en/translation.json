@@ -19,7 +19,7 @@
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
     "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, enelant, and truly unforgettable stay.",
-    "roomsSideNote": "Check‑in is available from <1>12:00 PM</1>. Check‑out is until <3>12:00 PM</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival.",
+    "roomsSideNote": "Check‑in is available from <1>12:00</1>. Check‑out is until <3>15:00</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival.",
     "roomsIncludeText": "Our rooms included with",
     "roomsIncludeTextBed": "100% Cotton sheets",
     "roomsIncludeTextDesk": "Desk",
@@ -34,9 +34,39 @@
     "subInfoPeople": "Up to 2 adults"
   },
   "roomCardEconomy": {
-    "subTitle": "Street view with Balcony",
-    "description": "In the heart of a historic textile and market street, our hotel offers a precise, elegant, and personal urban hospitality experience.",
-    "subInfoMeter": "55 m²"
+    "subTitle": "Economy Room",
+    "description": "Intimate, cozy, and tastefully designed. The Economy Room is ideal for guests seeking a calm hideaway in the heart of the city, with refined décor, a comfortable double bed, and a warm Tel Aviv atmosphere.",
+    "subInfoMeter": "14 m²"
+  },
+  "roomCardStandard": {
+    "subTitle": "Standard Room",
+    "description": "A refined, comfortable room with a plush double bed and a calm space to unwind after a lively day in the city. Perfect for couples or solo travelers seeking a balance of comfort, location, and atmosphere.",
+    "subInfoMeter": "16 m²"
+  },
+  "roomCardSuperior": {
+    "subTitle": "Superior Room",
+    "description": "A stylishly designed room with refined furnishings and a modern bathroom. Enjoy a calm, comfortable stay in the heart of the city, complete with thoughtful touches that make all the difference.",
+    "subInfoMeter": "18 m²"
+  },
+  "roomCardSuperiorBalcony": {
+    "subTitle": "Superior Room with Balcony",
+    "description": "All the comfort of a Superior room, plus a private balcony overlooking the vibrant, colorful Nahalat Binyamin boulevard. Perfect for guests who enjoy both the room and the city atmosphere.",
+    "subInfoMeter": "18 m²"
+  },
+  "roomCardDeluxe": {
+    "subTitle": "Deluxe Room",
+    "description": "Spacious, elegant, and inviting with a refined boutique feel. The Deluxe room features curated furnishings, a cozy seating area, and a stylish bathroom—offering comfort and calm right in the heart of the city.",
+    "subInfoMeter": "22 m²"
+  },
+  "roomCardDeluxeBalcony": {
+    "subTitle": "Deluxe Room with Balcony",
+    "description": "A room that blends calm with a charming urban view. The Deluxe Balcony offers generous space, refined design, and a private terrace overlooking the colorful, lively streets of Nahalat Binyamin.",
+    "subInfoMeter": "22 m²"
+  },
+  "roomCardSuite": {
+    "subTitle": "Suite with Balcony",
+    "description": "Bright suites on the upper floors with a spacious balcony overlooking the Mediterranean and lively Nahalat Binyamin. Ideal for couples seeking a boutique experience.",
+    "subInfoMeter": "21 m²"
   },
   "homeServices": {
     "homeServicesText": "Hotel Services",
@@ -51,7 +81,7 @@
   },
   "homeMap": {
     "sub-header-map": "The Center of Center TLV",
-    "sub-text-map": "SAS"
+    "sub-text-map": "The Taylor is located on Nahalat Binyamin, one of Tel Aviv’s most vibrant and iconic streets, once known as a hub for textiles, markets, and local craftsmanship. Just a few steps from the colorful Carmel Market and surrounded by a rich variety of restaurants, bars, and beloved cafés, you’ll enjoy a lively urban atmosphere around the clock — right outside your door."
   },
   "footer": {
     "footerTitle": "The Tailor Hotel",

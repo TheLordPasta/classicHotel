@@ -26,7 +26,7 @@ const ImagesCarousel: React.FC<ImagesCarouselProps> = ({
     <div style={{ overflow: "hidden" }}>
       <Marquee
         gradient={false}
-        speed={120}
+        speed={60}
         direction={isRTL ? "right" : "left"}
         pauseOnHover={false} // never stop on hover
         pauseOnClick={false} // never stop on click

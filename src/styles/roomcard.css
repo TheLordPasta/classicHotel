@@ -52,6 +52,7 @@
 .description {
   margin-bottom: 30px;
   font-size: 0.875rem;
+  font-weight: 350 !important;
   min-height: 100px;
 }
 

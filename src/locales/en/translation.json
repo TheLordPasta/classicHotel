@@ -28,7 +28,8 @@
     "roomsIncludeTextSafeBox": "Safe box",
     "roomsIncludeTextMinibar": "Minibar",
     "roomsIncludeCosmetic": "Care & Comfort Products",
-    "roomsIncludeTextItem2": "2"
+    "roomsIncludeBathrobe": "Bathrobe",
+    "roomsIncludeFabricBag": "Cloth tote bag"
   },
   "roomCardAll": {
     "subInfoPeople": "Up to 2 adults"

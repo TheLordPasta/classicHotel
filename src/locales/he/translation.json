@@ -27,7 +27,8 @@
     "roomsIncludeTextSafeBox": "כספת",
     "roomsIncludeTextMinibar": "מיניבר",
     "roomsIncludeCosmetic": "מוצרי טיפוח ונוחות",
-    "roomsIncludeTextItem2": "2"
+    "roomsIncludeBathrobe": "חלוק רחצה",
+    "roomsIncludeFabricBag": "תיק בד"
   },
   "roomCardAll": {
     "subInfoPeople": "עד 2 מבוגרים"

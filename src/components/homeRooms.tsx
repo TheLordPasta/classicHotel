@@ -10,6 +10,8 @@ import Nespresso from "../resources/images/nespresso.svg";
 import SafeBox from "../resources/images/safebox.svg";
 import Minibar from "../resources/images/minibar.svg";
 import Cosmetic from "../resources/images/cosmetic.svg";
+import Bathrobe from "../resources/images/bathrobe.svg";
+import Bag from "../resources/images/bag.svg";
 import EmbelaRoomCarousel from "./embelaRoomCarousel";
 
 const HomeRooms: React.FC = () => {
@@ -151,9 +153,15 @@ const HomeRooms: React.FC = () => {
             </p>
           </div>
           <div className="icon-with-subtext">
-            <img src={Bed}></img>
+            <img src={Bathrobe}></img>
             <p className="icon-side-note">
-              {t("homeRooms.roomsIncludeTextItem2")}
+              {t("homeRooms.roomsIncludeBathrobe")}
+            </p>
+          </div>
+          <div className="icon-with-subtext">
+            <img src={Bag}></img>
+            <p className="icon-side-note">
+              {t("homeRooms.roomsIncludeFabricBag")}
             </p>
           </div>
         </div>

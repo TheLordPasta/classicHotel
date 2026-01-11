@@ -108,7 +108,7 @@ function Home() {
         <div className="image-carousel-env">
           <ImagesCarousel
             images={EnvImages}
-            cardSize={{ width: 249, height: 392 }}
+            cardSize={{ width: 294, height: 391 }}
           />
         </div>
       </motion.div>

@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr; /* text left, image right */
   align-items: start; /* 👈 instead of center */
-  margin: 0px 160px;
+  margin: 0px 100px;
   color: var(--text2-color) !important ;
   gap: 2rem;
   padding: 100px 0px;
@@ -27,12 +27,16 @@
   direction: rtl;
   grid-template-columns: 1fr 1fr; /* still two columns */
 }
+.text-container-services {
+  width: 396px;
+}
 .sub-header-services {
   font-size: 0.75rem !important;
   font-weight: 600 !important;
   color: var(--text2-color);
   line-height: 25px;
   margin: 0 !important; /* remove default margins */
+  letter-spacing: 1px;
 }
 .sub-text-services-list {
   list-style-type: disc !important;
@@ -44,6 +48,9 @@
 .sub-text-services-list li {
   text-indent: 5px;
   margin: 5px 0px;
+}
+.qa-container {
+  min-width: 713px;
 }
 .qa-container span {
   font-size: 1.5rem;

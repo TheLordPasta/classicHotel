@@ -3,7 +3,6 @@
   color: var(--text-color);
   font-family: var(--raleway);
   box-sizing: border-box;
-  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1);
 }
 .footer-container[dir="rtl"] {
   text-align: right;
@@ -13,7 +12,7 @@
   display: grid;
   grid-template-columns: 0.8fr 0.8fr;
   padding: 20px 100px;
-  margin-top: 200px;
+  margin-top: 95px;
 }
 @media (max-width: 900px) {
   .logo-with-text-grid {
@@ -39,7 +38,7 @@
   font-size: 1rem !important;
   font-family: var(--font) !important;
   line-height: 22px;
-  font-weight: 100;
+  font-weight: 350 !important;
   color: var(--text-color);
 }
 
@@ -62,6 +61,7 @@
   margin: 20px 0px;
   color: var(--side-menu-background) !important;
   gap: 0.5rem;
+  font-weight: 350 !important;
 }
 .policy-item a:hover {
   color: var(--hover-color) !important;
@@ -87,13 +87,12 @@
   text-align: center !important;
 }
 .banner-image {
-  height: 70px;
+  height: 140px;
   width: 1440px;
   width: 100%;
-  background-image: url("../resources/images/patternBanner2x.png");
+  background-image: url("../resources/images/brand pattern_banner3.png");
   background-repeat: repeat; /* repeat both directions */
-  background-size: 720px 69px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
 }
 .banner-image img {
 }
@@ -103,6 +102,7 @@
 }
 .credits-grid span {
   font-size: 0.875rem !important;
+  margin-bottom: 10px;
 }
 @media (max-width: 900px) {
   .credits-grid span {

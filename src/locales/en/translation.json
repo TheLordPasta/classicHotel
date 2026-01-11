@@ -19,7 +19,8 @@
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
     "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, enelant, and truly unforgettable stay.",
-    "roomsSideNote": "Check‑in is available from <1>12:00</1>. Check‑out is until <3>15:00</3>. The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival.",
+    "roomsSideNote": "Check‑in is available from <1>12:00</1>. Check‑out is until <3>15:00</3>.",
+    "roomsSideNoteCancellationPolicy": "The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival.",
     "roomsIncludeText": "Our rooms included with",
     "roomsIncludeTextBed": "100% Cotton sheets",
     "roomsIncludeTextDesk": "Desk",

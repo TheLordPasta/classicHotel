@@ -88,10 +88,8 @@ const HomeRooms: React.FC = () => {
                 3: <span className="rooms-highlight" />,
               }}
             />
+            <div>{t("homeRooms.roomsSideNoteCancellationPolicy")}</div>
           </p>
-        </div>
-        <div className={`arrow-wrapper ${isRTL ? "rtl" : ""}`}>
-          <img src={ArrowLeftImg} className="arrow-swipper-icon" />
         </div>
       </div>
       {/* Carousel of 4 duplicated rooms */}

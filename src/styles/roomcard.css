@@ -20,10 +20,6 @@
   }
 }
 
-.card-container:hover {
-  transform: translateY(-5px);
-}
-
 /* Styling for the image inside the card */
 .card-image {
   width: 100%;
@@ -44,7 +40,7 @@
   height: 15px;
 }
 .card-text .sub-title {
-  font-weight: 400;
+  font-weight: 350;
   margin-top: 6px;
   font-size: 1rem !important;
 }
@@ -53,7 +49,14 @@
   margin-bottom: 30px;
   font-size: 0.875rem;
   font-weight: 350 !important;
-  min-height: 100px;
+  line-height: 20px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 👈 number of lines */
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .side-info-container {
@@ -63,8 +66,9 @@
   background-color: black;
   padding: 0 20px;
   color: rgba(255, 255, 255, 0.8) !important;
-  font-weight: lighter !important;
   white-space: nowrap; /* prevent text wrapping to next line */
+  font-weight: 350px;
+  min-height: 34px;
 }
 
 /* Ensure icons and text behave inline */
@@ -94,4 +98,53 @@
   height: auto !important; /* let cards size naturally */
   display: flex !important; /* prevent inline-block gaps */
   justify-content: center; /* center your RoomCard inside */
+}
+
+/*MODAL*/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  color: white;
+  max-width: 720px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content.rtl {
+  direction: rtl;
+}
+
+.modal-image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.modal-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
 }

@@ -21,7 +21,7 @@ const EmbelaRoomCarousel: React.FC<Props> = ({ rooms, cardWidth = 400 }) => {
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "he";
 
-  const alignment: "start" | "end" = isRTL ? "end" : "start";
+  const alignment: "end" | "start" = isRTL ? "start" : "end";
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,

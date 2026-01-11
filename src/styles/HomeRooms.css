@@ -9,8 +9,6 @@
 }
 .header-include-container {
   align-items: start !important;
-  padding-left: 60px;
-  padding-right: 90px;
 }
 .rooms-container.rtl {
   direction: rtl !important;
@@ -22,6 +20,7 @@
   color: var(--text2-color) !important;
   margin-bottom: 0.5rem;
   padding-top: 62px !important;
+  letter-spacing: 1px;
 }
 
 .rooms-text {
@@ -30,6 +29,7 @@
   max-width: 820px;
   align-items: start;
   color: var(--text2-color);
+  line-height: 34px;
 }
 .rooms-text.rtl {
   direction: rtl;
@@ -41,6 +41,7 @@
   color: var(--text2-color) !important;
   margin-bottom: 0.5rem;
   max-width: 550px;
+  line-height: 24px;
 }
 .carousel-container {
   width: 100%;
@@ -114,7 +115,7 @@
 }
 
 .icon-side-note {
-  font-weight: 200 !important;
+  font-weight: 350 !important;
   color: var(--text2-color) !important;
   margin-top: 1rem;
   max-width: 118px;

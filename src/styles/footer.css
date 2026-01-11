@@ -94,8 +94,7 @@
   background-repeat: repeat; /* repeat both directions */
   margin-bottom: 10px;
 }
-.banner-image img {
-}
+
 .credits-grid {
   display: flex;
   justify-content: space-around;

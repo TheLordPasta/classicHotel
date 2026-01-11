@@ -8,8 +8,8 @@ import LogoBlack from "../resources/images/newLogoBlack.svg";
 import LogoWhite from "../resources/images/newLogoWhite.svg";
 import LogoBlackPNG from "../resources/images/logoBlack1x.png";
 import LogoWhitePNG from "../resources/images/logoWhite1x.png";
-import tinyLogoBlack from "../resources/images/newTinyLogoBlack.svg";
-import tinyLogoWhite from "../resources/images/newTinyLogoWhite.svg";
+import TinyLogoBlack from "../resources/images/newTinyLogoBlack.svg";
+import TinyLogoWhite from "../resources/images/newTinyLogoWhite.svg";
 import GlobusBlack from "../resources/images/globusBlack.svg";
 import GlobusWhite from "../resources/images/globusWhite.svg";
 import ArrowBlack from "../resources/images/arrowBlack.svg";
@@ -47,6 +47,7 @@ export const useLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Asset state
+  const [tinyLogo, setTinyLogo] = useState(TinyLogoBlack);
   const [logo, setLogo] = useState(LogoBlack);
   const [bigLogo, setBigLogo] = useState(LogoBlackPNG);
   const [globus, setGlobus] = useState(GlobusBlack);
@@ -94,6 +95,7 @@ export const useLayout = () => {
     });
 
     // Full theme asset swap
+    setTinyLogo(isDark ? TinyLogoBlack : TinyLogoWhite);
     setBigLogo(isDark ? LogoWhitePNG : LogoBlackPNG);
     setGlobus(isDark ? GlobusWhite : GlobusBlack);
     setArrow(isDark ? ArrowWhite : ArrowBlack);
@@ -129,8 +131,8 @@ export const useLayout = () => {
   useEffect(() => {
     const newLogo = scrolled
       ? darkMode
-        ? tinyLogoWhite
-        : tinyLogoBlack
+        ? TinyLogoWhite
+        : TinyLogoBlack
       : darkMode
       ? LogoWhite
       : LogoBlack;
@@ -151,6 +153,7 @@ export const useLayout = () => {
     menuOpen,
     dropdownOpen,
     isRTL,
+    tinyLogo,
     logo,
     bigLogo,
     globus,

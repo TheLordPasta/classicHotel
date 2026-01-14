@@ -7,6 +7,7 @@
   margin: 0px 100px;
   margin-top: 100px;
   gap: 2rem;
+  max-width: 1440px;
 }
 
 .hotel-welcome-container img {
@@ -15,7 +16,7 @@
 /* Text styles */
 .sub-header-welcome {
   font-size: 0.75rem !important;
-  font-weight: bold !important;
+  font-weight: 600 !important;
   color: var(--text-color);
   margin-bottom: 1.5rem;
   letter-spacing: 1px;

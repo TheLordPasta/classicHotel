@@ -67,7 +67,7 @@
   padding: 0 20px;
   color: rgba(255, 255, 255, 0.8) !important;
   white-space: nowrap; /* prevent text wrapping to next line */
-  font-weight: 350px;
+
   min-height: 34px;
 }
 
@@ -84,6 +84,7 @@
   display: inline-block;
   line-height: 2;
   font-size: 0.75rem !important;
+  font-weight: 350 !important;
 }
 .side-info-container img {
   width: 14px;
@@ -109,18 +110,29 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .modal-content {
   color: white;
-  max-width: 720px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 24px;
+  width: 100%;
+  margin: 68px 65px;
   position: relative;
   text-align: center;
+}
+.modal-text {
+  max-width: 682px;
+  margin: 0 auto; /* center it horizontally */
+}
+.modal-title {
+  line-height: 15px;
+  font-size: 1.375rem !important;
+  font-weight: 350 !important;
+  height: 15px;
+}
+.modal-sub-title {
+  font-weight: 350;
+  margin-top: 6px;
+  font-size: 1rem !important;
 }
 
 .modal-content.rtl {
@@ -138,13 +150,31 @@
   line-height: 1.6;
   text-align: center;
 }
+/* roomcard.css */
 
-.modal-close {
+/* Close button */
+.modal-close-button {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: 22px;
+  top: 15px;
+  right: 37px;
+  width: 34px;
+  height: 34px;
   cursor: pointer;
+  z-index: 1002;
+}
+
+.modal-close-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Optional: increase click area on mobile */
+@media (max-width: 768px) {
+  .close-button {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
 }

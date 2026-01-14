@@ -108,7 +108,6 @@ p,
 button,
 a {
   font-family: var(--font), serif;
-  font-weight: 300 !important;
 }
 select {
   all: unset;
@@ -142,7 +141,7 @@ a {
 
 ul {
   font-size: 1rem; /* ~18px */
-  padding: 0 10px; /* To remove default bottom margin */
+  padding: 0 px; /* To remove default bottom margin */
 }
 select {
   appearance: none; /* removes default arrow in most browsers */

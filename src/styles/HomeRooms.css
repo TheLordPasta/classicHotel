@@ -1,8 +1,14 @@
+.rooms-wrapper {
+  max-width: 1440px;
+}
 .rooms-container {
   align-items: start !important;
   border-radius: 0px;
   margin: 60px 100px;
   transition: transform 0.2s ease-in-out;
+}
+.rooms {
+  width: 100%;
 }
 .header-container {
   align-items: start !important;
@@ -25,7 +31,7 @@
 
 .rooms-text {
   font-size: 1.5rem;
-  font-weight: thin !important;
+  font-weight: 350 !important;
   max-width: 820px;
   align-items: start;
   color: var(--text2-color);

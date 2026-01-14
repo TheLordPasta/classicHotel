@@ -30,7 +30,7 @@ const RoomsCarousel: React.FC<RoomsCarouselProps> = ({ rooms }) => {
     >
       {rooms.map((room, idx) => (
         <SwiperSlide key={idx} style={{ width: "400px" }}>
-          <RoomCard {...room} />
+          {/* <RoomCard {...room} /> */}
         </SwiperSlide>
       ))}
     </Swiper>

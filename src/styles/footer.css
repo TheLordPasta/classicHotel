@@ -3,6 +3,10 @@
   color: var(--text-color);
   font-family: var(--raleway);
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  align-items: center;
+  margin: 0 auto; /* 👈 center it */
 }
 .footer-container[dir="rtl"] {
   text-align: right;
@@ -10,7 +14,7 @@
 
 .logo-with-text-grid {
   display: grid;
-  grid-template-columns: 0.8fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
   padding: 20px 100px;
   margin-top: 95px;
 }
@@ -26,6 +30,9 @@
   .footer-container {
     box-shadow: none;
   }
+}
+.footer-text {
+  min-width: 713px;
 }
 .footer-item {
   display: flex;
@@ -57,7 +64,7 @@
 .footer-policies a {
   display: flex;
   justify-content: start;
-  font-size: 1rem !important;
+  font-size: 0.75rem !important;
   margin: 20px 0px;
   color: var(--side-menu-background) !important;
   gap: 0.5rem;

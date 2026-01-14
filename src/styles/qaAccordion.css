@@ -19,7 +19,7 @@
   padding: 0;
   cursor: pointer;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 350;
   color: #000000;
   direction: inherit; /* important: follows parent direction (RTL/LTR) */
 }

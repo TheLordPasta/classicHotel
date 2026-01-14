@@ -10,6 +10,7 @@ interface Room {
   imageUrl: string;
   description: string;
   sideInfoMeter: string;
+  roomImages: string[];
 }
 
 interface Props {

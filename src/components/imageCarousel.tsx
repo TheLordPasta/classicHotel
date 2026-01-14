@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 
@@ -14,6 +14,17 @@ interface ImagesCarouselProps {
     height: number; // px
   };
 }
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  return isMobile;
+};
 
 const ImagesCarousel: React.FC<ImagesCarouselProps> = ({
   images,
@@ -21,6 +32,10 @@ const ImagesCarousel: React.FC<ImagesCarouselProps> = ({
 }) => {
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "he";
+  const isMobile = useIsMobile();
+  const effectiveImageSize = isMobile
+    ? { width: 177.45, height: 236.39 }
+    : cardSize;
 
   return (
     <div style={{ overflow: "hidden" }}>
@@ -36,8 +51,8 @@ const ImagesCarousel: React.FC<ImagesCarouselProps> = ({
           <div
             key={idx}
             style={{
-              width: cardSize.width,
-              height: cardSize.height,
+              width: effectiveImageSize.width,
+              height: effectiveImageSize.height,
               marginRight: 20,
               overflow: "hidden",
               flex: "0 0 auto",

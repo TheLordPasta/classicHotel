@@ -17,7 +17,10 @@ export default function Footer() {
   return (
     <footer className="footer-container" dir={direction}>
       <div className="logo-with-text-grid">
-        <img className="logo-footer" src={layout.bigLogo}></img>
+        <div className="logo-container">
+          <img className="logo-footer" src={layout.bigLogo}></img>
+        </div>
+
         <div className="footer-text">
           <div className={`footer-contact ${layout.isRTL ? "rtl" : ""}`}>
             <div className="footer-item">

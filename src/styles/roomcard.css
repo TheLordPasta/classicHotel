@@ -16,7 +16,6 @@
 }
 @media (max-width: 768px) {
   .card-container {
-    width: 80%;
   }
 }
 
@@ -176,5 +175,15 @@
     right: 12px;
     width: 36px;
     height: 36px;
+  }
+  .card-container {
+    max-width: 289px;
+  }
+  .card-image {
+    width: 100%;
+    height: 266px;
+    max-width: 289px;
+    object-fit: cover;
+    display: block;
   }
 }

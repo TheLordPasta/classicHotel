@@ -111,7 +111,7 @@ const HomeRooms: React.FC = () => {
       <div className="rooms-wrapper">
         <div className={`rooms-container ${isRTL ? "rtl" : ""}`}>
           <div className="header-include-container">
-            <p className={`rooms-text ${isRTL ? "rtl" : ""}`}>
+            <p className={`rooms-text-include ${isRTL ? "rtl" : ""}`}>
               {t("homeRooms.roomsIncludeText")}
             </p>
             {/*icons with subtexts*/}

@@ -17,11 +17,23 @@ interface Props {
   rooms: Room[];
   cardWidth?: number;
 }
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  return isMobile;
+};
 
 const EmbelaRoomCarousel: React.FC<Props> = ({ rooms, cardWidth = 400 }) => {
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "he";
-
+  const isMobile = useIsMobile();
+  const effectiveCardWidth = isMobile ? 289 : cardWidth;
   const alignment: "end" | "start" = isRTL ? "start" : "end";
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -59,7 +71,10 @@ const EmbelaRoomCarousel: React.FC<Props> = ({ rooms, cardWidth = 400 }) => {
             <div
               className="embla__slide"
               key={i}
-              style={{ flex: `0 0 ${cardWidth}px`, minWidth: `${cardWidth}px` }}
+              style={{
+                flex: `0 0 ${effectiveCardWidth}px`,
+                minWidth: `${effectiveCardWidth}px`,
+              }}
             >
               <RoomCard {...room} />
             </div>

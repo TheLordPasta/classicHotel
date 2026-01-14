@@ -128,6 +128,9 @@
   direction: rtl; /* Hebrew alignment */
   font-size: 0.875rem;
 }
+.rooms-text-include {
+  font-weight: 350;
+}
 
 @media (max-width: 768px) {
   .rooms-container {
@@ -171,5 +174,8 @@
     margin-top: 58px;
     padding: 0px;
     row-gap: 2rem; /* vertical spacing */
+  }
+  .rooms-text-include {
+    text-align: center;
   }
 }

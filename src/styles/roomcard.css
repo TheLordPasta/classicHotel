@@ -104,7 +104,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--hotel-background);
   z-index: 9999;
 
   display: flex;
@@ -112,15 +112,20 @@
 }
 
 .modal-content {
-  color: white;
+  display: flex;
+  color: var(--text-color);
   width: 100%;
-  margin: 68px 65px;
   position: relative;
-  text-align: center;
+  justify-content: space-between;
 }
 .modal-text {
-  max-width: 682px;
-  margin: 0 auto; /* center it horizontally */
+  max-width: 400px;
+  margin-top: 201px;
+  margin-left: 99px;
+}
+.modal-text.rtl {
+  margin-left: 0px;
+  margin-right: 99px;
 }
 .modal-title {
   line-height: 15px;
@@ -147,7 +152,36 @@
 .modal-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  text-align: center;
+}
+.side-info-container-modal {
+  display: flex; /* force horizontal layout */
+  align-items: center; /* vertically center icons + text */
+  gap: 8px; /* control spacing between items */
+  background-color: (--hotel-background);
+  white-space: nowrap; /* prevent text wrapping to next line */
+
+  min-height: 34px;
+}
+
+.side-info-container-modal img {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.side-info-container-modal span {
+  display: inline-block;
+  line-height: 2;
+  font-size: 0.75rem !important;
+  font-weight: 350 !important;
+}
+.slider-wrapper {
+  margin-left: 0px;
+  margin-right: 99px;
+  margin-top: 145px;
+}
+.slider-wrapper.rtl {
+  margin-left: 99px;
 }
 /* roomcard.css */
 

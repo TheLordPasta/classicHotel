@@ -5,7 +5,8 @@ import MeterIcon from "../resources/images/meter.svg";
 import { useTranslation } from "react-i18next";
 import { createPortal } from "react-dom";
 import EmbelaImageSlider from "./embelaImageSlider";
-import IconCloseWhite from "../resources/images/hamburgerIconCloseWhite.svg";
+
+import { useLayoutContext } from "../contexts/LayoutContext";
 
 interface RoomCardProps {
   title: string;
@@ -24,6 +25,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
   sideInfoMeter,
   roomImages,
 }) => {
+  const layout = useLayoutContext();
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "he";
   const [open, setOpen] = useState(false);
@@ -36,20 +38,28 @@ const RoomCard: React.FC<RoomCardProps> = ({
     <div className="modal-overlay" onClick={() => setOpen(false)}>
       {/* Close Button */}
       <div className="modal-close-button" onClick={() => setOpen(false)}>
-        <img src={IconCloseWhite} alt="close"></img>
+        <img src={layout.hamburgerIconClose} alt="close"></img>
       </div>
       <div
         className={`modal-content ${isRTL ? "rtl" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="modal-text">
+        <div className={`modal-text ${isRTL ? "rtl" : ""}`}>
           <div className="modal-title">{title}</div>
           <div className="modal-sub-title">{subTitle}</div>
           <p className="modal-description">{description}</p>
+          <div className="side-info-container-modal">
+            <img src={layout.PeopleIconRev} />
+            <span>{t("roomCardAll.subInfoPeople")}</span>
+            <img src={layout.MeterIconRev} />
+            <span>{sideInfoMeter}</span>
+          </div>
         </div>
 
         {/* <img src={imageUrl} className="modal-image" /> */}
-        <EmbelaImageSlider images={roomImages} />
+        <div className={`slider-wrapper ${isRTL ? "rtl" : ""}`}>
+          <EmbelaImageSlider images={roomImages} />
+        </div>
       </div>
     </div>
   ) : null;
@@ -69,9 +79,9 @@ const RoomCard: React.FC<RoomCardProps> = ({
           <p className="description">{description}</p>
         </div>
         <div className="side-info-container">
-          <img src={PeopleIcon} />
+          <img src={layout.PeopleIcon} />
           <span>{t("roomCardAll.subInfoPeople")}</span>
-          <img src={MeterIcon} />
+          <img src={layout.MeterIcon} />
           <span>{sideInfoMeter}</span>
         </div>
       </div>

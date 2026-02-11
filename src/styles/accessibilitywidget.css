@@ -3,14 +3,9 @@
   bottom: 10px;
   left: 10px;
   z-index: 1000;
-  border-color: transparent;
-  background-color: transparent;
   padding: 0px;
   cursor: pointer;
-  font-size: 40px;
-  list-style: none;
-  background-color: color-mix(in srgb, var(--primary-color) 75%, transparent);
-  border-radius: 8px;
+  width: 100px;
   transition: transform 0.3s ease;
 }
 .accessibility-toggle:hover {
@@ -18,37 +13,83 @@
 }
 
 .accessibility-drawer {
-  text-align: start;
+  text-align: center;
   position: fixed;
-  top: 30%;
-  right: -350px;
-  width: 150px;
+  top: 10%;
+  left: -450px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   background-color: white;
   color: black;
-  padding: 12px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
-  transition: right 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
   z-index: 999;
   margin-bottom: 50%;
 }
 
+.accessibility-drawer.rtl {
+  direction: rtl;
+}
+
 .accessibility-drawer.open {
-  right: 0;
+  left: 0;
 }
 
-.accessibility-drawer h2 {
-  margin-top: 0;
-  font-size: 16px;
-  font-weight: bold;
+.accessibility-header {
+  display: grid;
+  grid-template-columns: 15fr 1fr;
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+  background-color: var(--side-menu-background);
+  color: var(--hotel-background);
+  padding: 10px;
 }
-
+.accessibility-header p {
+  padding: 0px;
+  margin: 0px;
+}
+.accessibility-icon {
+  z-index: 1000;
+  padding: 0px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
 .accessibility-drawer ul {
   list-style: none;
   padding: 0;
 }
 .accessibility-drawer li {
   margin-top: 5px;
+}
+.accessibility-text {
+  background-color: var(--other-container-background-rev);
+}
+.accessibility-subject {
+  margin: 0px;
+  font-size: 1.5rem !important;
+  font-weight: 350 !important;
+  line-height: 34px;
+}
+.accessibility-divider {
+  height: 1px;
+  margin-bottom: 10px;
+  background-color: var(--side-menu-background);
+  opacity: 0.2;
+}
+
+.accessibility-icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1500px; /* limits total width */
+  margin: 0 auto; /* centers the grid */
+  row-gap: 2rem; /* vertical spacing */
+}
+.accessibility-icons-grid.rtl {
+  direction: rtl;
 }
 
 .accessibility-drawer button {
@@ -70,7 +111,7 @@
 
 .accessibility-drawer button.reset {
   background-color: var(--secondary-text-color);
-  color: white;
+  color: rgb(198, 15, 15);
   border-color: transparent;
 }
 .accessibility-drawer button.reset:hover {
@@ -121,6 +162,7 @@ body {
   --hotel-background: #000000; /* Black background */
   --dark-background: #000000; /* Black elements */
   --text-color: #ffffff; /* White text */
+  --text2-color: #ffffff;
   --secondary-text-color: #ffd6cc; /* Light peach for subtext */
   --highlight-color: #00aaff; /* Bright blue highlight */
 
@@ -141,21 +183,6 @@ body {
   /* Buttons & UI */
   --button-color: #f8a88d; /* Coral button */
   --button-hover-color: #f2c4b4; /* Light coral hover */
-}
-
-.light-bg-mode {
-  /* Tailor Hotel Light Palette */
-  --primary-color: #7aa892; /* Softer Deep Green */
-  --accent-color: #f8a88d; /* Light Warm Accent */
-  --hotel-background: #fbe4c7; /* Pale Tan */
-  --dark-background: #333333; /* Soft Black */
-  --text-color: #000000; /* Deep Charcoal */
-  --secondary-text-color: #a24120;
-  --highlight-color: #eaf3ff; /* Pale Blue Accent */
-
-  /* Buttons & UI */
-  --button-color: #f2c4b4; /* Light Accent Coral */
-  --button-hover-color: #f8a88d; /* Light Coral Hover */
 }
 
 .underline-links-mode a {

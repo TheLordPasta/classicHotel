@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import "../styles/embelaImageSlider.css";
 import { useTranslation } from "react-i18next";
+import { useDotButton, DotButton } from "./embelaCarouselDotButton";
 
 interface Props {
   images: string[];
@@ -18,6 +19,8 @@ const EmbelaImageSlider: React.FC<Props> = ({ images }) => {
     align: "center",
     direction: isRTL ? "rtl" : "ltr",
   });
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
 
   // State for pagination
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,10 +70,16 @@ const EmbelaImageSlider: React.FC<Props> = ({ images }) => {
           {isRTL ? "‹" : "›"}
         </button>
       </div>
-
-      {/* Pagination */}
-      <div className="image-embla__pagination">
-        {currentIndex + 1}/{images.length}
+      <div className="embla__dots">
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            onClick={() => onDotButtonClick(index)}
+            className={"embla__dot".concat(
+              index === selectedIndex ? " embla__dot--selected" : ""
+            )}
+          />
+        ))}
       </div>
     </div>
   );

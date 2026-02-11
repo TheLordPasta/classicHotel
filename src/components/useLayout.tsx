@@ -24,6 +24,12 @@ import PhoneIconWhite from "../resources/images/phoneIconWhite.svg";
 import PhoneIconBlack from "../resources/images/phoneIconBlack.svg";
 import MailIconWhite from "../resources/images/mailIconWhite.svg";
 import MailIconBlack from "../resources/images/mailIconBlack.svg";
+import AccessibilityIconBlack from "../resources/images/accessibility.png";
+import AccessibilityIconWhite from "../resources/images/accessibilityWhite.png";
+import MeterWhiteIcon from "../resources/images/meterWhite.svg";
+import MeterBlackIcon from "../resources/images/meterBlack.svg";
+import PeopleWhiteIcon from "../resources/images/peopleWhite.svg";
+import PeopleBlackIcon from "../resources/images/peopleBlack.svg";
 
 export const useLayout = () => {
   const { i18n } = useTranslation();
@@ -68,6 +74,17 @@ export const useLayout = () => {
   const [mailIconRev, setMailIconRev] = useState(MailIconBlack);
   const [phoneIconRev, setPhoneIconRev] = useState(PhoneIconBlack);
 
+  const [AccessibilityIcon, setAccessibilityIcon] = useState(
+    AccessibilityIconBlack
+  );
+  const [AccessibilityIconRev, setAccessibilityIconRev] = useState(
+    AccessibilityIconWhite
+  );
+  const [MeterIcon, setMeterIcon] = useState(MeterWhiteIcon);
+  const [MeterIconRev, setMeterIconRev] = useState(MeterBlackIcon);
+  const [PeopleIcon, setPeopleIcon] = useState(PeopleWhiteIcon);
+  const [PeopleIconRev, setPeopleIconRev] = useState(PeopleBlackIcon);
+
   // Themes
   const darkTheme = {
     "--hotel-background": "#000000",
@@ -75,6 +92,7 @@ export const useLayout = () => {
     "--text-color": "#ffffff",
     "--border-color": "#ffffff",
     "--other-container-background": "#d1e7fe",
+    "--other-container-background-rev": "#d1e7fe33",
   };
   const lightTheme = {
     "--hotel-background": "#ffffff",
@@ -82,6 +100,7 @@ export const useLayout = () => {
     "--text-color": "#000000",
     "--border-color": "#ffffff00",
     "--other-container-background": "#d1e7fe33",
+    "--other-container-background-rev": "#d1e7fe",
   };
 
   /** Apply CSS variables + images */
@@ -115,6 +134,16 @@ export const useLayout = () => {
     setMappinIconRev(isDark ? MappinIconWhite : MappinIconBlack);
     setMailIconRev(isDark ? MailIconWhite : MailIconBlack);
     setPhoneIconRev(isDark ? PhoneIconWhite : PhoneIconBlack);
+
+    setAccessibilityIcon(
+      isDark ? AccessibilityIconWhite : AccessibilityIconBlack
+    );
+    setAccessibilityIconRev(
+      isDark ? AccessibilityIconBlack : AccessibilityIconWhite
+    );
+
+    setMeterIconRev(isDark ? MeterWhiteIcon : MeterBlackIcon);
+    setPeopleIconRev(isDark ? PeopleWhiteIcon : PeopleBlackIcon);
   };
 
   /** Load saved theme once */
@@ -167,7 +196,13 @@ export const useLayout = () => {
     mappinIconRev,
     mailIconRev,
     phoneIconRev,
+    AccessibilityIcon,
+    AccessibilityIconRev,
     displayLang,
+    MeterIcon,
+    MeterIconRev,
+    PeopleIcon,
+    PeopleIconRev,
     changeLanguage,
     toggleDropdown: () => setDropdownOpen((s) => !s),
     toggleTheme: () => applyTheme(!darkMode),

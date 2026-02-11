@@ -20,7 +20,7 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: 350;
-  color: #000000;
+  color: var(--text-color2);
   direction: inherit; /* important: follows parent direction (RTL/LTR) */
 }
 

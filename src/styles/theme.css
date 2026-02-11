@@ -79,13 +79,11 @@
   --hotel-background: #ffffff;
   --side-menu-background: #000000;
   --other-container-background: #d1e7fe33;
+  --other-container-background-rev: #d1e7fe;
   --border-color: #00000000;
   --text-color: #000000;
   --text2-color: #000000;
   --hover-color: #d1e7fe;
-}
-html {
-  font-size: 16px !important;
 }
 
 body {

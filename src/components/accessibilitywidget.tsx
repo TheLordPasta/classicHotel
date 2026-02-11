@@ -1,57 +1,20 @@
 import React, { useState } from "react";
 import "../styles/accessibilitywidget.css";
 import { useTranslation } from "react-i18next";
+import { useLayoutContext } from "../contexts/LayoutContext";
+import { useIsRTL } from "react-bootstrap/esm/ThemeProvider";
 
 const AccessibilityWidget: React.FC = () => {
-  const { t } = useTranslation();
+  const layout = useLayoutContext();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "he";
   const [isOpen, setIsOpen] = useState(false);
-  const defaultTheme = {
-    "--primary-color": "#245445",
-    "--accent-color": "#f58266",
-    "--hotel-background": "#f5d6ab",
-    "--button-background": "#000000",
-    "--text-color": "#ffffff",
-    "--secondary-text-color": "#e3b09e",
-    "--highlight-color": "#d1e7fe",
-    "--button-color": "#e3b09e",
-    "--button-hover-color": "#f58266",
-  };
-
-  const lightTheme = {
-    "--primary-color": "#e3b09e",
-    "--accent-color": "#245445",
-    "--hotel-background": "#d1e7fe",
-    "--button-background": "#ffffff",
-    "--text-color": "#000000",
-    "--secondary-text-color": "#333333",
-    "--highlight-color": "#245445",
-    "--button-color": "#d1e7fe",
-    "--button-hover-color": "#245445",
-    "--primary-logo-image": 'url("../resources/logo-black.png")',
-  };
-  const applyTheme = (theme: Record<string, string>) => {
-    Object.entries(theme).forEach(([key, value]) => {
-      document.documentElement.style.setProperty(key, value);
-    });
-  };
-  const toggleLightBackground = () => {
-    const newValue = !settings.lightBackground;
-    if (newValue) {
-      applyTheme(lightTheme);
-      // setLogo(BlackLogo);
-    } else {
-      applyTheme(defaultTheme);
-      // setLogo(WhiteLogo);
-    }
-    setSettings((prev) => ({ ...prev, lightBackground: newValue }));
-  };
 
   const [settings, setSettings] = useState({
     fontScale: 1,
     grayscale: false,
     highContrast: false,
     negativeContrast: false,
-    lightBackground: false,
     underlineLinks: false,
     readableFont: false,
   });
@@ -59,11 +22,16 @@ const AccessibilityWidget: React.FC = () => {
   const toggleDrawer = () => setIsOpen(!isOpen);
 
   const applyFontScale = (scale: number) => {
-    document.documentElement.style.setProperty(
-      "--base-font-size",
-      `${scale * 22}px`
-    );
-    setSettings((prev) => ({ ...prev, fontScale: scale }));
+    // Limit scale between 0.8x and 1.8x
+    const minScale = 0.8; // 80% of default
+    const maxScale = 1.8; // 180% of default
+    const clamped = Math.min(maxScale, Math.max(minScale, scale));
+
+    // Apply font size to root
+    document.documentElement.style.fontSize = `${clamped * 16}px`;
+
+    // Update state
+    setSettings((prev) => ({ ...prev, fontScale: clamped }));
   };
 
   const toggleClass = (key: keyof typeof settings, className: string) => {
@@ -80,24 +48,62 @@ const AccessibilityWidget: React.FC = () => {
       grayscale: false,
       highContrast: false,
       negativeContrast: false,
-      lightBackground: false,
       underlineLinks: false,
       readableFont: false,
     });
-    applyTheme(defaultTheme);
   };
 
   return (
     <>
-      <button
-        className={`accessibility-toggle ${isOpen ? "open" : ""}`}
+      <img
+        className={`accessibility-toggle ${isOpen ? "open" : ""} `}
         onClick={toggleDrawer}
-      >
-        ♿
-      </button>
+        src={layout.AccessibilityIcon}
+      ></img>
 
-      <div className={`accessibility-drawer ${isOpen ? "open" : ""}`}>
-        <h2>{t("accessibilityWidget.accessibilityWidgetTitle")}</h2>
+      <div
+        className={`accessibility-drawer ${isOpen ? "open" : ""} ${
+          isRTL ? "rtl" : ""
+        }`}
+      >
+        <div className="accessibility-header">
+          <p>{t("accessibilityWidget.accessibilityWidgetTitle")}</p>
+
+          <img
+            className="accessibility-icon"
+            src={layout.AccessibilityIconRev}
+          ></img>
+        </div>
+        <div className="accessibility-text">
+          <p className="accessibility-subject">גודל גופן</p>
+          <div className="accessibility-divider"></div>
+          <div className={`accessibility-icons-grid ${isRTL ? "rtl" : ""}`}>
+            <div className="icon-with-subtext">
+              <button onClick={() => applyFontScale(settings.fontScale + 0.1)}>
+                <img src={layout.accessibility}></img>
+              </button>
+
+              <p className="icon-side-note">
+                {t("accessibilityWidget.increaseText")}
+              </p>
+            </div>
+            <div className="icon-with-subtext">
+              <button
+                onClick={() =>
+                  applyFontScale(Math.max(0.8, settings.fontScale - 0.1))
+                }
+              >
+                <img src={layout.accessibility}></img>
+              </button>
+
+              <p className="icon-side-note">
+                {t("accessibilityWidget.decreaseText")}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/*old 
         <ul>
           <li>
             <button onClick={() => applyFontScale(settings.fontScale + 0.1)}>
@@ -126,16 +132,7 @@ const AccessibilityWidget: React.FC = () => {
             </button>
           </li>
           <li>
-            <button
-              onClick={() =>
-                toggleClass("negativeContrast", "negative-contrast-mode")
-              }
-            >
-              {t("accessibilityWidget.negativeContrast")}
-            </button>
-          </li>
-          <li>
-            <button onClick={toggleLightBackground}>
+            <button onClick={layout.toggleTheme}>
               {t("accessibilityWidget.lightBackground")}
             </button>
           </li>
@@ -160,7 +157,7 @@ const AccessibilityWidget: React.FC = () => {
               {t("accessibilityWidget.resetAll")}
             </button>
           </li>
-        </ul>
+        </ul>*/}
       </div>
     </>
   );

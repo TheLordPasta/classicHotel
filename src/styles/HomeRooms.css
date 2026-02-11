@@ -130,6 +130,7 @@
 }
 .rooms-text-include {
   font-weight: 350;
+  color: var(--text2-color) !important;
 }
 
 @media (max-width: 768px) {

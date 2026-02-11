@@ -21,7 +21,7 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: 100%;
-  max-width: 1440px; /* 👈 limit width */
+
   margin: 0 auto; /* 👈 center it */
   background-color: var(--hotel-background);
   height: 85px;
@@ -154,6 +154,7 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  padding: 0px 5px;
 }
 
 .dropdown-menu-new li {

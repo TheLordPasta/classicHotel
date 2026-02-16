@@ -39,7 +39,7 @@
 .accessibility-header {
   display: grid;
   grid-template-columns: 15fr 1fr;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   font-weight: 500 !important;
   background-color: var(--side-menu-background);
   color: var(--hotel-background);
@@ -48,6 +48,10 @@
 .accessibility-header p {
   padding: 0px;
   margin: 0px;
+}
+.accessibility-header img {
+  width: 30px;
+  height: 30px;
 }
 .accessibility-icon {
   z-index: 1000;
@@ -65,19 +69,19 @@
   margin-top: 5px;
 }
 .accessibility-text {
-  background-color: var(--other-container-background-rev);
+  background-color: var(--other-container-background);
 }
 .accessibility-subject {
   margin: 0px;
   font-size: 1.5rem !important;
   font-weight: 350 !important;
   line-height: 34px;
+  background-color: var(--other-container-background-rev);
 }
 .accessibility-divider {
   height: 1px;
-  margin-bottom: 10px;
-  background-color: var(--side-menu-background);
-  opacity: 0.2;
+
+  background-color: black;
 }
 
 .accessibility-icons-grid {
@@ -85,13 +89,50 @@
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 1500px; /* limits total width */
-  margin: 0 auto; /* centers the grid */
+  margin: 5px auto; /* centers the grid */
   row-gap: 2rem; /* vertical spacing */
 }
 .accessibility-icons-grid.rtl {
   direction: rtl;
 }
+.accessibility-icon-with-subtext {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 102px;
+  text-align: center;
 
+  border-radius: 0px;
+  transition: background-color 0.2s ease;
+}
+
+.accessibility-icon-with-subtext:hover {
+  cursor: pointer;
+}
+
+/* ACTIVE STATE */
+.accessibility-icon-with-subtext.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.vertical-divider {
+  width: 2px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 5px,
+    transparent 2px,
+    transparent 10px
+  );
+  margin: 0 8px;
+}
+
+.accessibility-icon-with-subtext img {
+  width: 40px;
+  height: 40px;
+}
+.accessibility-icon-with-subtext p {
+  font-size: 0.75rem;
+}
 .accessibility-drawer button {
   text-align: start;
   width: 100%;

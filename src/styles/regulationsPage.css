@@ -1,0 +1,40 @@
+.regulations-container {
+  align-items: start; /* 👈 instead of center */
+  color: var(--text2-color);
+  margin: 0px 100px;
+  margin-top: 100px;
+  gap: 2rem;
+  max-width: 1440px;
+  padding: 50px 0px;
+}
+.sub-header-regulations {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: var(--text2-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-family: var(--font);
+}
+
+.header-regulations {
+  font-size: 1.5rem !important;
+  font-weight: 350 !important;
+  margin: 0 0 0.5rem;
+}
+.sectionAccordion-container {
+  width: 100%;
+  max-width: 728px;
+}
+.regulations-divider {
+  height: 2px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  background-color: var(--text2-color);
+}
+.sectionAccordion-container span {
+  font-size: 1.5rem;
+}
+.sectionAccordion-container p {
+  font-size: 1rem;
+  color: var(--text2-color) !important;
+}

@@ -24,8 +24,8 @@ import PhoneIconWhite from "../resources/images/phoneIconWhite.svg";
 import PhoneIconBlack from "../resources/images/phoneIconBlack.svg";
 import MailIconWhite from "../resources/images/mailIconWhite.svg";
 import MailIconBlack from "../resources/images/mailIconBlack.svg";
-import AccessibilityIconBlack from "../resources/images/accessibility.png";
-import AccessibilityIconWhite from "../resources/images/accessibilityWhite.png";
+import AccessibilityIcon from "../resources/images/wheelchair.svg";
+
 import MeterWhiteIcon from "../resources/images/meterWhite.svg";
 import MeterBlackIcon from "../resources/images/meterBlack.svg";
 import PeopleWhiteIcon from "../resources/images/peopleWhite.svg";
@@ -73,13 +73,6 @@ export const useLayout = () => {
   const [mappinIconRev, setMappinIconRev] = useState(MappinIconBlack);
   const [mailIconRev, setMailIconRev] = useState(MailIconBlack);
   const [phoneIconRev, setPhoneIconRev] = useState(PhoneIconBlack);
-
-  const [AccessibilityIcon, setAccessibilityIcon] = useState(
-    AccessibilityIconBlack
-  );
-  const [AccessibilityIconRev, setAccessibilityIconRev] = useState(
-    AccessibilityIconWhite
-  );
   const [MeterIcon, setMeterIcon] = useState(MeterWhiteIcon);
   const [MeterIconRev, setMeterIconRev] = useState(MeterBlackIcon);
   const [PeopleIcon, setPeopleIcon] = useState(PeopleWhiteIcon);
@@ -134,13 +127,6 @@ export const useLayout = () => {
     setMappinIconRev(isDark ? MappinIconWhite : MappinIconBlack);
     setMailIconRev(isDark ? MailIconWhite : MailIconBlack);
     setPhoneIconRev(isDark ? PhoneIconWhite : PhoneIconBlack);
-
-    setAccessibilityIcon(
-      isDark ? AccessibilityIconWhite : AccessibilityIconBlack
-    );
-    setAccessibilityIconRev(
-      isDark ? AccessibilityIconBlack : AccessibilityIconWhite
-    );
 
     setMeterIconRev(isDark ? MeterWhiteIcon : MeterBlackIcon);
     setPeopleIconRev(isDark ? PeopleWhiteIcon : PeopleBlackIcon);
@@ -197,7 +183,6 @@ export const useLayout = () => {
     mailIconRev,
     phoneIconRev,
     AccessibilityIcon,
-    AccessibilityIconRev,
     displayLang,
     MeterIcon,
     MeterIconRev,

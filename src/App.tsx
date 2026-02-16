@@ -38,7 +38,10 @@ function App() {
             <Route path="/rooms" element={<Rooms />} />
             <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
             <Route path="/accessibility" element={<Accessibility />} />
-            <Route path="/terms&conditions" element={<TermsAndConditions />} />
+            <Route
+              path="/terms-and-conditions"
+              element={<TermsAndConditions />}
+            />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/maintenance" element={<MaintenancePage />} />
           </Routes>

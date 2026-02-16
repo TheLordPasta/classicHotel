@@ -19,7 +19,7 @@
   "homeRooms": {
     "roomsTitle": "ROOMS & SUITES",
     "roomsText": "The Tailor Hotel offers a unique hospitality experience with 29 beautifully designed rooms, including 2 luxurious suites. Each room is thoughtfully crafted, blending style, comfort, and functionality with precision. Many rooms overlook a vibrant urban landscape and offer breathtaking views of the Mediterranean Sea. All accommodations are equipped with top-tier modern amenities to ensure a comfortable, enelant, and truly unforgettable stay.",
-    "roomsSideNote": "Check‑in is available from <1>12:00</1>. Check‑out is until <3>15:00</3>.",
+    "roomsSideNote": "Check‑in is available from <1>15:00</1>. Check‑out is until <3>12:00</3>.",
     "roomsSideNoteCancellationPolicy": "The Tailor Hotel’s cancellation policy allows changes up to 48 hours prior to arrival.",
     "roomsIncludeText": "Our rooms included with",
     "roomsIncludeTextBed": "100% Cotton sheets",
@@ -100,12 +100,15 @@
   },
   "accessibilityWidget": {
     "accessibilityWidgetTitle": "Accessibility Tools",
+    "fontSize": "Font Size",
+    "contrastColor": "Color Contrasts",
+    "moreTools": "More Tools",
     "increaseText": "Increase Text",
     "decreaseText": "Decrease Text",
     "grayScale": "Grayscale",
     "highContrast": "High Contrast",
     "negativeContrast": "Negative Contrast",
-    "lightBackground": "Light Background",
+    "background": "dark/light",
     "linkUnderline": "Link Underline",
     "readableFont": "Readable Font",
     "resetAll": "Reset All"
@@ -148,99 +151,125 @@
     "introText": "These Terms & Conditions govern your use of Tailor Hotel’s website and services. By accessing or booking with us, you agree to the following terms:",
     "sections": [
       {
-        "title": "Reservations & Payments",
+        "title": "General",
+        "paragraph": "The www.thetailortlv.com website provides information on The Tailor Hotel and offers the opportunity to purchase vacation packages. The website is owned by Classic Fashion Ltd Management. All purchasers or users of the website declare that they are aware of and agree to these regulations and waive any claims against the website, its operators, owners, managers, or their agents."
+      },
+      {
+        "title": "Conditions for Use of the Website",
         "items": [
-          "All reservations are subject to availability and confirmation.",
-          "Payment must be completed prior to check-in unless otherwise agreed.",
-          "Cancellation policies vary by rate and season."
+          "Only holders of valid credit cards issued by Visa Cal, Visa Leumi Card, Diners' Club, Isracard, or Mastercard may purchase services via the website.",
+          "The website may be used solely for booking, purchasing services, or receiving information.",
+          "Any other use of the website is strictly forbidden.",
+          "All bookings must be made using a credit card and will not be completed without providing full credit card details.",
+          "Credit card details are used only to guarantee bookings and will be charged upon arrival at the hotel.",
+          "Illegal use of the website or its content constitutes a violation of copyright and other applicable laws.",
+          "The Tailor Hotel reserves the right to change the website regulations at any time.",
+          "Any dispute will be adjudicated exclusively in the courts of Rehovot, Israel."
         ]
       },
       {
-        "title": "Guest Responsibilities",
+        "title": "The Purchaser's Personal Information",
+        "paragraph": "When booking services, the purchaser must provide personal details. The website owners and operators are not responsible for errors made during data entry, including incorrect dates, services, or package selection. The hotel is not responsible for missing information or technical issues preventing booking. Providing false information is a criminal offense and may result in legal action."
+      },
+      {
+        "title": "Making a Reservation",
         "items": [
-          "Guests must comply with hotel rules and respect other guests.",
-          "Damage to property may result in additional charges."
+          "Reservations are made by entering purchaser details and providing credit card information solely to guarantee the booking.",
+          "Upon completion, the purchaser will receive an automatic confirmation email, which should be printed and presented upon arrival.",
+          "The credit card will be charged upon arrival at the hotel.",
+          "By making a reservation, consent is given to receive promotional communications from the hotel.",
+          "Purchasers may opt out of communications at any time by emailing hello@thetailortlv.com."
         ]
       },
       {
-        "title": "Privacy & Data",
-        "paragraph": "We respect your privacy. Personal data collected during booking is handled in accordance with our privacy policy."
+        "title": "Cancellation Policy",
+        "items": [
+          "Cancellations are subject to the Israeli Consumer Protection Law of 1981 and its amendments.",
+          "Cancellations must be made in writing via email to hello@thetailortlv.com or by phone with written confirmation from the hotel.",
+          "Cancellations made up to 48 hours prior to arrival will incur a cancellation fee of 100% of the package cost."
+        ]
+      },
+      {
+        "title": "Changes to the Website",
+        "paragraph": "The Tailor Hotel may update or modify the website’s structure, content, services, and conditions at any time without prior notice."
       }
     ]
   },
   "privacyPage": {
     "pageTitle": "Privacy Policy",
-    "introText": "This Privacy Policy explains how we collect, use, and protect your personal data when you visit our website. By using our site, you agree to the practices described below, in accordance with GDPR and CCPA regulations.",
+    "introText": "This Privacy Policy explains how The Tailor Hotel collects, uses, and protects your personal information, in compliance with GDPR, data protection laws, and WCAG 2.2 accessibility standards.",
     "sections": [
+      {
+        "title": "General",
+        "paragraph": "The Tailor Hotel website values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your data in compliance with GDPR, data protection laws, and accessibility standards such as WCAG 2.2."
+      },
       {
         "title": "Data Collection",
         "items": [
-          "We collect non-personal data such as browser type, device info, and pages visited to improve site performance.",
-          "Personal data (e.g., name, email) is only collected when you voluntarily submit it via forms or account registration.",
-          "We do not collect sensitive personal data unless explicitly required and consented to."
+          "We collect data to improve website performance, user experience, and accessibility.",
+          "Information may include user preferences for website theme, font size, and accessibility settings.",
+          "We use analytics tools such as Google Analytics and Meta Pixel to track website usage and provide targeted advertisements.",
+          "No sensitive personal data is collected without explicit consent."
         ]
       },
       {
-        "title": "Legal Basis for Processing",
+        "title": "Cookies and Tracking Technologies",
         "items": [
-          "We process personal data based on your consent, contractual necessity, legal obligations, or legitimate interests.",
-          "You may withdraw your consent at any time without affecting the lawfulness of prior processing."
+          "We use cookies to ensure optimal website performance and functionality.",
+          "Cookies help remember your chosen theme, font size, and other accessibility preferences.",
+          "Tracking cookies are used for analytics and advertising purposes.",
+          "You can manage cookie preferences via your browser settings or the cookie consent banner."
         ]
       },
       {
-        "title": "Cookies & Tracking",
+        "title": "Use of Collected Data",
         "items": [
-          "We use cookies to remember preferences, analyze traffic, and improve user experience.",
-          "Google Analytics tracks usage patterns anonymously.",
-          "Meta Pixel helps us measure ad performance and retarget visitors.",
-          "Tracking scripts are only activated after you accept cookies via our cookie drawer."
+          "Data is used to improve website functionality and user experience.",
+          "Analytics data helps us understand website traffic and user behavior.",
+          "Advertising data is used to display personalized ads on partner platforms.",
+          "Data will not be shared with third parties except as required by law or for services like hosting, analytics, or advertising."
         ]
       },
       {
-        "title": "Third-Party Services",
+        "title": "User Rights under GDPR",
         "items": [
-          "We use Google and Meta platforms for analytics and advertising insights.",
-          "These services may store cookies or use similar technologies on your device.",
-          "We do not sell personal data. We only share data when legally required or with your explicit consent."
-        ]
-      },
-      {
-        "title": "International Data Transfers",
-        "items": [
-          "Your data may be transferred to and processed in countries outside your jurisdiction.",
-          "We implement appropriate safeguards to ensure your data is protected in accordance with applicable laws."
+          "You have the right to access, correct, or delete personal data collected by the website.",
+          "You may request restrictions on the processing of your personal data.",
+          "You can withdraw consent for data processing at any time.",
+          "You have the right to lodge a complaint with a relevant data protection authority if you feel your rights are violated."
         ]
       },
       {
         "title": "Data Retention",
+        "paragraph": "We retain personal and non-personal data only for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, or resolve disputes."
+      },
+      {
+        "title": "Third-Party Services",
         "items": [
-          "We retain personal data only as long as necessary for the purposes described or as required by law.",
-          "Retention periods vary depending on the nature of the data and legal obligations."
+          "We may use third-party services (e.g., Google Analytics, Meta Pixel) for analytics and advertising.",
+          "These services may place cookies or collect anonymous data as outlined in their respective privacy policies.",
+          "We ensure all third-party services comply with GDPR and data protection standards."
         ]
       },
       {
-        "title": "Your Rights",
-        "items": [
-          "You have the right to access, correct, delete, or restrict your personal data.",
-          "You may request data portability or object to certain types of processing.",
-          "California residents may opt out of the sale of personal information.",
-          "To exercise these rights, contact us at: <strong>privacy@yourdomain.com</strong>"
-        ]
+        "title": "Accessibility and WCAG Compliance",
+        "paragraph": "We follow WCAG 2.2 guidelines to ensure the website is accessible to all users, including those with disabilities. Accessibility settings such as font choice, size, color contrast, and theme preferences are stored to improve the user experience."
       },
       {
-        "title": "User Control",
+        "title": "Security Measures",
         "items": [
-          "You can accept or decline cookies via the cookie drawer on our site.",
-          "Declining cookies disables tracking scripts and analytics tools.",
-          "You may request deletion of any personal data you’ve submitted via contact forms."
+          "We implement technical and organizational measures to protect collected data.",
+          "Access to personal data is restricted to authorized personnel only.",
+          "Data is transmitted securely using HTTPS and other encryption protocols where applicable."
         ]
       },
       {
         "title": "Policy Updates",
-        "items": [
-          "We may update this Privacy Policy periodically. Changes will be posted on this page with a revised date.",
-          "We encourage you to review this policy regularly to stay informed."
-        ]
+        "paragraph": "We may update this Privacy Policy from time to time to reflect changes in practices, legal requirements, or services. Any updates will be posted on this page with the revised date."
+      },
+      {
+        "title": "Contact Information",
+        "paragraph": "For any questions, concerns, or requests regarding your data, please contact us at hello@thetailortlv.com or through the contact form on our website."
       }
     ]
   },

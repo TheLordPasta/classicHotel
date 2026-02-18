@@ -45,16 +45,20 @@ export default function Footer() {
           <div className={`footer-policies ${layout.isRTL ? "rtl" : ""}`}>
             <div className="policy-item">
               <a href="/terms-and-conditions">
+                {t("footer.footerSectionLeftPrivacyPolicyText")}
+              </a>
+            </div>
+            <div className="policy-divider"></div>
+            <div className="policy-item">
+              <a href="/privacy-policy">
                 {t("footer.footerSectionMiddleTermsAndConditionsText")}
               </a>
             </div>
             <div className="policy-divider"></div>
             <div className="policy-item">
-              <a>Update Reservation</a>
-            </div>
-            <div className="policy-divider"></div>
-            <div className="policy-item">
-              <a>{t("footer.footerSectionRightAccessibilityText")}</a>
+              <a href="/accessibility">
+                {t("footer.footerSectionRightAccessibilityText")}
+              </a>
             </div>
           </div>
         </div>

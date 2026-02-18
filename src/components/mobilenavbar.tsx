@@ -133,15 +133,21 @@ const MobileNavbar: React.FC<Props> = (props) => {
           className={`side-menu-footer-policies ${props.isRTL ? "rtl" : ""}`}
         >
           <div className="side-menu-policy-item">
-            <a>Cancellation Policy</a>
+            <a href="/terms-and-conditions">
+              {t("footer.footerSectionLeftPrivacyPolicyText")}
+            </a>{" "}
           </div>
           <div className="side-menu-policy-divider"></div>
           <div className="side-menu-policy-item">
-            <a>Update Reservation</a>
+            <a href="/privacy-policy">
+              {t("footer.footerSectionMiddleTermsAndConditionsText")}
+            </a>{" "}
           </div>
           <div className="side-menu-policy-divider"></div>
           <div className="side-menu-policy-item">
-            <a>Accessibility Statement</a>
+            <a href="/accessibility">
+              {t("footer.footerSectionRightAccessibilityText")}
+            </a>{" "}
           </div>
         </div>
       </div>

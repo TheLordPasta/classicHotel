@@ -4,10 +4,11 @@ import "../styles/CookieDrawer.css";
 import {
   loadTrackingScripts,
   sendPageView,
+  disableTracking,
+  enableTracking,
 } from "../utils/loadTrackingScripts";
 
 const COOKIE_CONSENT_KEY = "cookieConsentStatus";
-const ENABLE_COOKIE_PERSISTENCE = true;
 
 const CookieDrawer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,27 +16,32 @@ const CookieDrawer = () => {
   const location = useLocation();
   const firstRender = useRef(true);
 
-  // Track route changes only if consent is accepted, skip first render
+  // Track route changes ONLY if consent === true
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
       return;
     }
+
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
     if (consent === "true") {
       sendPageView(location.pathname);
     }
   }, [location]);
 
-  // Initial load: check consent and show drawer if needed
+  // Initial load
   useEffect(() => {
-    const storedValue = localStorage.getItem(COOKIE_CONSENT_KEY);
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
 
-    if (storedValue !== null) {
+    if (consent === "true") {
+      loadTrackingScripts();
       setIsDismissed(true);
-      if (storedValue === "true") {
-        loadTrackingScripts();
-      }
+      return;
+    }
+
+    if (consent === "false") {
+      disableTracking();
+      setIsDismissed(true);
       return;
     }
 
@@ -46,19 +52,17 @@ const CookieDrawer = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleReject = () => {
-    if (ENABLE_COOKIE_PERSISTENCE) {
-      localStorage.setItem(COOKIE_CONSENT_KEY, "false");
-    }
+  const handleAccept = () => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, "true");
+    enableTracking();
+    loadTrackingScripts();
     setIsDismissed(true);
   };
 
-  const handleAccept = () => {
-    if (ENABLE_COOKIE_PERSISTENCE) {
-      localStorage.setItem(COOKIE_CONSENT_KEY, "true");
-    }
+  const handleReject = () => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, "false");
+    disableTracking();
     setIsDismissed(true);
-    loadTrackingScripts();
   };
 
   if (isDismissed) return null;

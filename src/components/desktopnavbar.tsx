@@ -139,16 +139,20 @@ const DesktopNavbar: React.FC<Props> = (props) => {
         <div
           className={`side-menu-footer-policies ${props.isRTL ? "rtl" : ""}`}
         >
+          <a href="/terms-and-conditions">
+            {t("footer.footerSectionLeftPrivacyPolicyText")}
+          </a>
+          <div className="side-menu-policy-divider"></div>
           <div className="side-menu-policy-item">
-            <a>Cancellation Policy</a>
+            <a href="/privacy-policy">
+              {t("footer.footerSectionMiddleTermsAndConditionsText")}
+            </a>
           </div>
           <div className="side-menu-policy-divider"></div>
           <div className="side-menu-policy-item">
-            <a>Update Reservation</a>
-          </div>
-          <div className="side-menu-policy-divider"></div>
-          <div className="side-menu-policy-item">
-            <a>Accessibility Statement</a>
+            <a href="/accessibility">
+              {t("footer.footerSectionRightAccessibilityText")}
+            </a>
           </div>
         </div>
       </div>

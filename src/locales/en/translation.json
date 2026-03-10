@@ -98,6 +98,9 @@
     "footerSectionLeftPrivacyPolicyText": "Privacy Policy",
     "footerSecuredWebsiteText": "Secured Website"
   },
+  "orderNow": {
+    "text": "Order Now"
+  },
   "accessibilityWidget": {
     "accessibilityWidgetTitle": "Accessibility Tools",
     "fontSize": "Font Size",

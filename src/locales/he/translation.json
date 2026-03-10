@@ -98,6 +98,9 @@
     "footerSectionLeftPrivacyPolicyText": "מדיניות פרטיות",
     "footerSecuredWebsiteText": "האתר מאובטח"
   },
+  "orderNow": {
+    "text": "הזמינו עכשיו"
+  },
   "accessibilityWidget": {
     "fontSize": "גודל גופן",
     "contrastColor": "ניגודיות צבעים",

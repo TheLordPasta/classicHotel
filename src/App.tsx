@@ -17,6 +17,7 @@ import TermsAndConditions from "./pages/terms-and-conditions";
 import Accessibility from "./pages/accessibility";
 import CookieDrawer from "./components/CookieDrawer";
 import PrivacyPolicy from "./pages/privacy-policy";
+import OrderNow from "./components/orderNow";
 import MaintenancePage from "./pages/maintenance";
 import { LayoutProvider } from "./contexts/LayoutContext";
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/maintenance" element={<MaintenancePage />} />
           </Routes>
+          <OrderNow />
           <Footer />
           <AccessibilityWidget />
           <CookieDrawer />

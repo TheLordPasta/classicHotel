@@ -14,15 +14,11 @@
 .card-container.rtl {
   direction: rtl !important;
 }
-@media (max-width: 768px) {
-  .card-container {
-  }
-}
 
 /* Styling for the image inside the card */
 .card-image {
   width: 100%;
-  height: 266px;
+  height: 192px;
   object-fit: cover;
   display: block;
 }
@@ -215,9 +211,40 @@
   }
   .card-image {
     width: 100%;
-    height: 266px;
+    height: 192-px;
     max-width: 289px;
     object-fit: cover;
     display: block;
+  }
+  .modal-close-button {
+    right: 0px;
+    margin: 0 20px !important;
+  }
+  .modal-overlay {
+    flex-direction: flex; /* stack vertically */
+    align-items: flex-start; /* top align, not center */
+    padding: 0px;
+  }
+  .modal-content {
+    flex-direction: column; /* stack vertically */
+    padding: 0px;
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  .modal-text {
+    margin: 90px 30px 0 30px !important; /* small top margin */
+    max-width: 100%;
+  }
+
+  .slider-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto; /* auto height for responsive */
   }
 }

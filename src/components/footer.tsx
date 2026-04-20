@@ -36,7 +36,6 @@ export default function Footer() {
             <div className="footer-divider"></div>
             <div className="footer-item">
               <img src={layout.phoneIconRev} alt="phone" />
-              <span> </span>
               <span className="contact-info"> +972-6598394</span>
             </div>
             <div className="footer-divider"></div>

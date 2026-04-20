@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {
   scrolled: boolean;
@@ -22,10 +23,44 @@ type Props = {
   toggleTheme: () => void;
   toggleMenu: () => void;
   navigate: (path: string) => void;
+  //refs
+  sectionRefs: {
+    fullWidthVideoRef: React.RefObject<HTMLDivElement>;
+    homeRoomsRef: React.RefObject<HTMLDivElement>;
+    homeMapRef: React.RefObject<HTMLDivElement>;
+    homeServicesRef: React.RefObject<HTMLDivElement>;
+    footerRef: React.RefObject<HTMLDivElement>;
+  };
 };
 
 const MobileNavbar: React.FC<Props> = (props) => {
   const { t } = useTranslation();
+  //logo on click
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    if (location.pathname === "/homePage") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/homePage");
+      window.scrollTo(0, 0);
+    }
+  };
+
+  //scroll to ref
+  const scrollToSection = (
+    ref: React.RefObject<HTMLDivElement>,
+    offset = 60,
+  ) => {
+    if (ref.current) {
+      const elementPosition =
+        ref.current.getBoundingClientRect().top + window.scrollY;
+      const scrollPosition = elementPosition - offset; // offset in px
+      window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+      props.toggleMenu();
+    }
+  };
 
   return (
     <>
@@ -63,11 +98,7 @@ const MobileNavbar: React.FC<Props> = (props) => {
 
         <div className="nav-logo-container">
           <div className="navbar-logo">
-            <img
-              src={props.logo}
-              alt="Hotel Logo"
-              onClick={() => props.navigate("/homePage")}
-            />
+            <img src={props.logo} alt="Hotel Logo" onClick={handleLogoClick} />
           </div>
         </div>
 
@@ -94,19 +125,34 @@ const MobileNavbar: React.FC<Props> = (props) => {
         </div>
 
         <div className={`side-menu-content ${props.isRTL ? "rtl" : ""}`}>
-          <div className="side-menu-item">
+          <div
+            className="side-menu-item"
+            onClick={() => scrollToSection(props.sectionRefs.fullWidthVideoRef)}
+          >
             <p>{t("navbar.homeButton")}</p>
           </div>
-          <div className="side-menu-item">
+          <div
+            className="side-menu-item"
+            onClick={() => scrollToSection(props.sectionRefs.homeRoomsRef)}
+          >
             <p>{t("navbar.roomsButton")}</p>
           </div>
-          <div className="side-menu-item">
+          <div
+            className="side-menu-item"
+            onClick={() => scrollToSection(props.sectionRefs.homeMapRef)}
+          >
             <p>{t("navbar.locationButton")}</p>
           </div>
-          <div className="side-menu-item">
+          <div
+            className="side-menu-item"
+            onClick={() => scrollToSection(props.sectionRefs.homeServicesRef)}
+          >
             <p>{t("navbar.hotelServicesButton")}</p>
           </div>
-          <div className="side-menu-item">
+          <div
+            className="side-menu-item"
+            onClick={() => scrollToSection(props.sectionRefs.footerRef)}
+          >
             <p>{t("navbar.contactUsButton")}</p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLayoutContext } from "../contexts/LayoutContext";
 import FullWidthVideo from "../components/fullwidthvideo";
 import HotelWelcome from "../components/hotelwelcome";
 import SEO from "../components/seo";
@@ -21,26 +22,7 @@ const EnvImages = [
   { imageUrl: env3, alt: "env3" },
   { imageUrl: env4, alt: "env4" },
   { imageUrl: env5, alt: "env5" },
-  { imageUrl: env1, alt: "env1" },
-  { imageUrl: env2, alt: "env2" },
-  { imageUrl: env3, alt: "env3" },
-  { imageUrl: env4, alt: "env4" },
-  { imageUrl: env5, alt: "env5" },
-  { imageUrl: env1, alt: "env1" },
-  { imageUrl: env2, alt: "env2" },
-  { imageUrl: env3, alt: "env3" },
-  { imageUrl: env4, alt: "env4" },
-  { imageUrl: env5, alt: "env5" },
-  { imageUrl: env1, alt: "env1" },
-  { imageUrl: env2, alt: "env2" },
-  { imageUrl: env3, alt: "env3" },
-  { imageUrl: env4, alt: "env4" },
-  { imageUrl: env5, alt: "env5" },
-  { imageUrl: env1, alt: "env1" },
-  { imageUrl: env2, alt: "env2" },
-  { imageUrl: env3, alt: "env3" },
-  { imageUrl: env4, alt: "env4" },
-  { imageUrl: env5, alt: "env5" },
+  // repeat as needed...
 ];
 
 const fadeInUpOnScroll = {
@@ -49,6 +31,8 @@ const fadeInUpOnScroll = {
 };
 
 function Home() {
+  const { sectionRefs } = useLayoutContext(); // grab the refs from context
+
   return (
     <div>
       <SEO
@@ -59,14 +43,18 @@ function Home() {
         image="https://thetailortlv.com/images/og-image.jpg"
       />
 
+      {/* Home / Video */}
       <motion.div
+        ref={sectionRefs.fullWidthVideoRef}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }} // animate when 30% of component is in view, only once
+        viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUpOnScroll}
       >
         <FullWidthVideo />
       </motion.div>
+
+      {/* Welcome */}
       <div className="component-wrapper">
         <motion.div
           initial="hidden"
@@ -77,7 +65,9 @@ function Home() {
           <HotelWelcome />
         </motion.div>
       </div>
-      <div className="blue-wrapper">
+
+      {/* Rooms */}
+      <div className="blue-wrapper" ref={sectionRefs.homeRoomsRef}>
         <div className="component-wrapper">
           <motion.div
             initial="hidden"
@@ -89,7 +79,9 @@ function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="component-wrapper">
+
+      {/* Map */}
+      <div className="component-wrapper" ref={sectionRefs.homeMapRef}>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -99,6 +91,8 @@ function Home() {
           <HomeMap />
         </motion.div>
       </div>
+
+      {/* Carousel */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -113,7 +107,8 @@ function Home() {
         </div>
       </motion.div>
 
-      <div className="blue-wrapper">
+      {/* Services */}
+      <div className="blue-wrapper" ref={sectionRefs.homeServicesRef}>
         <div className="component-wrapper">
           <motion.div
             initial="hidden"
@@ -125,19 +120,9 @@ function Home() {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUpOnScroll}
-      >
-        <div className="image-carousel-env">
-          <ImagesCarousel
-            images={EnvImages}
-            cardSize={{ width: 362.49, height: 390 }}
-          />
-        </div>
-      </motion.div>
+
+      {/* Footer */}
+      <div ref={sectionRefs.footerRef}></div>
     </div>
   );
 }

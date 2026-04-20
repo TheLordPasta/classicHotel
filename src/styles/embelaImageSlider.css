@@ -113,3 +113,30 @@
 .embla__dot--selected {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .image-embla__slide img {
+    width: 100%;
+    max-width: 342px;
+    height: 100%;
+    max-height: 228px;
+    object-fit: cover;
+    display: block;
+  }
+  .image-embla__button.prev {
+    left: 30px;
+  }
+
+  .image-embla__button.next {
+    right: 30px;
+  }
+  .image-embla__button--prev.rtl {
+    left: auto;
+    right: 0px;
+  }
+
+  .image-embla__button--next.rtl {
+    left: 0px;
+    right: auto;
+  }
+}

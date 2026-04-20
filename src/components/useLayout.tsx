@@ -1,5 +1,5 @@
 // useLayout.tsx
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -60,10 +60,10 @@ export const useLayout = () => {
   const [arrow, setArrow] = useState(ArrowBlack);
   const [hamburgerIcon, setHamburgerIcon] = useState(HamburgerIconBlack);
   const [hamburgerIconClose, setHamburgerIconClose] = useState(
-    HamburgerIconCloseBlack
+    HamburgerIconCloseBlack,
   );
   const [closeButtonSideMenu, setCloseButtonSideMenu] = useState(
-    HamburgerIconCloseWhite
+    HamburgerIconCloseWhite,
   );
 
   const [mappinIcon, setMappinIcon] = useState(MappinIconWhite);
@@ -95,6 +95,21 @@ export const useLayout = () => {
     "--other-container-background": "#d1e7fe33",
     "--other-container-background-rev": "#d1e7fe",
   };
+  // ------------------ ADD REFS -----------------
+  const fullWidthVideoRef = useRef<HTMLDivElement>(null);
+  const homeRoomsRef = useRef<HTMLDivElement>(null);
+  const homeMapRef = useRef<HTMLDivElement>(null);
+  const homeServicesRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+
+  const sectionRefs = {
+    fullWidthVideoRef,
+    homeRoomsRef,
+    homeMapRef,
+    homeServicesRef,
+    footerRef,
+  };
+  // ---------------------------------------------
 
   /** Apply CSS variables + images */
   const applyTheme = (isDark: boolean) => {
@@ -114,10 +129,10 @@ export const useLayout = () => {
 
     setHamburgerIcon(isDark ? HamburgerIconWhite : HamburgerIconBlack);
     setHamburgerIconClose(
-      isDark ? HamburgerIconCloseWhite : HamburgerIconCloseBlack
+      isDark ? HamburgerIconCloseWhite : HamburgerIconCloseBlack,
     );
     setCloseButtonSideMenu(
-      isDark ? HamburgerIconCloseBlack : HamburgerIconCloseWhite
+      isDark ? HamburgerIconCloseBlack : HamburgerIconCloseWhite,
     );
 
     setMappinIcon(isDark ? MappinIconBlack : MappinIconWhite);
@@ -149,8 +164,8 @@ export const useLayout = () => {
         ? TinyLogoWhite
         : TinyLogoBlack
       : darkMode
-      ? LogoWhite
-      : LogoBlack;
+        ? LogoWhite
+        : LogoBlack;
 
     setLogo(newLogo);
   }, [scrolled, darkMode]);
@@ -169,6 +184,7 @@ export const useLayout = () => {
     dropdownOpen,
     isRTL,
     tinyLogo,
+    TinyLogoWhite,
     logo,
     bigLogo,
     globus,
@@ -193,5 +209,7 @@ export const useLayout = () => {
     toggleTheme: () => applyTheme(!darkMode),
     toggleMenu: () => setMenuOpen((s) => !s),
     navigate,
+    // 🔹 add refs to context return
+    sectionRefs,
   };
 };

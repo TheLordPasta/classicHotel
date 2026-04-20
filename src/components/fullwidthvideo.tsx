@@ -49,7 +49,7 @@ const FullWidthVideo: React.FC = () => {
 
       {/* Foreground SVG */}
       <img
-        src={layout.tinyLogo}
+        src={layout.TinyLogoWhite}
         alt="Overlay logo"
         className="video-overlay-logo"
       />

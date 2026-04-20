@@ -29,6 +29,7 @@
 .sub-text-services-list {
   list-style-type: disc !important;
   margin: 10px 5px !important; /* remove default margins */
+  font-weight: 350;
 }
 .sub-text-services-list li::marker {
   font-size: 0.4em;
@@ -53,7 +54,7 @@
     display: grid;
     grid-template-columns: 1fr !important;
     gap: 30px;
-    margin: 100px 40px;
+    margin: 100px 22px;
   }
   .qa-container span {
     font-size: 1.125rem !important;

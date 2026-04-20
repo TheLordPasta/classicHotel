@@ -12,7 +12,7 @@
   background: var(--hotel-background);
 
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
-  z-index: 9999;
+  z-index: 999;
 }
 
 /* Button styling */

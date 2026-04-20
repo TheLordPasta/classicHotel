@@ -34,7 +34,7 @@ const EmbelaRoomCarousel: React.FC<Props> = ({ rooms, cardWidth = 400 }) => {
   const isRTL = i18n.language === "he";
   const isMobile = useIsMobile();
   const effectiveCardWidth = isMobile ? 289 : cardWidth;
-  const alignment: "end" | "start" = isRTL ? "start" : "end";
+  const alignment: "start" = "start";
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -53,13 +53,15 @@ const EmbelaRoomCarousel: React.FC<Props> = ({ rooms, cardWidth = 400 }) => {
   // FIX: swap scroll directions in RTL
   const scrollPrev = useCallback(() => {
     if (!emblaApi) return;
-    if (isRTL) emblaApi.scrollNext(); // prev visually → scrollNext internally
+    if (isRTL)
+      emblaApi.scrollNext(); // prev visually → scrollNext internally
     else emblaApi.scrollPrev();
   }, [emblaApi, isRTL]);
 
   const scrollNext = useCallback(() => {
     if (!emblaApi) return;
-    if (isRTL) emblaApi.scrollPrev(); // next visually → scrollPrev internally
+    if (isRTL)
+      emblaApi.scrollPrev(); // next visually → scrollPrev internally
     else emblaApi.scrollNext();
   }, [emblaApi, isRTL]);
 

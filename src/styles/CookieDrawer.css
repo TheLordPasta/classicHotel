@@ -9,13 +9,14 @@
   padding: 20px;
   text-align: center;
   transition: bottom 0.5s ease-in-out;
-  z-index: 1000;
+  z-index: 80000;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
   font-family: var(--polin);
 }
 
 .consent-banner.show {
   bottom: 0;
+  z-index: 80000;
 }
 
 .consent-actions {

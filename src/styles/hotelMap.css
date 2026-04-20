@@ -6,7 +6,8 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hotel-map-container {
-    width: 363px !important;
+    width: 100%;
+    max-width: 363px !important;
     height: 461px !important; /* or whatever height you want */
   }
 }

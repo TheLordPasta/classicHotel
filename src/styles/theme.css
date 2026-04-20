@@ -128,10 +128,6 @@ h3 {
   font-size: 1.18rem; /* ~26px */
 }
 
-button,
-a {
-  font-size: 0.82rem; /* 22px */
-}
 small {
   font-size: 0.82rem; /* ~18px */
 }
@@ -152,9 +148,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: none;
-}
-span {
-  font-size: 0.82rem;
 }
 
 /*the momment i broke shit*/

@@ -16,7 +16,7 @@
   display: flex;
   gap: 130px;
   padding: 20px 100px;
-  margin-top: 95px;
+  margin-top: 60px;
 }
 
 .logo-container {
@@ -116,6 +116,7 @@
   .logo-container {
     text-align: center;
     max-height: 96.17px;
+    margin-bottom: 40px;
   }
   .logo-footer {
     margin-bottom: 100px;
